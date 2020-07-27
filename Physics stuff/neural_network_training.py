@@ -27,10 +27,9 @@ data_test = scaler.transform(data_test)
 
 neural_network = MLPClassifier(hidden_layer_sizes=(50,50), activation='tanh', max_iter=500)
 
-neural_network.fit(data_x_train, comparison_x_train)
+neural_network.fit(data_train, comparison_train)
 
-predicted_x = neural_network.predict(data_x_test)
-predicted_y = neural_network.predict(data_y_test)
+predicted_x = neural_network.predict(data_test)
 
 # this will eventually be phased out, just need it to see how well the neural network is working
 print(confusion_matrix(comparison_x_test, predicted_x))
