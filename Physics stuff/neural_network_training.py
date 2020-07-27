@@ -32,10 +32,8 @@ neural_network.fit(data_train, comparison_train)
 predicted_x = neural_network.predict(data_test)
 
 # this will eventually be phased out, just need it to see how well the neural network is working
-print(confusion_matrix(comparison_x_test, predicted_x))
-print(confusion_matrix(comparison_y_test, predicted_y))
-print(classification_report(comparison_x_test, predicted_x))
-print(classification_report(comparison_y_test, predicted_y))
+print(confusion_matrix(comparison_test, predicted_x))
+print(classification_report(comparison_test, predicted_x))
 
 def retrieve_data(dataset):
     dataset = ServiceXDataset(dataset)
