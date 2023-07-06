@@ -1,0 +1,680 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     25883,        672]
+NotebookOptionsPosition[     24636,        631]
+NotebookOutlinePosition[     24980,        646]
+CellTagsIndexPosition[     24937,        643]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"j", "=", 
+   RowBox[{
+   "Input", "[", "\"\<Number of random numbers to generate: \>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Mu]1", " ", "=", " ", 
+   RowBox[{
+   "Input", "[", "\"\<Energy level we are working with: \>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Mu]2", " ", "=", " ", 
+   RowBox[{
+   "Input", "[", "\"\<Energy level we are working with: \>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", " ", "=", " ", 
+   RowBox[{"Input", "[", "\"\<Resolution we are working with: \>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TotalValue", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "z1", ",", "z2", ",", "z3", ",", "z4", ",", "z5", ",", "z6", ",", "z7", 
+     ",", "z8", ",", "z9", ",", "z10", ",", "z11", ",", "z12", ",", "z13", 
+     ",", "z14", ",", "z15", ",", "z16", ",", "z17", ",", "z18", ",", "z19", 
+     ",", "z20", ",", "z21", ",", "z22", ",", "z23", ",", "z24"}], "}"}], "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+      ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+     ",", "0", ",", "0"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"i", "=", "0"}], ",", 
+   RowBox[{"i", "<", "j"}], ",", 
+   RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"TotalValue", "=", "0"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"For", "[", 
+     RowBox[{
+      RowBox[{"n", "=", "0"}], ",", 
+      RowBox[{"n", "<", "12"}], ",", 
+      RowBox[{"n", "++"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"TotalValue", "=", 
+       RowBox[{"TotalValue", "+", 
+        RowBox[{"RandomReal", "[", "]"}]}]}]}], "]"}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"TotalValue", "=", 
+     RowBox[{"TotalValue", "-", "6"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"TotalValue", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"TotalValue", "*", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"\[Mu]1", "*", "r"}], ")"}], "/", "2.35"}]}], "+", 
+      "\[Mu]1"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.1", "\[LessEqual]", "TotalValue", "<", "1.115"}], ",", 
+      RowBox[{"z1", "=", 
+       RowBox[{"z1", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.115", "\[LessEqual]", "TotalValue", "<", "1.13"}], ",", 
+      RowBox[{"z2", "=", 
+       RowBox[{"z2", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.13", "\[LessEqual]", "TotalValue", "<", "1.145"}], ",", 
+      RowBox[{"z3", "=", 
+       RowBox[{"z3", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.145", "\[LessEqual]", "TotalValue", "<", "1.16"}], ",", 
+      RowBox[{"z4", "=", 
+       RowBox[{"z4", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.16", "\[LessEqual]", "TotalValue", "<", "1.175"}], ",", 
+      RowBox[{"z5", "=", 
+       RowBox[{"z5", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.175", "\[LessEqual]", "TotalValue", "<", "1.19"}], ",", 
+      RowBox[{"z6", "=", 
+       RowBox[{"z6", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.19", "\[LessEqual]", "TotalValue", "<", "1.205"}], ",", 
+      RowBox[{"z7", "=", 
+       RowBox[{"z7", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.205", "\[LessEqual]", "TotalValue", "<", "1.22"}], ",", 
+      RowBox[{"z8", "=", 
+       RowBox[{"z8", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.22", "\[LessEqual]", "TotalValue", "<", "1.235"}], ",", 
+      RowBox[{"z9", "=", 
+       RowBox[{"z9", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.235", "\[LessEqual]", "TotalValue", "<", "1.25"}], ",", 
+      RowBox[{"z10", "=", 
+       RowBox[{"z10", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.25", "\[LessEqual]", "TotalValue", "<", "1.265"}], ",", 
+      RowBox[{"z11", "=", 
+       RowBox[{"z11", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.265", "\[LessEqual]", "TotalValue", "<", "1.28"}], ",", 
+      RowBox[{"z12", "=", 
+       RowBox[{"z12", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.28", "\[LessEqual]", "TotalValue", "<", "1.295"}], ",", 
+      RowBox[{"z13", "=", 
+       RowBox[{"z13", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.295", "\[LessEqual]", "TotalValue", "<", "1.31"}], ",", 
+      RowBox[{"z14", "=", 
+       RowBox[{"z14", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.31", "\[LessEqual]", "TotalValue", "<", "1.325"}], ",", 
+      RowBox[{"z15", "=", 
+       RowBox[{"z15", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.325", "\[LessEqual]", "TotalValue", "<", "1.34"}], ",", 
+      RowBox[{"z16", "=", 
+       RowBox[{"z16", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.34", "\[LessEqual]", "TotalValue", "<", "1.355"}], ",", 
+      RowBox[{"z17", "=", 
+       RowBox[{"z17", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.355", "\[LessEqual]", "TotalValue", "<", "1.37"}], ",", 
+      RowBox[{"z18", "=", 
+       RowBox[{"z18", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.37", "\[LessEqual]", "TotalValue", "<", "1.385"}], ",", 
+      RowBox[{"z19", "=", 
+       RowBox[{"z19", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.385", "\[LessEqual]", "TotalValue", "<", "1.4"}], ",", 
+      RowBox[{"z20", "=", 
+       RowBox[{"z20", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.4", "\[LessEqual]", "TotalValue", "<", "1.415"}], ",", 
+      RowBox[{"z21", "=", 
+       RowBox[{"z21", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.415", "\[LessEqual]", "TotalValue", "<", "1.43"}], ",", 
+      RowBox[{"z22", "=", 
+       RowBox[{"z22", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.43", "\[LessEqual]", "TotalValue", "<", "1.445"}], ",", 
+      RowBox[{"z23", "=", 
+       RowBox[{"z23", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.445", "\[LessEqual]", "TotalValue", "\[LessEqual]", "1.46"}],
+       ",", 
+      RowBox[{"z24", "=", 
+       RowBox[{"z24", "+", "1"}]}]}], "]"}]}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"i", "=", "0"}], ",", 
+   RowBox[{"i", "<", "j"}], ",", 
+   RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"TotalValue", "=", "0"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"For", "[", 
+     RowBox[{
+      RowBox[{"n", "=", "0"}], ",", 
+      RowBox[{"n", "<", "12"}], ",", 
+      RowBox[{"n", "++"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"TotalValue", "=", 
+       RowBox[{"TotalValue", "+", 
+        RowBox[{"RandomReal", "[", "]"}]}]}]}], "]"}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"TotalValue", "=", 
+     RowBox[{"TotalValue", "-", "6"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"TotalValue", " ", "=", " ", 
+     RowBox[{
+      RowBox[{"TotalValue", "*", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"\[Mu]2", "*", "r"}], ")"}], "/", "2.35"}]}], "+", 
+      "\[Mu]2"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.1", "\[LessEqual]", "TotalValue", "<", "1.115"}], ",", 
+      RowBox[{"z1", "=", 
+       RowBox[{"z1", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.115", "\[LessEqual]", "TotalValue", "<", "1.13"}], ",", 
+      RowBox[{"z2", "=", 
+       RowBox[{"z2", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.13", "\[LessEqual]", "TotalValue", "<", "1.145"}], ",", 
+      RowBox[{"z3", "=", 
+       RowBox[{"z3", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.145", "\[LessEqual]", "TotalValue", "<", "1.16"}], ",", 
+      RowBox[{"z4", "=", 
+       RowBox[{"z4", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.16", "\[LessEqual]", "TotalValue", "<", "1.175"}], ",", 
+      RowBox[{"z5", "=", 
+       RowBox[{"z5", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.175", "\[LessEqual]", "TotalValue", "<", "1.19"}], ",", 
+      RowBox[{"z6", "=", 
+       RowBox[{"z6", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.19", "\[LessEqual]", "TotalValue", "<", "1.205"}], ",", 
+      RowBox[{"z7", "=", 
+       RowBox[{"z7", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.205", "\[LessEqual]", "TotalValue", "<", "1.22"}], ",", 
+      RowBox[{"z8", "=", 
+       RowBox[{"z8", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.22", "\[LessEqual]", "TotalValue", "<", "1.235"}], ",", 
+      RowBox[{"z9", "=", 
+       RowBox[{"z9", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.235", "\[LessEqual]", "TotalValue", "<", "1.25"}], ",", 
+      RowBox[{"z10", "=", 
+       RowBox[{"z10", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.25", "\[LessEqual]", "TotalValue", "<", "1.265"}], ",", 
+      RowBox[{"z11", "=", 
+       RowBox[{"z11", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.265", "\[LessEqual]", "TotalValue", "<", "1.28"}], ",", 
+      RowBox[{"z12", "=", 
+       RowBox[{"z12", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.28", "\[LessEqual]", "TotalValue", "<", "1.295"}], ",", 
+      RowBox[{"z13", "=", 
+       RowBox[{"z13", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.295", "\[LessEqual]", "TotalValue", "<", "1.31"}], ",", 
+      RowBox[{"z14", "=", 
+       RowBox[{"z14", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.31", "\[LessEqual]", "TotalValue", "<", "1.325"}], ",", 
+      RowBox[{"z15", "=", 
+       RowBox[{"z15", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.325", "\[LessEqual]", "TotalValue", "<", "1.34"}], ",", 
+      RowBox[{"z16", "=", 
+       RowBox[{"z16", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.34", "\[LessEqual]", "TotalValue", "<", "1.355"}], ",", 
+      RowBox[{"z17", "=", 
+       RowBox[{"z17", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.355", "\[LessEqual]", "TotalValue", "<", "1.37"}], ",", 
+      RowBox[{"z18", "=", 
+       RowBox[{"z18", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.37", "\[LessEqual]", "TotalValue", "<", "1.385"}], ",", 
+      RowBox[{"z19", "=", 
+       RowBox[{"z19", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.385", "\[LessEqual]", "TotalValue", "<", "1.4"}], ",", 
+      RowBox[{"z20", "=", 
+       RowBox[{"z20", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.4", "\[LessEqual]", "TotalValue", "<", "1.415"}], ",", 
+      RowBox[{"z21", "=", 
+       RowBox[{"z21", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.415", "\[LessEqual]", "TotalValue", "<", "1.43"}], ",", 
+      RowBox[{"z22", "=", 
+       RowBox[{"z22", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.43", "\[LessEqual]", "TotalValue", "<", "1.445"}], ",", 
+      RowBox[{"z23", "=", 
+       RowBox[{"z23", "+", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"1.445", "\[LessEqual]", "TotalValue", "\[LessEqual]", "1.46"}],
+       ",", 
+      RowBox[{"z24", "=", 
+       RowBox[{"z24", "+", "1"}]}]}], "]"}]}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Number of values in Bin 1: \>\"", ",", " ", "z1"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Number of values in Bin 2: \>\"", ",", " ", "z2"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Number of values in Bin 3: \>\"", ",", " ", "z3"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Number of values in Bin 4: \>\"", ",", " ", "z4"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Number of values in Bin 5: \>\"", ",", " ", "z5"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Number of values in Bin 6: \>\"", ",", " ", "z6"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Number of values in Bin 7: \>\"", ",", " ", "z7"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Number of values in Bin 8: \>\"", ",", " ", "z8"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Number of values in Bin 9: \>\"", ",", " ", "z9"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Number of values in Bin 10: \>\"", ",", " ", "z10"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Number of values in Bin 11: \>\"", ",", " ", "z11"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Number of values in Bin 12: \>\"", ",", " ", "z12"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Number of values in Bin 13: \>\"", ",", " ", "z13"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Number of values in Bin 14: \>\"", ",", " ", "z14"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Number of values in Bin 15: \>\"", ",", " ", "z15"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Number of values in Bin 16: \>\"", ",", " ", "z16"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Number of values in Bin 17: \>\"", ",", " ", "z17"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Number of values in Bin 18: \>\"", ",", " ", "z18"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Number of values in Bin 19: \>\"", ",", " ", "z19"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Number of values in Bin 20: \>\"", ",", " ", "z20"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Number of values in Bin 21: \>\"", ",", " ", "z21"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Number of values in Bin 22: \>\"", ",", " ", "z22"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Number of values in Bin 23: \>\"", ",", " ", "z23"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Number of values in Bin 24: \>\"", ",", " ", "z24"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.7274515884974537`*^9, 3.727451634557727*^9}, {
+  3.72745167150774*^9, 3.7274518483762145`*^9}, {3.7274518969162436`*^9, 
+  3.72745189765598*^9}, {3.7274519377360477`*^9, 3.727451946635995*^9}, {
+  3.7274519856389365`*^9, 3.727452343589293*^9}, {3.727452466719327*^9, 
+  3.7274526964081793`*^9}, {3.7310820145966744`*^9, 3.731082254726454*^9}, {
+  3.73108230364641*^9, 3.731082497966241*^9}, {3.7310825432961955`*^9, 
+  3.731082584225895*^9}, {3.731082641817925*^9, 3.731082692237939*^9}, {
+  3.7310827346780663`*^9, 3.7310827433780947`*^9}, {3.7310828155580344`*^9, 
+  3.7310829041079473`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of values in Bin 1: \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["Number of values in Bin 1: ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.731082783257805*^9, 3.731082936857657*^9, 
+  3.731082968147629*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of values in Bin 2: \"\>", "\[InvisibleSpace]", "22"}],
+  SequenceForm["Number of values in Bin 2: ", 22],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.731082783257805*^9, 3.731082936857657*^9, 
+  3.7310829681576424`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of values in Bin 3: \"\>", "\[InvisibleSpace]", "318"}],
+  SequenceForm["Number of values in Bin 3: ", 318],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.731082783257805*^9, 3.731082936857657*^9, 
+  3.7310829681576424`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of values in Bin 4: \"\>", "\[InvisibleSpace]", "1768"}],
+  SequenceForm["Number of values in Bin 4: ", 1768],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.731082783257805*^9, 3.731082936857657*^9, 
+  3.7310829681576424`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of values in Bin 5: \"\>", "\[InvisibleSpace]", "3770"}],
+  SequenceForm["Number of values in Bin 5: ", 3770],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.731082783257805*^9, 3.731082936857657*^9, 
+  3.7310829681576424`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of values in Bin 6: \"\>", "\[InvisibleSpace]", "3009"}],
+  SequenceForm["Number of values in Bin 6: ", 3009],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.731082783257805*^9, 3.731082936857657*^9, 
+  3.7310829681576424`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of values in Bin 7: \"\>", "\[InvisibleSpace]", "968"}],
+  SequenceForm["Number of values in Bin 7: ", 968],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.731082783257805*^9, 3.731082936857657*^9, 
+  3.7310829681576424`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of values in Bin 8: \"\>", "\[InvisibleSpace]", "141"}],
+  SequenceForm["Number of values in Bin 8: ", 141],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.731082783257805*^9, 3.731082936857657*^9, 
+  3.7310829681576424`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of values in Bin 9: \"\>", "\[InvisibleSpace]", "4"}],
+  SequenceForm["Number of values in Bin 9: ", 4],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.731082783257805*^9, 3.731082936857657*^9, 
+  3.7310829681576424`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of values in Bin 10: \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["Number of values in Bin 10: ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.731082783257805*^9, 3.731082936857657*^9, 
+  3.7310829681576424`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of values in Bin 11: \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["Number of values in Bin 11: ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.731082783257805*^9, 3.731082936857657*^9, 
+  3.731082968167629*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of values in Bin 12: \"\>", "\[InvisibleSpace]", "4"}],
+  SequenceForm["Number of values in Bin 12: ", 4],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.731082783257805*^9, 3.731082936857657*^9, 
+  3.731082968167629*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of values in Bin 13: \"\>", "\[InvisibleSpace]", "107"}],
+  SequenceForm["Number of values in Bin 13: ", 107],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.731082783257805*^9, 3.731082936857657*^9, 
+  3.731082968167629*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of values in Bin 14: \"\>", "\[InvisibleSpace]", "778"}],
+  SequenceForm["Number of values in Bin 14: ", 778],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.731082783257805*^9, 3.731082936857657*^9, 
+  3.731082968167629*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of values in Bin 15: \"\>", "\[InvisibleSpace]", 
+   "2336"}],
+  SequenceForm["Number of values in Bin 15: ", 2336],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.731082783257805*^9, 3.731082936857657*^9, 
+  3.731082968167629*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of values in Bin 16: \"\>", "\[InvisibleSpace]", 
+   "3344"}],
+  SequenceForm["Number of values in Bin 16: ", 3344],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.731082783257805*^9, 3.731082936857657*^9, 
+  3.731082968167629*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of values in Bin 17: \"\>", "\[InvisibleSpace]", 
+   "2420"}],
+  SequenceForm["Number of values in Bin 17: ", 2420],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.731082783257805*^9, 3.731082936857657*^9, 
+  3.731082968167629*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of values in Bin 18: \"\>", "\[InvisibleSpace]", "858"}],
+  SequenceForm["Number of values in Bin 18: ", 858],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.731082783257805*^9, 3.731082936857657*^9, 
+  3.731082968167629*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of values in Bin 19: \"\>", "\[InvisibleSpace]", "141"}],
+  SequenceForm["Number of values in Bin 19: ", 141],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.731082783257805*^9, 3.731082936857657*^9, 
+  3.7310829681776466`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of values in Bin 20: \"\>", "\[InvisibleSpace]", "12"}],
+  SequenceForm["Number of values in Bin 20: ", 12],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.731082783257805*^9, 3.731082936857657*^9, 
+  3.7310829681776466`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of values in Bin 21: \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["Number of values in Bin 21: ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.731082783257805*^9, 3.731082936857657*^9, 
+  3.7310829681776466`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of values in Bin 22: \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["Number of values in Bin 22: ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.731082783257805*^9, 3.731082936857657*^9, 
+  3.7310829681776466`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of values in Bin 23: \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["Number of values in Bin 23: ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.731082783257805*^9, 3.731082936857657*^9, 
+  3.7310829681776466`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of values in Bin 24: \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["Number of values in Bin 24: ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.731082783257805*^9, 3.731082936857657*^9, 
+  3.7310829681776466`*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{759, 833},
+WindowMargins->{{Automatic, 572}, {64, Automatic}},
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 17098, 408, 1852, "Input"],
+Cell[CellGroupData[{
+Cell[17703, 434, 279, 6, 23, "Print"],
+Cell[17985, 442, 283, 6, 23, "Print"],
+Cell[18271, 450, 285, 6, 23, "Print"],
+Cell[18559, 458, 287, 6, 23, "Print"],
+Cell[18849, 466, 287, 6, 23, "Print"],
+Cell[19139, 474, 287, 6, 23, "Print"],
+Cell[19429, 482, 285, 6, 23, "Print"],
+Cell[19717, 490, 285, 6, 23, "Print"],
+Cell[20005, 498, 281, 6, 23, "Print"],
+Cell[20289, 506, 283, 6, 23, "Print"],
+Cell[20575, 514, 281, 6, 23, "Print"],
+Cell[20859, 522, 281, 6, 23, "Print"],
+Cell[21143, 530, 285, 6, 23, "Print"],
+Cell[21431, 538, 285, 6, 23, "Print"],
+Cell[21719, 546, 291, 7, 23, "Print"],
+Cell[22013, 555, 291, 7, 23, "Print"],
+Cell[22307, 564, 291, 7, 23, "Print"],
+Cell[22601, 573, 285, 6, 23, "Print"],
+Cell[22889, 581, 287, 6, 23, "Print"],
+Cell[23179, 589, 285, 6, 23, "Print"],
+Cell[23467, 597, 283, 6, 23, "Print"],
+Cell[23753, 605, 283, 6, 23, "Print"],
+Cell[24039, 613, 283, 6, 23, "Print"],
+Cell[24325, 621, 283, 6, 23, "Print"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

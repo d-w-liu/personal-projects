@@ -1,0 +1,443 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     13460,        435]
+NotebookOptionsPosition[     11188,        356]
+NotebookOutlinePosition[     11532,        371]
+CellTagsIndexPosition[     11489,        368]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+By the Heisenberg Uncertainty Principle, \[CapitalDelta]E * \[CapitalDelta]t \
+>= h bar. For Cesium-137, \[CapitalDelta]t = 30 years. h bar is approximately \
+6.58e-16 eV*s. Then:\
+\>", "Text",
+ CellChangeTimes->{{3.730468240016788*^9, 3.730468322981248*^9}, {
+  3.7304684005712285`*^9, 3.7304684030112195`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"30", "*", 
+  RowBox[{"365", "/", "1"}], "*", 
+  RowBox[{"24", "/", "1"}], "*", 
+  RowBox[{"60", "/", "1"}], "*", 
+  RowBox[{"60", "/", "1"}]}]], "Input",
+ CellChangeTimes->{{3.730468333771061*^9, 3.7304683720512404`*^9}}],
+
+Cell[BoxData["946080000"], "Output",
+ CellChangeTimes->{3.7304683739009824`*^9}]
+}, Open  ]],
+
+Cell["\<\
+This value is the half-life of Cesium-137 in seconds. Therefore, \
+\[CapitalDelta]E must be:\
+\>", "Text",
+ CellChangeTimes->{{3.730468381771237*^9, 3.730468416760944*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"6.58", "*", 
+  RowBox[{
+   RowBox[{"10", "^", 
+    RowBox[{"-", "16"}]}], "/", "946080000"}]}]], "Input",
+ CellChangeTimes->{{3.7304684221312027`*^9, 3.7304684443509183`*^9}}],
+
+Cell[BoxData["6.955014375105699`*^-25"], "Output",
+ CellChangeTimes->{3.73046844567093*^9}]
+}, Open  ]],
+
+Cell["\<\
+For Cs-137, the natural line width of its gamma ray energy spread is 6.96e-25 \
+eV. This spread is less than a fraction of a fraction of a voltage bin; \
+therefore, this spread could not be precisely detected by our equipment.\
+\>", "Text",
+ CellChangeTimes->{{3.7304684520211754`*^9, 3.7304685065511456`*^9}, {
+  3.7304685635310736`*^9, 3.7304686089410334`*^9}, {3.7304686752809753`*^9, 
+  3.7304686822709665`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.7304687027506857`*^9, 3.7304687032709475`*^9}}],
+
+Cell[TextData[{
+ "Calculating the energy resolution of an NaI detector using Co-60, Na-22, \
+and Cs-137:\n\nFormula: R = FWHM / x, where FWHM = 2.35\[Sigma] and x = \[Mu]\
+\n\nCo-60:\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Mu]", "1"], TraditionalForm]]],
+ " = 3.3 V\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Mu]", "2"], TraditionalForm]]],
+ " = 3.7 V\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["FWHM", "1"], TraditionalForm]]],
+ " = 0.2 V\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["FWHM", "2"], TraditionalForm]]],
+ " = 0.2 V"
+}], "Text",
+ CellChangeTimes->{{3.730468711230956*^9, 3.730468732240925*^9}, {
+   3.7304687627110667`*^9, 3.730468844391549*^9}, {3.7304689028816175`*^9, 
+   3.7304689924223804`*^9}, 3.730469105042498*^9, {3.7310797703256598`*^9, 
+   3.7310797713355618`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    SubscriptBox["R", "1"], "=", " ", 
+    RowBox[{"0.2", " ", "/", " ", "3.3"}]}], "\[IndentingNewLine]", 
+   RowBox[{
+    SubscriptBox["R", "2"], " ", "=", " ", 
+    RowBox[{"0.2", "/", " ", "3.7"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.730468997542177*^9, 3.7304690503826184`*^9}, {
+  3.730469087322574*^9, 3.7304690874325886`*^9}, {3.731079779105651*^9, 
+  3.7310797804556513`*^9}}],
+
+Cell[BoxData["0.06060606060606061`"], "Output",
+ CellChangeTimes->{{3.7304690814923544`*^9, 3.7304690879223223`*^9}, 
+   3.7310797810153956`*^9}],
+
+Cell[BoxData["0.05405405405405405`"], "Output",
+ CellChangeTimes->{{3.7304690814923544`*^9, 3.7304690879223223`*^9}, 
+   3.7310797810153956`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Na-22:\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Mu]", "1"], TraditionalForm]]],
+ " = 1.5 V\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Mu]", "2"], TraditionalForm]]],
+ " = 3.6 V\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["FWHM", "1"], TraditionalForm]]],
+ " = 0.1 V\n",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["FWHM", "2"], TraditionalForm]]],
+ " = 0.2 V"
+}], "Text",
+ CellChangeTimes->{{3.730469111432583*^9, 3.7304691217125535`*^9}, {
+  3.7304691595324955`*^9, 3.7304692127324715`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  SubscriptBox["R", "1"], "=", " ", 
+  RowBox[{"0.1", " ", "/", " ", "1.5"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["R", "2"], "=", " ", 
+  RowBox[{"0.2", " ", "/", " ", "3.6"}]}]}], "Input",
+ CellChangeTimes->{{3.730469217082245*^9, 3.7304692470224743`*^9}}],
+
+Cell[BoxData["0.06666666666666667`"], "Output",
+ CellChangeTimes->{3.7304692475422106`*^9}],
+
+Cell[BoxData["0.05555555555555556`"], "Output",
+ CellChangeTimes->{3.7304692475422106`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Cs-137:\n",
+ Cell[BoxData[
+  FormBox["\[Mu]", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = 1.9 V\nFWHM = 0.1 V"
+}], "Text",
+ CellChangeTimes->{{3.730469350652314*^9, 3.7304693919215164`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"R", " ", "=", " ", 
+  RowBox[{"0.1", " ", "/", " ", "1.9"}]}]], "Input",
+ CellChangeTimes->{{3.730469395149884*^9, 3.730469399080139*^9}}],
+
+Cell[BoxData["0.05263157894736842`"], "Output",
+ CellChangeTimes->{3.73046939964991*^9}]
+}, Open  ]],
+
+Cell["\<\
+A better estimate of the energy resolution:
+Calculate the energy resolution by converting the V to E (MeV) using the \
+equation: E = 0.4V. Then, estimate the FWHM in terms of the energy spread; \
+finally, using the known energy of each \[Gamma]-ray, calculate R for all \
+five rays.
+
+Co-60:\
+\>", "Text",
+ CellChangeTimes->{{3.7304695098798084`*^9, 3.7304696021499567`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"FWHM", "=", 
+  RowBox[{"0.2", " ", "*", " ", "0.4"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["R", "1"], "=", " ", 
+  RowBox[{"FWHM", " ", "/", " ", "1.172"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["R", "2"], "=", " ", 
+  RowBox[{"FWHM", " ", "/", " ", "1.333"}]}]}], "Input",
+ CellChangeTimes->{{3.7304696102196865`*^9, 3.730469664249902*^9}, {
+  3.730469747039776*^9, 3.7304697808598185`*^9}, {3.7310799414578686`*^9, 
+  3.7310799415778427`*^9}}],
+
+Cell[BoxData["0.08000000000000002`"], "Output",
+ CellChangeTimes->{{3.7304697659395466`*^9, 3.7304697814795637`*^9}, 
+   3.731079942147643*^9}],
+
+Cell[BoxData["0.06825938566552903`"], "Output",
+ CellChangeTimes->{{3.7304697659395466`*^9, 3.7304697814795637`*^9}, 
+   3.7310799421576195`*^9}],
+
+Cell[BoxData["0.060015003750937754`"], "Output",
+ CellChangeTimes->{{3.7304697659395466`*^9, 3.7304697814795637`*^9}, 
+   3.7310799421576195`*^9}]
+}, Open  ]],
+
+Cell["Na-22:", "Text",
+ CellChangeTimes->{{3.7304697995697536`*^9, 3.7304698028797255`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"FWHM1", " ", "=", " ", 
+  RowBox[{"0.1", " ", "*", " ", "0.4"}]}], "\[IndentingNewLine]", 
+ RowBox[{"FWHM2", " ", "=", " ", 
+  RowBox[{"0.2", " ", "*", " ", "0.4"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["R", "1"], "=", " ", 
+  RowBox[{"FWHM1", " ", "/", " ", "0.511"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["R", "2"], "=", " ", 
+  RowBox[{"FWHM2", " ", "/", " ", "1.277"}]}]}], "Input",
+ CellChangeTimes->{{3.7304698063795424`*^9, 3.730469867699716*^9}}],
+
+Cell[BoxData["0.04000000000000001`"], "Output",
+ CellChangeTimes->{3.730469871129493*^9}],
+
+Cell[BoxData["0.08000000000000002`"], "Output",
+ CellChangeTimes->{3.730469871129493*^9}],
+
+Cell[BoxData["0.07827788649706459`"], "Output",
+ CellChangeTimes->{3.730469871129493*^9}],
+
+Cell[BoxData["0.06264682850430699`"], "Output",
+ CellChangeTimes->{3.730469871129493*^9}]
+}, Open  ]],
+
+Cell["Cs-137:", "Text",
+ CellChangeTimes->{{3.730469885369669*^9, 3.7304698888296967`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"FWHM", " ", "=", " ", 
+  RowBox[{"0.2", " ", "*", " ", "0.4"}]}], "\[IndentingNewLine]", 
+ RowBox[{"R", " ", "=", " ", 
+  RowBox[{"FWHM", " ", "*", " ", "0.662"}]}]}], "Input",
+ CellChangeTimes->{{3.730469891879696*^9, 3.730469915809665*^9}, {
+  3.731080989118393*^9, 3.731080989278393*^9}}],
+
+Cell[BoxData["0.08000000000000002`"], "Output",
+ CellChangeTimes->{
+  3.7304699171494427`*^9, {3.731080974428176*^9, 3.7310809896881633`*^9}}],
+
+Cell[BoxData["0.052960000000000014`"], "Output",
+ CellChangeTimes->{
+  3.7304699171494427`*^9, {3.731080974428176*^9, 3.7310809896881633`*^9}}]
+}, Open  ]],
+
+Cell["\<\
+Ultimate calculation of energy resolution:
+Calculate the energy resolution using the mean and standard deviation from \
+each fit. Don\[CloseCurlyQuote]t forget to convert standard deviation to \
+FWHM! (FWHM = 2.355\[Sigma])
+
+Co-60:\
+\>", "Text",
+ CellChangeTimes->{{3.7310811785069513`*^9, 3.731081276791761*^9}, {
+  3.7310813882972965`*^9, 3.731081388447298*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"FWHM1", " ", "=", " ", 
+   RowBox[{"2.355", "*", "0.073"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"FWHM2", " ", "=", " ", 
+   RowBox[{"2.355", " ", "*", " ", "0.084"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["R", "1"], "=", " ", 
+  RowBox[{"FWHM1", " ", "/", " ", "3.31"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["R", "2"], "=", " ", 
+  RowBox[{"FWHM2", " ", "/", " ", "3.74"}]}]}], "Input",
+ CellChangeTimes->{{3.7310812798217616`*^9, 3.731081303787347*^9}, {
+  3.7310813737273097`*^9, 3.731081474357504*^9}}],
+
+Cell[BoxData["0.05193806646525679`"], "Output",
+ CellChangeTimes->{3.73108149587741*^9}],
+
+Cell[BoxData["0.052893048128342245`"], "Output",
+ CellChangeTimes->{3.73108149587741*^9}]
+}, Open  ]],
+
+Cell["Na-22:", "Text",
+ CellChangeTimes->{{3.7310815016176734`*^9, 3.7310815036276846`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"FWHM1", " ", "=", " ", 
+   RowBox[{"2.355", " ", "*", " ", "0.048"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"FWHM2", " ", "=", " ", 
+   RowBox[{"2.355", " ", "*", " ", "0.081"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["R", "1"], "=", " ", 
+  RowBox[{"FWHM1", " ", "/", " ", "1.492"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["R", "2"], "=", " ", 
+  RowBox[{"FWHM2", " ", "/", " ", "3.602"}]}]}], "Input",
+ CellChangeTimes->{{3.7310815063074694`*^9, 3.731081578808114*^9}}],
+
+Cell[BoxData["0.07576407506702414`"], "Output",
+ CellChangeTimes->{3.7310815793378863`*^9}],
+
+Cell[BoxData["0.05295807884508607`"], "Output",
+ CellChangeTimes->{3.7310815793378863`*^9}]
+}, Open  ]],
+
+Cell["Cs-137:", "Text",
+ CellChangeTimes->{{3.731081587808154*^9, 3.7310815910081835`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"FWHM", " ", "=", " ", 
+   RowBox[{"2.355", "*", "0.054"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"R", " ", "=", " ", 
+  RowBox[{"FWHM", " ", "/", " ", "1.905"}]}]}], "Input",
+ CellChangeTimes->{{3.731081593697943*^9, 3.7310816233383684`*^9}}],
+
+Cell[BoxData["0.06675590551181103`"], "Output",
+ CellChangeTimes->{3.731081623658141*^9}]
+}, Open  ]]
+},
+WindowSize->{759, 836},
+WindowMargins->{{Automatic, -64}, {Automatic, 49}},
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 322, 6, 49, "Text"],
+Cell[CellGroupData[{
+Cell[905, 30, 245, 6, 31, "Input"],
+Cell[1153, 38, 80, 1, 31, "Output"]
+}, Open  ]],
+Cell[1248, 42, 182, 4, 30, "Text"],
+Cell[CellGroupData[{
+Cell[1455, 50, 199, 5, 31, "Input"],
+Cell[1657, 57, 91, 1, 31, "Output"]
+}, Open  ]],
+Cell[1763, 61, 426, 7, 68, "Text"],
+Cell[2192, 70, 150, 2, 72, "Input"],
+Cell[2345, 74, 809, 24, 182, "Text"],
+Cell[CellGroupData[{
+Cell[3179, 102, 457, 11, 72, "Input"],
+Cell[3639, 115, 145, 2, 31, "Output"],
+Cell[3787, 119, 145, 2, 31, "Output"]
+}, Open  ]],
+Cell[3947, 124, 524, 20, 106, "Text"],
+Cell[CellGroupData[{
+Cell[4496, 148, 297, 7, 52, "Input"],
+Cell[4796, 157, 91, 1, 31, "Output"],
+Cell[4890, 160, 91, 1, 31, "Output"]
+}, Open  ]],
+Cell[4996, 164, 222, 7, 68, "Text"],
+Cell[CellGroupData[{
+Cell[5243, 175, 162, 3, 31, "Input"],
+Cell[5408, 180, 88, 1, 31, "Output"]
+}, Open  ]],
+Cell[5511, 184, 384, 9, 125, "Text"],
+Cell[CellGroupData[{
+Cell[5920, 197, 497, 11, 72, "Input"],
+Cell[6420, 210, 143, 2, 31, "Output"],
+Cell[6566, 214, 145, 2, 31, "Output"],
+Cell[6714, 218, 146, 2, 31, "Output"]
+}, Open  ]],
+Cell[6875, 223, 92, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[6992, 228, 507, 11, 92, "Input"],
+Cell[7502, 241, 89, 1, 31, "Output"],
+Cell[7594, 244, 89, 1, 31, "Output"],
+Cell[7686, 247, 89, 1, 31, "Output"],
+Cell[7778, 250, 89, 1, 31, "Output"]
+}, Open  ]],
+Cell[7882, 254, 91, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[7998, 259, 316, 6, 52, "Input"],
+Cell[8317, 267, 142, 2, 31, "Output"],
+Cell[8462, 271, 143, 2, 31, "Output"]
+}, Open  ]],
+Cell[8620, 276, 374, 9, 106, "Text"],
+Cell[CellGroupData[{
+Cell[9019, 289, 592, 14, 92, "Input"],
+Cell[9614, 305, 88, 1, 31, "Output"],
+Cell[9705, 308, 89, 1, 31, "Output"]
+}, Open  ]],
+Cell[9809, 312, 92, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[9926, 317, 553, 13, 92, "Input"],
+Cell[10482, 332, 91, 1, 31, "Output"],
+Cell[10576, 335, 91, 1, 31, "Output"]
+}, Open  ]],
+Cell[10682, 339, 91, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[10798, 344, 282, 6, 52, "Input"],
+Cell[11083, 352, 89, 1, 31, "Output"]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,0 +1,170 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5858,        162]
+NotebookOptionsPosition[      5189,        143]
+NotebookOutlinePosition[      5592,        159]
+CellTagsIndexPosition[      5549,        156]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"a", ":=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"4", ",", "2"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "3"}], "}"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"rot", "[", "\[Theta]_", "]"}], ":=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Cos", "[", "\[Theta]", "]"}], ",", 
+      RowBox[{"-", 
+       RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Sin", "[", "\[Theta]", "]"}], ",", 
+      RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "}"}]}], "}"}]}]}], "Input",
+ CellChangeTimes->{{3.8769126465687838`*^9, 3.8769127341089*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"12473b1f-3854-4612-be8c-ab4356682c4e"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.8769127481726837`*^9, 
+  3.876912785543036*^9}},ExpressionUUID->"ae6bee58-f75b-474b-b904-\
+2f3dfc220bb1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Show", "[", 
+    RowBox[{
+     RowBox[{"Graphics", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"Arrow", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}], ",", 
+           RowBox[{
+            RowBox[{"rot", "[", "\[Theta]", "]"}], ".", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "2"}], "}"}]}]}], "}"}], "]"}], "}"}], ",", 
+       RowBox[{"PlotRange", "->", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "10"}], ",", "10"}], "}"}]}], "}"}]}], ",", 
+       RowBox[{"Axes", "->", "True"}]}], "]"}], ",", 
+     RowBox[{"Graphics", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"Arrow", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}], ",", 
+           RowBox[{"a", ".", 
+            RowBox[{"rot", "[", "\[Theta]", "]"}], ".", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "2"}], "}"}]}]}], "}"}], "]"}], "}"}], ",", 
+       RowBox[{"Axes", "->", "True"}]}], "]"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Theta]", ",", "0", ",", 
+     RowBox[{"2", "Pi"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.87691312084738*^9, 3.8769131674789195`*^9}, {
+  3.8769146890480194`*^9, 3.876914731587367*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"8ace8216-8495-4350-ac52-72b0bb2d2cd4"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`\[Theta]$$ = 4.396287582447267, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`\[Theta]$$], 0, 2 Pi}}, Typeset`size$$ = {
+    360., {176., 181.12890684604645`}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`\[Theta]$$ = 0}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        Graphics[{
+          Arrow[{{0, 0}, 
+            Dot[
+             $CellContext`rot[$CellContext`\[Theta]$$], {1, 2}]}]}, 
+         PlotRange -> {{-10, 10}, {-10, 10}}, Axes -> True], 
+        Graphics[{
+          Arrow[{{0, 0}, 
+            Dot[$CellContext`a, 
+             $CellContext`rot[$CellContext`\[Theta]$$], {1, 2}]}]}, Axes -> 
+         True]], "Specifications" :> {{$CellContext`\[Theta]$$, 0, 2 Pi}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{410., {230.13403309800196`, 235.86596690199804`}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.8769131510275*^9, 3.8769131810810423`*^9}, {
+  3.8769147124728146`*^9, 3.8769147354287825`*^9}},
+ CellLabel->"Out[15]=",ExpressionUUID->"a4f55215-8a56-4371-9210-3b3d75f9ed09"]
+}, Open  ]]
+},
+WindowSize->{1440., 741.75},
+WindowMargins->{{-6, Automatic}, {Automatic, -6}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (June 16, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"7b61db25-9066-418b-809b-4c09a0523ab0"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 770, 22, 48, "Input",ExpressionUUID->"12473b1f-3854-4612-be8c-ab4356682c4e"],
+Cell[1331, 44, 154, 3, 28, "Input",ExpressionUUID->"ae6bee58-f75b-474b-b904-2f3dfc220bb1"],
+Cell[CellGroupData[{
+Cell[1510, 51, 1606, 45, 28, "Input",ExpressionUUID->"8ace8216-8495-4350-ac52-72b0bb2d2cd4"],
+Cell[3119, 98, 2054, 42, 508, "Output",ExpressionUUID->"a4f55215-8a56-4371-9210-3b3d75f9ed09"]
+}, Open  ]]
+}
+]
+*)
+

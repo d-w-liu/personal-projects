@@ -1,0 +1,3126 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    122845,       3118]
+NotebookOptionsPosition[    118278,       3045]
+NotebookOutlinePosition[    118676,       3061]
+CellTagsIndexPosition[    118633,       3058]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"Half", "-", 
+   RowBox[{"Index", " ", "Computations"}]}], "Title"]], "Input",
+ CellChangeTimes->{{3.8461777828390923`*^9, 
+  3.846177821988043*^9}},ExpressionUUID->"8d03b0cb-8f11-4f60-b47f-\
+a96d51e14703"],
+
+Cell[TextData[StyleBox["Definitions of various functions that we will need \
+follow:", "Section",
+ FontSize->24,
+ FontVariations->{"Underline"->True}]], "Text",
+ CellChangeTimes->{{3.844375813651626*^9, 
+  3.8443758299003487`*^9}},ExpressionUUID->"4b75c533-4db0-4eba-ab7c-\
+6f180692844b"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<grassmann`\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.844391158206381*^9, 3.8443911950562487`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"ee913cc2-73d0-4c49-8115-dbbb2ef6e059"],
+
+Cell["Flat metric for 3-D spacetime:", "Text",
+ CellChangeTimes->{{3.8443895215236073`*^9, 
+  3.8443895570863514`*^9}},ExpressionUUID->"1b0ccf9d-a733-447e-bb1b-\
+f45788678661"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Eta]", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "1", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "1"}], "}"}]}], "}"}]}], " ", 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.8443758326233435`*^9, 3.8443758347653465`*^9}, {
+   3.8443891919255967`*^9, 3.8443893299259253`*^9}, {3.8443893778593965`*^9, 
+   3.844389383232912*^9}, {3.844389443103097*^9, 3.844389457952989*^9}, 
+   3.8443896673181767`*^9},
+ CellLabel->"In[2]:=",ExpressionUUID->"80c74e55-015d-43c0-84a6-7c525554e7b2"],
+
+Cell["\<\
+Grassmann coordinates. Since we are in N=(0,2) SUSY, we have two complex \
+spinors, also defined here.\
+\>", "Text",
+ CellChangeTimes->{{3.8445437931934614`*^9, 3.844543862368424*^9}, {
+  3.844544103680742*^9, 3.8445441195682344`*^9}, {3.846124515931116*^9, 
+  3.8461245165386343`*^9}},ExpressionUUID->"568f6be0-30cc-490f-9c35-\
+a671b9a37f48"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Fermion", "[", 
+   RowBox[{"\[Theta]1", ",", "\[Theta]2", ",", " ", 
+    RowBox[{"Qplus", "[", "_", "]"}], ",", 
+    RowBox[{"Qbarplus", "[", "_", "]"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.84454386387584*^9, 3.8445439348010764`*^9}, 
+   3.8458196434669886`*^9, {3.846124520073474*^9, 
+   3.846124526605654*^9}},ExpressionUUID->"ef1f2adb-2f97-4796-8642-\
+b5d60940e13f"],
+
+Cell["Let us also define a chiral superfield:", "Text",
+ CellChangeTimes->{{3.844544125235526*^9, 
+  3.844544187526533*^9}},ExpressionUUID->"1bf16049-fa9b-4a47-bb60-\
+da84c82e503e"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Fermion", "[", 
+   RowBox[{"\[CapitalPhi]", "[", "_", "]"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[CapitalPhi]", "[", 
+    RowBox[{"\[Theta]1_", ",", "\[Theta]2_"}], "]"}], "=", 
+   RowBox[{"\[Phi]", "+", 
+    RowBox[{"\[Psi]1", " ", "\[Theta]1"}], "+", 
+    RowBox[{"\[Psi]2", " ", "\[Theta]2"}], " ", "+", " ", 
+    RowBox[{"F", " ", "\[Theta]1", " ", "\[Theta]2"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8445441892385426`*^9, 3.8445442902892647`*^9}, {
+  3.845819638795217*^9, 
+  3.8458196408348827`*^9}},ExpressionUUID->"09fd5bab-ad4a-4fbc-9202-\
+264d77405b66"],
+
+Cell[CellGroupData[{
+
+Cell["XYZ model and its boundary conditions", "Section",
+ CellChangeTimes->{{3.8462040576661625`*^9, 
+  3.8462040663572083`*^9}},ExpressionUUID->"be73eced-2d23-492c-ba32-\
+534e41ea9a04"],
+
+Cell[TextData[{
+ "Let\[CloseCurlyQuote]s consider a simple XYZ model. Here, we have three \
+three-dimensional chiral matter multiplets, ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox[
+        StyleBox["X", "TI"], 
+        RowBox[{"3", 
+          StyleBox["d", "TI"]}]], TraditionalForm], "errors" -> {}, "input" -> 
+     "X_{3d}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "55f9e4ff-0f99-487b-b1ca-e50f293e61c9"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox[
+        StyleBox["Y", "TI"], 
+        RowBox[{"3", 
+          StyleBox["d", "TI"]}]], TraditionalForm], "errors" -> {}, "input" -> 
+     "Y_{3d}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "e7c4f63a-0163-4206-bf2b-4421972984ce"],
+ ", and ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox[
+        StyleBox["Z", "TI"], 
+        RowBox[{"3", 
+          StyleBox["d", "TI"]}]], TraditionalForm], "errors" -> {}, "input" -> 
+     "Z_{3d}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "7998de89-4a45-4792-afbe-723320231e2e"],
+ ", that we couple using a simple superpotential ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["W", "TI"], "\[LongEqual]", 
+         SubscriptBox[
+          StyleBox["X", "TI"], 
+          RowBox[{"3", 
+            StyleBox["d", "TI"]}]], 
+         SubscriptBox[
+          StyleBox["Y", "TI"], 
+          RowBox[{"3", 
+            StyleBox["d", "TI"]}]], 
+         SubscriptBox[
+          StyleBox["Z", "TI"], 
+          RowBox[{"3", 
+            StyleBox["d", "TI"]}]]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "W=X_{3d}Y_{3d}Z_{3d}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "89fe8fa0-1329-4a03-8e4b-055dbe2af8f4"],
+ ".\n\nTo begin with, we know Neumann boundary conditions for all three \
+multiplets will require the addition of additional Fermi multiplets on the \
+boundary coupled to the bulk in order to preserve SUSY as we desire. This is \
+because of the presence of the superpotential. When we have a 3-d chiral \
+multiplet, we can decompose it into a 2-d chiral multiplet ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    TemplateBox[Association[
+     "boxes" -> FormBox["\[CapitalPhi]", TraditionalForm], "errors" -> {}, 
+      "input" -> "\\Phi", "state" -> "Boxes"],
+     "TeXAssistantTemplate"], " "}], TraditionalForm]],ExpressionUUID->
+  "ea50818b-9e96-49de-ab4e-6492074f8f66"],
+ "satisfying ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    TemplateBox[Association["boxes" -> FormBox[
+        RowBox[{
+          OverscriptBox[
+           SubscriptBox[
+            StyleBox["D", "TI"], "+"], "_"], "\[CapitalPhi]", "\[LongEqual]", 
+          "0"}], TraditionalForm], "errors" -> {}, "input" -> 
+      "\\bar{D_+}\\Phi=0", "state" -> "Boxes"],
+     "TeXAssistantTemplate"], " "}], TraditionalForm]],ExpressionUUID->
+  "8409145a-9b02-41c9-8c45-6fa5436088d7"],
+ "and a 2-d Fermi multiplet ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association[
+    "boxes" -> FormBox["\[CapitalPsi]", TraditionalForm], "errors" -> {}, 
+     "input" -> "\\Psi", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "f820f9e4-f051-4b0a-a771-fb3912c9e42a"],
+ " that satisfies ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         OverscriptBox[
+          SubscriptBox[
+           StyleBox["D", "TI"], "+"], "_"], "\[CapitalPsi]", "\[LongEqual]", 
+         "0"}], TraditionalForm], "errors" -> {}, "input" -> 
+     "\\bar{D_+}\\Psi=0", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "7e678087-933c-4d4c-be95-0e110c91c75e"],
+ ". However, in the presence of the superpotential, the Fermi multiplet\
+\[CloseCurlyQuote]s constraint will actually change to ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         OverscriptBox[
+          SubscriptBox[
+           StyleBox["D", "TI"], "+"], "_"], 
+         SuperscriptBox["\[CapitalPsi]", 
+          StyleBox["a", "TI"]], "\[LongEqual]", 
+         FractionBox[
+          RowBox[{"\[PartialD]", 
+            StyleBox["W", "TI"], 
+            RowBox[{"(", "\[CapitalPhi]", ")"}]}], 
+          RowBox[{"\[PartialD]", 
+            SuperscriptBox["\[CapitalPhi]", 
+             StyleBox["a", "TI"]]}]]}], TraditionalForm], "errors" -> {}, 
+     "input" -> 
+     "\\bar{D_+}\\Psi^a = \\frac{\\partial W(\\Phi)}{\\partial \\Phi^a}", 
+     "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "ec86d036-e2e7-42be-8b2d-771fd7d44299"],
+ ". This is an E-term coupling. For a generic half-space action that encodes \
+Neumann boundary conditions, we also have a J-term, perhaps of the form ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox["\[PartialD]", "\[Perpendicular]"], 
+         SuperscriptBox["\[CapitalPhi]", 
+          StyleBox["a", "TI"]]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "\\partial_\\perp\\Phi^a", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "48640bab-14bb-4bcd-95df-46e4fb527c26"],
+ "; then, when we check our SUSY-preserving constraint that ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["E", "TI"], "\[CenterDot]", 
+         StyleBox["J", "TI"], "\[LongEqual]", "0"}], TraditionalForm], 
+     "errors" -> {}, "input" -> "E\\cdot J = 0", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "1fefb146-6e36-4b74-855d-7a80c6ff02db"],
+ ", we find that the superpotential must be zero on the boundary. This is \
+automatically violated if we have a non-zero superpotential and we constrain ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SuperscriptBox["\[CapitalPhi]", 
+        StyleBox["a", "TI"]], TraditionalForm], "errors" -> {}, "input" -> 
+     "\\Phi^a", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "970e1e39-b266-43dd-b3e4-72fb03c75305"],
+ " as Neumann boundary conditions usually do. So, we can\[CloseCurlyQuote]t \
+preserve SUSY with basic Neumann boundary conditions. But instead, we can use \
+Dirichlet boundary conditions for at least one of the multiplets to guarantee \
+that we\[CloseCurlyQuote]ll preserve SUSY. We can also use deformed Dirichlet \
+boundary conditions, such that we constrain ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SuperscriptBox["\[CapitalPhi]", 
+          StyleBox["a", "TI"]], "\[LongEqual]", 
+         StyleBox["c", "TI"]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "\\Phi^a=c", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "85f11253-df5d-4e94-95eb-b62cf1e2edfb"],
+ " where c is a constant background, non-zero, complex-number-valued chiral \
+field. In this case, we still need to consider the other two chiral \
+multiplets in the theory.\n\nThere are a few different ways that we can \
+introduce at least one Dirichlet boundary condition. The permutations are \
+really just (in self-evident notation):\n\n(D,D,D). Here, all three fields \
+are assigned Dirichlet boundary conditions. If we wish to use a deformed \
+boundary condition D",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox["\[Null]", 
+        StyleBox["c", "TI"]], TraditionalForm], "errors" -> {}, "input" -> 
+     "_c", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "abada804-92d6-4d69-b464-fd6f4c501337"],
+ " for any of the fields, we will need to ensure the others are both are \
+Dirichlet or else the deformation will result in SUSY SSB. Thus, with this \
+constraint, we really have the possibilities (D, D, D), (D",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox["\[Null]", 
+        StyleBox["c", "TI"]], TraditionalForm], "errors" -> {}, "input" -> 
+     "_c", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "2a55cde7-4f08-4e40-a618-c20b2ac14105"],
+ ", D, D), (D, D",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox["\[Null]", 
+        StyleBox["c", "TI"]], TraditionalForm], "errors" -> {}, "input" -> 
+     "_c", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "2e8d497c-dac1-4618-b469-9321e121cee6"],
+ ", D), and (D, D, D",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox["\[Null]", 
+        StyleBox["c", "TI"]], TraditionalForm], "errors" -> {}, "input" -> 
+     "_c", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "e1bef126-010d-4cb1-85c0-76f6ccfcdbc1"],
+ "). I don\[CloseCurlyQuote]t really know why this is and should probably \
+figure that out. Presumably it lifts the potential minimum out of zero \
+somehow.\n\n(D,D,N). Here, we assign two fields as Dirichlet boundary \
+conditions. We can choose to deform one of them, but not both, so we have the \
+possibilities (D,D,N), (D, N, D), (N, D, D), (D",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox["\[Null]", 
+        StyleBox["c", "TI"]], TraditionalForm], "errors" -> {}, "input" -> 
+     "_c", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "7ec97112-a48e-4469-9247-8990f965ebc1"],
+ ",D,N), (D,D",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox["\[Null]", 
+        StyleBox["c", "TI"]], TraditionalForm], "errors" -> {}, "input" -> 
+     "_c", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "345b555d-ed0b-4a37-9da4-f1f06a962ee6"],
+ ",N), (D",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox["\[Null]", 
+        StyleBox["c", "TI"]], TraditionalForm], "errors" -> {}, "input" -> 
+     "_c", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "333dbaa0-3173-4f85-a969-233193638dd2"],
+ ", N, D), (D, N, D",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox["\[Null]", 
+        StyleBox["c", "TI"]], TraditionalForm], "errors" -> {}, "input" -> 
+     "_c", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "aaae496d-17ce-4621-a704-c642eb2b109f"],
+ "), (N, D",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox["\[Null]", 
+        StyleBox["c", "TI"]], TraditionalForm], "errors" -> {}, "input" -> 
+     "_c", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "d55b03c4-4a0a-4dec-93ac-718d3ceccd15"],
+ ", D), and (N, D, D",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox["\[Null]", 
+        StyleBox["c", "TI"]], TraditionalForm], "errors" -> {}, "input" -> 
+     "_c", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "c0c0aab1-2b25-4145-a6ed-6370990247ea"],
+ "). \n\n(D,N,N). Here, we assign only one field with Dirichlet boundary \
+conditions. We cannot deform any of them, leaving us with the possibilities \
+(D, N, N), (N, D, N), and (N, N, D)."
+}], "Text",
+ CellChangeTimes->{{3.8461250678331337`*^9, 3.846125140889701*^9}, {
+  3.846125243467288*^9, 3.846125247408388*^9}, {3.8461252893093433`*^9, 
+  3.8461253402868104`*^9}, {3.846125397305211*^9, 3.8461256505295315`*^9}, {
+  3.8461256881537657`*^9, 3.846125769385024*^9}, {3.846125857775023*^9, 
+  3.8461258796431465`*^9}, {3.846126005844581*^9, 3.846126057025388*^9}, {
+  3.846126108426261*^9, 3.8461261693543434`*^9}, {3.8461262072469516`*^9, 
+  3.846126440234371*^9}, {3.846126475435166*^9, 3.846126520977145*^9}, {
+  3.846126589821864*^9, 3.8461266466986895`*^9}, {3.8461266847926936`*^9, 
+  3.8461267672258596`*^9}, {3.8461270575033135`*^9, 3.846127251775507*^9}, {
+  3.846127719099392*^9, 3.8461277225373697`*^9}, {3.846127758009533*^9, 
+  3.846127758281827*^9}, {3.846127807659001*^9, 3.846127835513441*^9}, {
+  3.8461281083624887`*^9, 3.8461283096946807`*^9}, {3.8462040316643925`*^9, 
+  3.8462040350430555`*^9}},ExpressionUUID->"c83a0012-fcc2-4fb7-b171-\
+436fcb8fa540"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Computation of the Half-Index in 2-d", "Section",
+ CellChangeTimes->{{3.8462040232176995`*^9, 
+  3.84620402934781*^9}},ExpressionUUID->"ece8e3ee-8659-4255-b3d1-\
+2d85fd99e09c"],
+
+Cell[TextData[{
+ "Now we want to compute the half-index for a theory with some given boundary \
+conditions. The half-index is a trace over the Hilbert space, modified with \
+various fugacities that correspond to relevant quantum numbers. We are \
+considering 3d N=2 theories with N=(0,2) boundary conditions (i.e. we wish to \
+enforce a boundary condition that preserves half of the SUSY). For such \
+theories, the half-index may be written as:\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          StyleBox["I", "TI"], 
+          RowBox[{
+            StyleBox["T", "TI"], ",", 
+            StyleBox["B", "TI"]}]], 
+         RowBox[{"(", 
+           RowBox[{
+             StyleBox["x", "TI"], ";", 
+             StyleBox["q", "TI"]}], ")"}], "\[LongEqual]", 
+         SubscriptBox[
+          StyleBox["Tr", FontSlant -> "Plain"], 
+          StyleBox["B", "TI"]], 
+         SuperscriptBox[
+          RowBox[{"(", "-1", ")"}], 
+          StyleBox["R", "TI"]], 
+         SuperscriptBox[
+          StyleBox["q", "TI"], 
+          RowBox[{
+            StyleBox["J", "TI"], "+", 
+            FractionBox[
+             StyleBox["R", "TI"], "2"]}]], 
+         SuperscriptBox[
+          StyleBox["x", "TI"], 
+          StyleBox["e", "TI"]]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "I_{T,B}(x;q)=\\mathrm{Tr}_{B}(-1)^R q^{J+\\frac{R}{2}} x^e", "state" -> 
+     "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "0621ca38-3acb-4670-aebc-1188c3985098"],
+ "  (Eq. 1)\n\nHere, B is the boundary that the local operators we are taking \
+a trace over live on, R is the R-charge operator, J is the generator of the \
+Spin(2) isomorphic to U(1) rotational symmetry in the boundary plane, and e \
+represents a flavor charge operator. Overall, this trace can be taken to \
+count operators in the cohomology group of one of the supercharges, which we \
+choose to be ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox[
+        OverscriptBox[
+         StyleBox["Q", "TI"], "_"], "+"], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\bar{Q}_+", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "71ca3c3b-c4b4-41d4-b0af-d0685a0bd268"],
+ ". This can also be interpreted as the elliptic genus of the manifold. The \
+elliptic genus is a generalization of the Euler characteristic of a manifold, \
+which can be calculated by integrating the Euler class over the manifold. The \
+generalization adds a dependency on two parameters to the Euler \
+characteristic, and can be viewed as the loop space of the manifold. When we \
+look at it from the physical perspective, we have our theory defined on a \
+manifold (in this case, ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SuperscriptBox[
+          StyleBox["R", "TI"], 
+          RowBox[{"1", ",", "1"}]], "\[CircleTimes]", 
+         SuperscriptBox[
+          StyleBox["R", "TI"], 
+          RowBox[{"\[Perpendicular]", "\[LessEqual]", "0"}]]}], 
+       TraditionalForm], "errors" -> {}, "input" -> 
+     "R^{1,1} \\otimes R^{\\perp \\leq 0}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "8cfd1cd1-1b1a-48ca-ae95-bce5a3a483e9"],
+ "). If we impose supersymmetry on it, and quantize, the Hilbert space of our \
+theory can be identified with the space of differential forms on our manifold \
+",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SuperscriptBox[
+          StyleBox["R", "TI"], 
+          RowBox[{"1", ",", "1"}]], "\[CircleTimes]", 
+         SuperscriptBox[
+          StyleBox["R", "TI"], 
+          RowBox[{"\[Perpendicular]", "\[LessEqual]", "0"}]]}], 
+       TraditionalForm], "errors" -> {}, "input" -> 
+     "R^{1,1} \\otimes R^{\\perp \\leq 0}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "b559a5f2-6f49-43d7-89f5-e5bb50d42c6a"],
+ ". Moreover, when we compute the Witten index, we will find that the Witten \
+index is always equal to the Euler characteristic of the manifold. If we \
+refine the Witten index, say by using two fugacities, this is equivalent to \
+generalizing the Euler characteristic by two parameters, which results in the \
+elliptic genus. Since this is the case, we can actually just compute our \
+refined index using the elliptic genus; the elliptic genus is defined to be:\n\
+\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          StyleBox["E", "TI"], 
+          StyleBox["M", "TI"]], 
+         RowBox[{"(", 
+           RowBox[{
+             StyleBox["x", "TI"], ",", 
+             StyleBox["q", "TI"]}], ")"}], "\[LongEqual]", 
+         UnderscriptBox["\[Product]", 
+          RowBox[{
+            StyleBox["n", "TI"], "\[GreaterEqual]", "0"}], LimitsPositioning -> 
+          True], 
+         FractionBox["1", 
+          RowBox[{
+            RowBox[{"(", 
+              RowBox[{"1", "-", 
+                SuperscriptBox[
+                 StyleBox["q", "TI"], 
+                 StyleBox["n", "TI"]], 
+                StyleBox["x", "TI"]}], ")"}], "(", 
+            RowBox[{"1", "-", 
+              SuperscriptBox[
+               StyleBox["q", "TI"], 
+               RowBox[{
+                 StyleBox["n", "TI"], "+", "1"}]], 
+              SuperscriptBox[
+               StyleBox["x", "TI"], "-1"]}], ")"}]]}], TraditionalForm], 
+     "errors" -> {}, "input" -> 
+     "\\mathscr{E}_M(x, q) = \\prod_{n\\geq 0} \\frac{1}{(1-q^n \
+x)(1-q^{n+1}x^{-1})}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "896380af-8495-4f6c-befb-71750bd4bf3f"],
+ " (Eq. 2)\n\nThis is precisely the half-index. This can also be seen by \
+considering the charges of the various operators on the theory. In Eq. 1, we \
+desire to count the operators in the cohomology group of ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox[
+        OverscriptBox[
+         StyleBox["Q", "TI"], "_"], "+"], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\bar{Q}_+", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "afd62b10-ccea-4eab-90d1-124689388870"],
+ " (that is to say, these are the local operators on the boundary). These are \
+the operators that are ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox[
+        OverscriptBox[
+         StyleBox["Q", "TI"], "_"], "+"], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\bar{Q}_+", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "f1bc23c3-b952-47e8-8d89-309156ddc1c8"],
+ "- closed, but that are not ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox[
+        OverscriptBox[
+         StyleBox["Q", "TI"], "_"], "+"], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\bar{Q}_+", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "16e3b7ad-6b0d-4e18-b4c7-e64e1189cbcd"],
+ "- exact (recall that ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          OverscriptBox[
+           StyleBox["Q", "TI"], "_"], "+"], "\[LongEqual]", 
+         FractionBox["\[PartialD]", 
+          RowBox[{"\[PartialD]", 
+            SubscriptBox[
+             OverscriptBox["\[Theta]", "_"], "+"]}]], "-", 
+         StyleBox["i", "TI"], 
+         SuperscriptBox["\[Theta]", "+"], 
+         SubscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"]]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "\\bar{Q}_+=\\frac{\\partial}{\\partial\\bar{\\theta}_+} - i \\theta^+ \
+\\partial_z", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "f2740279-09ea-4c26-a5b0-169f92575b76"],
+ " in our 2-d space). The relevant operators will be ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association[
+    "boxes" -> FormBox["\[Phi]", TraditionalForm], "errors" -> {}, "input" -> 
+     "\\phi", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "c2145b25-3f69-4ec3-a1b5-f6ac8e012d9f"],
+ ", the leading boson in a 2-d chiral multiplet ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association[
+    "boxes" -> FormBox["\[CapitalPhi]", TraditionalForm], "errors" -> {}, 
+     "input" -> "\\Phi", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "b4a2566b-c54f-4c46-9381-b6be5429dc02"],
+ ", as well as its holomorphic derivatives ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], "\[Phi]"}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\phi", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "89441137-15c2-41f8-8006-4d7e81f3a928"],
+ ", and the holomorphic derivatives of its complex conjugate ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         OverscriptBox["\[Phi]", "_"]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\bar{\\phi}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "61ab0132-73ed-4f11-9fc7-4924dcb4ceac"],
+ ", and normal-ordered monomials in these operators (i.e. we move barred \
+terms to the left). The operators ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], "\[Phi]"}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\phi", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "15d9f62a-47df-4079-8510-e75224e8c0b6"],
+ " are all ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox[
+        OverscriptBox[
+         StyleBox["Q", "TI"], "_"], "+"], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\bar{Q}_+", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "729127a5-0a2e-4142-81cd-f95fac22cfc5"],
+ "-closed, which is to say that they vanish under the action of ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox[
+        OverscriptBox[
+         StyleBox["Q", "TI"], "_"], "+"], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\bar{Q}_+", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "937de313-9266-4389-b48d-1dcb993ff220"],
+ " for all ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["n", "TI"], "\[GreaterEqual]", "0"}], TraditionalForm], 
+     "errors" -> {}, "input" -> "n\\geq 0", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "33858b5d-a7c5-4483-9d48-6a9761e6d2b5"],
+ ". The operators ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         OverscriptBox["\[Phi]", "_"]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\bar{\\phi}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "981923d2-c9df-4a82-b052-36c2dfb26703"],
+ " are transformed into ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         SubscriptBox[
+          OverscriptBox["\[Psi]", "_"], "+"]}], TraditionalForm], 
+     "errors" -> {}, "input" -> "\\partial^n_z \\bar{\\psi}_+", "state" -> 
+     "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "509ab9b6-9c40-4985-b62b-3f2772e73ece"],
+ " under the action of ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox[
+        OverscriptBox[
+         StyleBox["Q", "TI"], "_"], "+"], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\bar{Q}_+", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "93ce84d0-112d-4257-9107-72376bc44b86"],
+ ", and are closed if the Dirac equation is obeyed, since it automatically \
+sets ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"]], 
+         SubscriptBox[
+          OverscriptBox["\[Psi]", "_"], "+"], "\[LongEqual]", "0"}], 
+       TraditionalForm], "errors" -> {}, "input" -> 
+     "\\partial_z \\bar{\\psi}_+=0", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "436009d5-9065-47c2-957e-1c737d53bf7c"],
+ ". \n\nLet\[CloseCurlyQuote]s suppose that our chiral multiplet ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association[
+    "boxes" -> FormBox["\[CapitalPhi]", TraditionalForm], "errors" -> {}, 
+     "input" -> "\\Phi", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "b050b27c-f72d-4c65-8c65-1804d9a76450"],
+ " has charge +1 under some ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["U", "TI"], 
+         SubscriptBox[
+          RowBox[{"(", "1", ")"}], 
+          StyleBox["x", "TI"]]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "U(1)_x", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "a9646339-3a56-4377-9b8f-db68df2809f6"],
+ " symmetry and zero R-charge. Then the operators ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], "\[Phi]"}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\phi", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "7175b549-347a-450e-923a-5f22b9491a81"],
+ " possess flavor charge +1 under ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["U", "TI"], 
+         SubscriptBox[
+          RowBox[{"(", "1", ")"}], 
+          StyleBox["x", "TI"]]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "U(1)_x", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "02275e0d-db88-488d-812a-9b01950ca2f0"],
+ ", and spin n under the ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["U", "TI"], 
+         SubscriptBox[
+          RowBox[{"(", "1", ")"}], 
+          StyleBox["J", "TI"]]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "U(1)_J", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "9c9008c5-9b18-4bc1-b652-19b6b8facc0e"],
+ " symmetry; moreover, all have zero R-charge. This is because each \
+differential operator ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox["\[PartialD]", 
+        StyleBox["z", "TI"]], TraditionalForm], "errors" -> {}, "input" -> 
+     "\\partial_z", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "fd89e8b8-bc20-4e3b-b0ba-cb56d58bafb4"],
+ " has a charge +1 under the rotational symmetry (this can be seen by \
+observing the action of ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          OverscriptBox[
+           StyleBox["Q", "TI"], "_"], "+"], 
+         SubscriptBox["\[Psi]", "+"], "\[LongEqual]", 
+         SubscriptBox["\[PartialD]", 
+          OverscriptBox[
+           StyleBox["z", "TI"], "_"]], "\[Phi]"}], TraditionalForm], 
+     "errors" -> {}, "input" -> 
+     "\\bar{Q}_+ \\psi_+ = \\partial_{\\bar{z}}\\phi", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "98debf33-6653-4f10-91e6-138132f9f5fa"],
+ "; the first two operators on the left side each carry a spin-1/2 and the \
+scalar field on the right is spinless, so the differential operator must \
+carry charge spin-1. The operators ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         OverscriptBox["\[Phi]", "_"]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\bar{\\phi}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "1a8c424b-fb66-4947-a4a3-e2d4a26444c7"],
+ ", on the other hand, have flavor charge -1, R-charge 0, and spin n+1. We \
+desire to count the number of normal-ordered polynomials we have of these \
+operators. This can be done using a geometric series; in general, the series ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{"1", "+", 
+         StyleBox["x", "TI"], "+", 
+         SuperscriptBox[
+          StyleBox["x", "TI"], "2"], "+", 
+         SuperscriptBox[
+          StyleBox["x", "TI"], "3"], "+", "...", "\[LongEqual]", 
+         FractionBox["1", 
+          RowBox[{"1", "-", 
+            StyleBox["x", "TI"]}]]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "1+x+x^2+x^3+...=\\frac{1}{1-x}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "55922c39-1295-4e90-88d1-e40241060a02"],
+ " counts the polynomials ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{"1", ",", "\[Phi]", ",", 
+         SuperscriptBox["\[Phi]", "2"], ",", 
+         SuperscriptBox["\[Phi]", "3"], ",", "..."}], TraditionalForm], 
+     "errors" -> {}, "input" -> "1, \\phi, \\phi^2, \\phi^3, ...", "state" -> 
+     "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "73f9dd6e-81e6-4249-8768-3866841dd8b5"],
+ " in a bosonic variable, where the variable is counted with a factor of ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SuperscriptBox[
+        StyleBox["x", "TI"], 
+        StyleBox["n", "TI"]], TraditionalForm], "errors" -> {}, "input" -> 
+     "x^n", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "7886cd9a-ef2d-4cd4-abb8-8a0441cc9da7"],
+ ". \n\nThis does exactly what we want. For example, for the case of ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], "\[Phi]"}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\phi", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "78512fd0-b093-488a-ae87-79d382828b17"],
+ ", we want to count the number of polynomials in ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], "\[Phi]"}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\phi", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "8ce870a5-f7d7-4922-84ec-4421f1b8c435"],
+ ", where ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], "\[Phi]"}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\phi", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "35ee33c0-ab21-459f-8097-57ca931f92ce"],
+ " is counted with a factor of ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SuperscriptBox[
+          StyleBox["q", "TI"], 
+          StyleBox["n", "TI"]], 
+         StyleBox["x", "TI"]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "q^n x", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "42db3653-3161-4423-a588-df92c6d16a42"],
+ " (i.e. at each order, there are ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SuperscriptBox[
+          StyleBox["q", "TI"], 
+          StyleBox["n", "TI"]], 
+         StyleBox["x", "TI"]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "q^n x", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "9f8b7577-c3f7-4ef7-a774-9b36d6ada5bd"],
+ " polynomials of ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], "\[Phi]"}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\phi", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "9eba7691-d384-4c10-8eec-56d18572a84f"],
+ "). ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], "\[Phi]"}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\phi", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "6c1ea206-9090-432b-a083-c885fdc988d2"],
+ " is the operator on the boundary that the trace is being taken over, and \
+the trace is weighted by the various charges as per Eq. 1. And we have n \
+possible operators, so each one gets its own count, and we multiply them all \
+together at the end of the day to get the total count. Similarly, in the case \
+of ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         OverscriptBox["\[Phi]", "_"]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\bar{\\phi}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "1b1d297b-775e-4cf8-a45c-0be36a707217"],
+ ", we are counting polynomials of ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         OverscriptBox["\[Phi]", "_"]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\bar{\\phi}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "5a1cf327-a2f5-4dc0-8235-31855b505e3a"],
+ ", weighted with a factor of (using that R = 0, J = n+1, and e = -1) ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SuperscriptBox[
+          StyleBox["q", "TI"], 
+          RowBox[{
+            StyleBox["n", "TI"], "+", "1"}]], 
+         SuperscriptBox[
+          StyleBox["x", "TI"], "-1"]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "q^{n+1} x^{-1}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "b692b85c-f7f2-4144-ac77-2b81e8994bb1"],
+ ". \n\nOverall, we find that we get:\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          StyleBox["I", "TI"], "1"], 
+         RowBox[{"(", 
+           RowBox[{
+             StyleBox["x", "TI"], ";", 
+             StyleBox["q", "TI"]}], ")"}], "\[LongEqual]", 
+         UnderscriptBox["\[Product]", 
+          RowBox[{
+            StyleBox["n", "TI"], "\[GreaterEqual]", "0"}], LimitsPositioning -> 
+          True], 
+         FractionBox["1", 
+          RowBox[{"1", "-", 
+            SuperscriptBox[
+             StyleBox["q", "TI"], 
+             StyleBox["n", "TI"]], 
+            StyleBox["x", "TI"]}]]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "I_1 (x;q) = \\prod_{n\\geq0}\\frac{1}{1-q^n x}", "state" -> 
+     "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "cf0dae71-935b-4199-941a-8b626d397f80"],
+ " for the ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], "\[Phi]"}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\phi", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "3cf8e600-4222-456d-993f-d14de73b4bce"],
+ " count\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          StyleBox["I", "TI"], "2"], 
+         RowBox[{"(", 
+           RowBox[{
+             StyleBox["x", "TI"], ";", 
+             StyleBox["q", "TI"]}], ")"}], "\[LongEqual]", 
+         UnderscriptBox["\[Product]", 
+          RowBox[{
+            StyleBox["n", "TI"], "\[GreaterEqual]", "0"}], LimitsPositioning -> 
+          True], 
+         FractionBox["1", 
+          RowBox[{"1", "-", 
+            SuperscriptBox[
+             StyleBox["q", "TI"], 
+             RowBox[{
+               StyleBox["n", "TI"], "+", "1"}]], 
+            SuperscriptBox[
+             StyleBox["x", "TI"], "-1"]}]]}], TraditionalForm], 
+     "errors" -> {}, "input" -> 
+     "I_2 (x;q) = \\prod_{n\\geq 0} \\frac{1}{1-q^{n+1}x^{-1}}", "state" -> 
+     "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "fa76079f-090e-4741-8704-81c71c1e06e6"],
+ "for the ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         OverscriptBox["\[Phi]", "_"]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\bar{\\phi}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "8da3a675-51c7-419d-821d-d977560670c8"],
+ " count\n\nSince the total index counts all the operators on the boundary, \
+we can then combine these, to recover exactly the same expression as in the \
+elliptic genus, Eq. 2. A similar process is used for the Fermi multiplet ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    TemplateBox[Association[
+     "boxes" -> FormBox["\[CapitalGamma]", TraditionalForm], "errors" -> {}, 
+      "input" -> "\\Gamma", "state" -> "Boxes"],
+     "TeXAssistantTemplate"], " "}], TraditionalForm]],ExpressionUUID->
+  "445b66de-f137-4c77-bf83-256f6ef8f7ab"],
+ "where we count the operators ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         SubscriptBox["\[Gamma]", "-"]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\gamma_-", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "ed768847-fa33-432f-8fe9-580672b385be"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         SubscriptBox[
+          OverscriptBox["\[Gamma]", "_"], "-"]}], TraditionalForm], 
+     "errors" -> {}, "input" -> "\\partial^n_z \\bar{\\gamma}_-", "state" -> 
+     "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "d3648988-d664-4f6c-ab9a-595e5314a4eb"],
+ ", where ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox["\[Gamma]", "-"], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\gamma_-", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "5c7957da-dbf2-41f1-84b9-ba591b82c6f0"],
+ "is the leading fermion in the expansion of ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association[
+    "boxes" -> FormBox["\[CapitalGamma]", TraditionalForm], "errors" -> {}, 
+     "input" -> "\\Gamma", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "1ff4dc4b-6d21-4429-809d-9e5654409db7"],
+ ". Let\[CloseCurlyQuote]s suppose here, in complement to the chiral \
+multiplet above, ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association[
+    "boxes" -> FormBox["\[CapitalGamma]", TraditionalForm], "errors" -> {}, 
+     "input" -> "\\Gamma", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "18c11968-f1a7-4cfe-9b81-7520b384c663"],
+ " possesses flavor charge -1 and R-charge +1. The operators ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         SubscriptBox["\[Gamma]", "-"]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\gamma_-", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "8adc0c15-e067-4e03-b8f3-734b3a5b455a"],
+ " must have the same -1 flavor charge and 1 R-charge, and will possess spin ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["n", "TI"], "+", 
+         FractionBox["1", "2"]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "n+\\frac{1}{2}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "a0f6be95-a17a-4890-96b9-3dde72182c3d"],
+ " for each n. Their conjugates, ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         SubscriptBox[
+          OverscriptBox["\[Gamma]", "_"], "-"]}], TraditionalForm], 
+     "errors" -> {}, "input" -> "\\partial^n_z \\bar{\\gamma}_-", "state" -> 
+     "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "53ded7e0-7ee1-402e-afd6-3b44987035bc"],
+ ", will flip the charges and keep the spin, so we\[CloseCurlyQuote]ll pick \
+up +1 flavor charge and -1 R-charge, with the same spin. In this case, \
+however, we are counting a ",
+ StyleBox["fermionic",
+  FontSlant->"Italic"],
+ " variable, though, and so we use the \[OpenCurlyDoubleQuote]geometric \
+series\[CloseCurlyDoubleQuote] ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{"1", "-", 
+         StyleBox["x", "TI"]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "1-x", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "3c9402d3-420f-4c73-8360-ce31afd23f78"],
+ " (here noting that fermionic variables truncate at ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["O", "TI"], "(", "1", ")"}], TraditionalForm], 
+     "errors" -> {}, "input" -> "O(1)", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "1f4fdb27-f59f-4305-aad2-5804af847d76"],
+ " since Grassmann numbers square to zero, and the factor of -1 in front of x \
+comes about because the trace is taken with ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SuperscriptBox[
+        RowBox[{"(", "-1", ")"}], 
+        StyleBox["F", "TI"]], TraditionalForm], "errors" -> {}, "input" -> 
+     "(-1)^F", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "5b76028e-8761-447d-9c4b-dc931327834b"],
+ " where F is 0 for a bosonic variable and 1 for a fermionic variable). Thus, \
+the count will become:\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          StyleBox["F", "TI"], 
+          RowBox[{
+            StyleBox["T", "TI"], ",", 
+            StyleBox["B", "TI"]}]], 
+         RowBox[{"(", 
+           RowBox[{
+             StyleBox["x", "TI"], ";", 
+             StyleBox["q", "TI"]}], ")"}], "\[LongEqual]", 
+         UnderscriptBox["\[Product]", 
+          RowBox[{
+            StyleBox["n", "TI"], "\[GreaterEqual]", "0"}], LimitsPositioning -> 
+          True], 
+         RowBox[{"(", 
+           RowBox[{"1", "-", 
+             SuperscriptBox[
+              StyleBox["q", "TI"], 
+              StyleBox["n", "TI"]], 
+             StyleBox["x", "TI"]}], ")"}], 
+         RowBox[{"(", 
+           RowBox[{"1", "-", 
+             SuperscriptBox[
+              StyleBox["q", "TI"], 
+              RowBox[{
+                StyleBox["n", "TI"], "+", "1"}]], 
+             SuperscriptBox[
+              StyleBox["x", "TI"], "-1"]}], ")"}]}], TraditionalForm], 
+     "errors" -> {}, "input" -> 
+     "F_{T,B} (x;q) = \\prod_{n\\geq0}(1-q^n x)(1-q^{n+1}x^{-1})", "state" -> 
+     "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "e35f402d-b963-4dde-bd35-47105357c8eb"],
+ " (Eq. 3)\n\nWe can also shorten these expressions using q-Pochhammer \
+symbols, which are defined as:\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          RowBox[{"(", 
+            RowBox[{
+              StyleBox["x", "TI"], ";", 
+              StyleBox["q", "TI"]}], ")"}], "\[Infinity]"], "\[LongEqual]", 
+         UnderscriptBox["\[Product]", 
+          RowBox[{
+            StyleBox["n", "TI"], "\[GreaterEqual]", "0"}], LimitsPositioning -> 
+          True], 
+         RowBox[{"(", 
+           RowBox[{"1", "-", 
+             SuperscriptBox[
+              StyleBox["q", "TI"], 
+              StyleBox["n", "TI"]], 
+             StyleBox["x", "TI"]}], ")"}]}], TraditionalForm], "errors" -> {},
+      "input" -> "(x;q)_{\\infty}=\\prod_{n\\geq0}(1-q^n x)", "state" -> 
+     "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "43f97f13-8a02-4cda-bbf3-5d37061e2eeb"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          RowBox[{"(", 
+            StyleBox["q", "TI"], ")"}], "\[Infinity]"], "\[LongEqual]", 
+         UnderscriptBox["\[Product]", 
+          RowBox[{
+            StyleBox["n", "TI"], "\[GreaterEqual]", "1"}], LimitsPositioning -> 
+          True], 
+         RowBox[{"(", 
+           RowBox[{"1", "-", 
+             SuperscriptBox[
+              StyleBox["q", "TI"], 
+              StyleBox["n", "TI"]]}], ")"}]}], TraditionalForm], 
+     "errors" -> {}, "input" -> "(q)_{\\infty}=\\prod_{n\\geq1}(1-q^n)", 
+     "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "6cc21c5e-3f29-427d-9714-f055513f3d33"]
+}], "Text",
+ CellChangeTimes->CompressedData["
+1:eJwdz1tIkwEABeC/STVltZlUD9pQ+50zc9WGOYVyYiniQ6G5ZcnQjVhpYUnq
+QlpKG5mXMZ2VCNPBWs2ii5sYXjJjl+ohK/lxdlswVELNCea6Dek/ezh8T+fA
+SVBUF51hEASRTgcGGC7Z9/tLOY8Z2rMwxj5ZC2OtZB3kfog78I+2vT0qHZ7c
+PHIY+helEriuHz4KCYrMh3s6i47BOlVvBYwkKRXkdldchhJnRAPsoKKvwX2c
+9uvQ8dAQ1p9EtUHXTYMRsspFPZB/JNcK9T7TAFSURTrgiEb+DNrLtGOwK6XB
+DWWnva/g++QJL1z1iX7DSvN4KLxvqo8I0Ur5/UzYlBiMhhdln7bD4FS/CG4q
+KsmEr6vWJJBaILUs21LOKdZ0M4xTJOmh1NUXlj36xgiVC1m34Ny32T5Y3lzZ
+D72pxkdwtlDkgh5x/luoEFvewQfPbRSMX1DNQM3xxq+wMlXK3kIrEBfHwDuE
+Zyd8sWEgARJRpXzI4vj3Qyd7TAgnf3Ay4Hm38xD0ZThyoDTNWQip1s8yyLjy
+J6xazlHBrEs7zsGJrX5eItT18iHH1rYIX47WrsKevBu/4NC2CyGoayEZu2m1
+NcsbYef8ihKuG01V8HaBVkiil6YWQV4uKUyiFRZ3n4Cz+WkKuOYmlVDTaK6G
+qhlvDRz82NkEqZ/2sKkBrQ6WrBjD7pJkt8Ll0kAHHM9OtkPL9NNBeLdVPgzN
+XfVzcCiWGcfD/3kFF7ZM1STCv8EgD5qZX/bCPEGKADr08U/gwaseO1RbDRY+
+bWaB6x78DxCQvSE=
+  "],ExpressionUUID->"5624b283-a443-4923-adea-af9bd2abc54f"],
+
+Cell["\<\
+And since we\[CloseCurlyQuote]ve now found these, let\[CloseCurlyQuote]s \
+define some functions that\[CloseCurlyQuote]ll automatically pull them out in \
+Mathematica for us.\
+\>", "Text",
+ CellChangeTimes->{{3.846252500151992*^9, 
+  3.846252521383686*^9}},ExpressionUUID->"0ecb792a-6836-4247-ae93-\
+56a1ba732362"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"ChiralPartial", "[", 
+    RowBox[{"r_", ",", "e_"}], "]"}], "=", 
+   RowBox[{"QPochhammer", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"-", "1"}], ")"}], "^", "r"}], " ", 
+      RowBox[{"q", "^", 
+       RowBox[{"(", 
+        RowBox[{"r", "/", "2"}], ")"}]}], " ", 
+      RowBox[{"x", "^", "e"}]}], ",", " ", "q"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ChiralPartialBar", "[", 
+    RowBox[{"r_", ",", "e_"}], "]"}], "=", 
+   RowBox[{"QPochhammer", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"-", "1"}], ")"}], "^", 
+       RowBox[{"(", "r", ")"}]}], " ", 
+      RowBox[{"q", "^", 
+       RowBox[{"(", 
+        RowBox[{"1", "+", 
+         RowBox[{"r", "/", "2"}]}], ")"}]}], " ", 
+      RowBox[{"x", "^", 
+       RowBox[{"(", "e", ")"}]}]}], ",", " ", "q"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"FermiPartial", "[", 
+    RowBox[{"r_", ",", "e_"}], "]"}], "=", 
+   RowBox[{"QPochhammer", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"-", "1"}], ")"}], "^", "r"}]}], " ", 
+      RowBox[{"q", "^", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"1", "/", "2"}], "+", 
+         RowBox[{"r", "/", "2"}]}], ")"}]}], " ", 
+      RowBox[{"x", "^", "e"}]}], ",", " ", "q"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"FermiPartialBar", "[", 
+     RowBox[{"r_", ",", "e_"}], "]"}], "=", 
+    RowBox[{"QPochhammer", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"-", "1"}], ")"}], "^", 
+         RowBox[{"(", "r", ")"}]}]}], " ", 
+       RowBox[{"q", "^", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"1", "/", "2"}], "+", 
+          RowBox[{"r", "/", "2"}]}], ")"}]}], " ", 
+       RowBox[{"x", "^", 
+        RowBox[{"(", "e", ")"}]}]}], ",", "q"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Chiral2dIndex", "[", 
+    RowBox[{"r_", ",", "e_"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"ChiralPartial", "[", 
+       RowBox[{"r", ",", "e"}], "]"}], " ", 
+      RowBox[{"ChiralPartialBar", "[", 
+       RowBox[{
+        RowBox[{"-", "r"}], ",", 
+        RowBox[{"-", "e"}]}], "]"}]}], ")"}], "^", 
+    RowBox[{"(", 
+     RowBox[{"-", "1"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Fermi2dIndex", "[", 
+    RowBox[{"r_", ",", "e_"}], "]"}], "=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"FermiPartial", "[", 
+      RowBox[{"r", ",", "e"}], "]"}], " ", 
+     RowBox[{"FermiPartialBar", "[", 
+      RowBox[{
+       RowBox[{"-", "r"}], ",", 
+       RowBox[{"-", "e"}]}], "]"}]}], ")"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8462509102900114`*^9, 3.846250970257972*^9}, {
+  3.8462524183340054`*^9, 3.846252420838628*^9}, {3.846252544535367*^9, 
+  3.8462525873520346`*^9}, {3.846254922166739*^9, 3.8462549223115206`*^9}, {
+  3.8462561177880445`*^9, 3.8462561510622683`*^9}, {3.8462562069340396`*^9, 
+  3.846256255019703*^9}, {3.8462562998465614`*^9, 3.8462564345408463`*^9}, {
+  3.8462564685195856`*^9, 3.8462564897408066`*^9}, {3.8462570395322*^9, 
+  3.846257059676778*^9}, {3.8462572096779747`*^9, 3.84625724657342*^9}, {
+  3.8462572882984853`*^9, 3.846257288843502*^9}, {3.8462581128391705`*^9, 
+  3.8462582743426533`*^9}, {3.8462583237904835`*^9, 3.8462583376586847`*^9}, {
+  3.8462583868001204`*^9, 3.846258387164375*^9}, {3.8462584203319125`*^9, 
+  3.846258450891494*^9}, {3.846258633135109*^9, 3.8462586347816534`*^9}, {
+  3.8462586861663733`*^9, 3.846258687097374*^9}},
+ CellLabel->"In[59]:=",ExpressionUUID->"64d89c98-dd90-4392-b918-dd076502e19e"],
+
+Cell[TextData[{
+ "Here, we have defined several functions. The first four simply are the \
+counts for ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], "\[Phi]"}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\phi", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "a724b0f4-285a-4e4d-91a1-47b4710c074c"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         OverscriptBox["\[Phi]", "_"]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\bar{\\phi}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "f51d924e-cd4d-4308-a399-38092e82cb15"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         SubscriptBox["\[Gamma]", "-"]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\gamma_-", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "08375190-5fa0-4406-b40d-5f690846b7b7"],
+ ", and ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         SubscriptBox[
+          OverscriptBox["\[Gamma]", "_"], "-"]}], TraditionalForm], 
+     "errors" -> {}, "input" -> "\\partial^n_z \\bar{\\gamma}_-", "state" -> 
+     "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "dd2ba410-26d9-43f1-ab42-177a22e95de8"],
+ ", respectively. In these, we simply have the counting factors, which we \
+read off from Eq. 1. For the Fermi versions (FermiPartial and \
+FermiPartialBar), we also include a factor of -1 at the beginning, since \
+these are Fermionic. \n\nThen we define the actual index calculations. For \
+the chiral index, the inputs are for the charges of the ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], "\[Phi]"}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\phi", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "bcdb0f80-c941-49e8-94c6-d3d201bb9547"],
+ " operators. The charges for the conjugate operators ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         OverscriptBox["\[Phi]", "_"]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\bar{\\phi}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "e9e56fe6-6940-478b-b150-a05f6ed297e5"],
+ " follow by simple complex conjugation; ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["R", "TI"], "\[Rule]", "-", 
+         StyleBox["R", "TI"]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "R\\rightarrow-R", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "e68ee3bf-aec4-4099-8b7b-17a725e2e01a"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["e", "TI"], "\[Rule]", "-", 
+         StyleBox["e", "TI"]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "e\\rightarrow -e", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "951373ca-ef8f-48e8-8ba4-073ff307234f"],
+ ". We get the overall index by counting up all the operators for ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], "\[Phi]"}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\phi", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "9866ad56-ed2a-4826-87eb-19c3ee8c00c0"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         OverscriptBox["\[Phi]", "_"]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\bar{\\phi}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "54ae5dea-2b44-4cf9-93d5-e980b70356df"],
+ ", then multiplying together for every possible combination.\nFor the Fermi \
+index, the inputs are again for the charges of the ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         SubscriptBox["\[Gamma]", "-"]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\gamma_-", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "722c36e6-6619-48a7-bbc3-62c3aa590aea"],
+ " operators. The conjugate operators again follow by the same complex \
+conjugation. Then, we multiply them all together again.\nWe can see that this \
+gives us exactly what it should in the case of ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], "\[Phi]"}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\phi", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "fe30c1d9-0101-41e6-9195-3a9e98a136df"],
+ " possessing ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["r", "TI"], "\[LongEqual]", "0"}], TraditionalForm], 
+     "errors" -> {}, "input" -> "r = 0", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "ea85608f-8541-4886-a911-127ba6bf7595"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["e", "TI"], "\[LongEqual]", "+1"}], TraditionalForm], 
+     "errors" -> {}, "input" -> "e=+1", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "6021e40a-3c3e-49a0-8592-f3ed1fabb789"],
+ " for the chiral multiplet, and ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         SubscriptBox["\[Gamma]", "-"]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\gamma_-", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "a38b544e-bb2d-4a3c-980b-71c8e6653c27"],
+ " possessing ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["r", "TI"], "\[LongEqual]", "1"}], TraditionalForm], 
+     "errors" -> {}, "input" -> "r=1", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "d4eb0b14-7185-4ce3-8fd7-ce8e14c89ffc"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["e", "TI"], "\[LongEqual]", "-1"}], TraditionalForm], 
+     "errors" -> {}, "input" -> "e=-1", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "96e855f9-a23d-4cbb-9622-3c551c9a4964"],
+ " for the Fermi multiplet:"
+}], "Text",
+ CellChangeTimes->{{3.846256492563241*^9, 3.846256518775321*^9}, {
+  3.8462566515728846`*^9, 3.8462566906297708`*^9}, {3.8462567323766255`*^9, 
+  3.846256906100792*^9}, {3.846256953478217*^9, 3.846257035412401*^9}, {
+  3.846257072949444*^9, 3.846257142678171*^9}, {3.846258708773287*^9, 
+  3.8462588532682867`*^9}, {3.846258888469815*^9, 
+  3.846258931844573*^9}},ExpressionUUID->"1e22699b-9028-49c0-a894-\
+246179ee1bcf"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Chiral2dIndex", "[", 
+  RowBox[{"0", ",", "1"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Fermi2dIndex", "[", 
+  RowBox[{"1", ",", 
+   RowBox[{"-", "1"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.846256815850033*^9, 3.846256820714676*^9}, {
+  3.8462571753082066`*^9, 3.8462571989559956`*^9}, {3.846257251115486*^9, 
+  3.846257253642943*^9}, {3.846257292838935*^9, 3.8462573111474347`*^9}},
+ CellLabel->"In[73]:=",ExpressionUUID->"814dd3b3-da9e-40c4-940d-2effdc697eea"],
+
+Cell[BoxData[
+ FractionBox["1", 
+  RowBox[{
+   RowBox[{"QPochhammer", "[", 
+    RowBox[{
+     FractionBox["q", "x"], ",", "q"}], "]"}], " ", 
+   RowBox[{"QPochhammer", "[", 
+    RowBox[{"x", ",", "q"}], "]"}]}]]], "Output",
+ CellChangeTimes->{3.8462573514083943`*^9, 3.846258278222686*^9, 
+  3.8462583449306054`*^9, 3.8462584733910275`*^9, 3.8462586391035957`*^9, 
+  3.8462586901250734`*^9, 3.846259195362115*^9},
+ CellLabel->"Out[73]=",ExpressionUUID->"73ab07c7-dfb5-4d77-ba41-d0e7ba934f8e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"QPochhammer", "[", 
+   RowBox[{
+    FractionBox["q", "x"], ",", "q"}], "]"}], " ", 
+  RowBox[{"QPochhammer", "[", 
+   RowBox[{"x", ",", "q"}], "]"}]}]], "Output",
+ CellChangeTimes->{3.8462573514083943`*^9, 3.846258278222686*^9, 
+  3.8462583449306054`*^9, 3.8462584733910275`*^9, 3.8462586391035957`*^9, 
+  3.8462586901250734`*^9, 3.846259195367138*^9},
+ CellLabel->"Out[74]=",ExpressionUUID->"b1a734e0-d59a-4d86-b82a-068fe6fa6d52"]
+}, Open  ]],
+
+Cell["And we can also series expand to, say, fourth order:", "Text",
+ CellChangeTimes->{{3.8462573672869596`*^9, 
+  3.8462573728236775`*^9}},ExpressionUUID->"dfdb83c2-b2b2-4458-bbd3-\
+baf34cfe51fd"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Series", "[", 
+   RowBox[{
+    RowBox[{"Chiral2dIndex", "[", 
+     RowBox[{"0", ",", "1"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"q", ",", "0", ",", "4"}], "}"}]}], "]"}], "//", 
+  "FullSimplify"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Series", "[", 
+   RowBox[{
+    RowBox[{"Fermi2dIndex", "[", 
+     RowBox[{"1", ",", 
+      RowBox[{"-", "1"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"q", ",", "0", ",", "4"}], "}"}]}], "]"}], "//", 
+  "FullSimplify"}]}], "Input",
+ CellChangeTimes->{{3.846257375224848*^9, 3.8462574116095223`*^9}, {
+  3.84625744619298*^9, 3.84625745404185*^9}},
+ CellLabel->"In[67]:=",ExpressionUUID->"8c5525ab-4ce1-4703-a44c-ab2e22419617"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", 
+    RowBox[{"1", "-", "x"}]], "+", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       SuperscriptBox["x", "2"]}], ")"}], " ", "q"}], 
+    RowBox[{"x", "-", 
+     SuperscriptBox["x", "2"]}]], "+", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "+", "x", "+", 
+       SuperscriptBox["x", "2"], "+", 
+       SuperscriptBox["x", "3"], "+", 
+       SuperscriptBox["x", "4"]}], ")"}], " ", 
+     SuperscriptBox["q", "2"]}], 
+    RowBox[{
+     SuperscriptBox["x", "2"], "-", 
+     SuperscriptBox["x", "3"]}]], "-", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       SuperscriptBox["x", "2"]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "+", "x", "+", 
+       SuperscriptBox["x", "2"], "+", 
+       SuperscriptBox["x", "3"], "+", 
+       SuperscriptBox["x", "4"]}], ")"}], " ", 
+     SuperscriptBox["q", "3"]}], 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", "x"}], ")"}], " ", 
+     SuperscriptBox["x", "3"]}]], "-", 
+   FractionBox[
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        SuperscriptBox["x", "2"]}], ")"}], "2"], " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "+", "x", "+", 
+       SuperscriptBox["x", "2"], "+", 
+       SuperscriptBox["x", "3"], "+", 
+       SuperscriptBox["x", "4"]}], ")"}], " ", 
+     SuperscriptBox["q", "4"]}], 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", "x"}], ")"}], " ", 
+     SuperscriptBox["x", "4"]}]], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "q", "]"}], "5"],
+    SeriesData[$CellContext`q, 0, {}, 0, 5, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`q, 
+   0, {(1 - $CellContext`x)^(-1), ($CellContext`x - $CellContext`x^2)^(-1) (1 + $\
+CellContext`x^2), ($CellContext`x^2 - $CellContext`x^3)^(-1) (
+     1 + $CellContext`x + $CellContext`x^2 + $CellContext`x^3 + \
+$CellContext`x^4), -(-1 + $CellContext`x)^(-1) $CellContext`x^(-3) (
+     1 + $CellContext`x^2) (
+     1 + $CellContext`x + $CellContext`x^2 + $CellContext`x^3 + \
+$CellContext`x^4), -(-1 + $CellContext`x)^(-1) $CellContext`x^(-4) (
+      1 + $CellContext`x^2)^2 (
+     1 + $CellContext`x + $CellContext`x^2 + $CellContext`x^3 + \
+$CellContext`x^4)}, 0, 5, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{3.8462574125572343`*^9, 3.8462574548045273`*^9, 
+  3.846258936303377*^9},
+ CellLabel->"Out[67]=",ExpressionUUID->"35429428-1ea7-44e6-968b-35f223f59450"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"1", "-", "x"}], ")"}], "+", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", "x"}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       SuperscriptBox["x", "2"]}], ")"}], " ", "q"}], "x"], "+", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"2", "-", 
+      FractionBox["1", "x"], "-", 
+      RowBox[{"2", " ", "x"}], "+", 
+      SuperscriptBox["x", "2"]}], ")"}], " ", 
+    SuperscriptBox["q", "2"]}], "-", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", "x"}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "1"}], "+", "x"}], ")"}], " ", "x"}]}], ")"}], " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       SuperscriptBox["x", "2"]}], ")"}], " ", 
+     SuperscriptBox["q", "3"]}], 
+    SuperscriptBox["x", "2"]], "-", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", "x"}], ")"}], " ", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], "+", "x"}], ")"}], " ", "x"}]}], ")"}], "2"], 
+     " ", 
+     SuperscriptBox["q", "4"]}], 
+    SuperscriptBox["x", "2"]], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "q", "]"}], "5"],
+    SeriesData[$CellContext`q, 0, {}, 0, 5, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`q, 0, {
+   1 - $CellContext`x, (-1 + $CellContext`x) $CellContext`x^(-1) (
+     1 + $CellContext`x^2), 2 - $CellContext`x^(-1) - 
+    2 $CellContext`x + $CellContext`x^2, -(-1 + $CellContext`x) \
+$CellContext`x^(-2) (1 + (-1 + $CellContext`x) $CellContext`x) (
+     1 + $CellContext`x^2), -(-1 + $CellContext`x) $CellContext`x^(-2) (
+      1 + (-1 + $CellContext`x) $CellContext`x)^2}, 0, 5, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{3.8462574125572343`*^9, 3.8462574548045273`*^9, 
+  3.846258936348378*^9},
+ CellLabel->"Out[68]=",ExpressionUUID->"21493c1c-f918-4c73-8e03-1f64ae43c5e3"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Computation of the half-index in 3-d", "Section",
+ CellChangeTimes->{{3.8462040109151363`*^9, 3.846204012432184*^9}, {
+  3.846204070384035*^9, 
+  3.846204073471141*^9}},ExpressionUUID->"192d6f55-aea6-420f-9768-\
+c233909a6262"],
+
+Cell[TextData[{
+ "In 3-d, we can do a basically identical calculation to get the half-index \
+as well. The difference will be that some of the operators that were ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox[
+        OverscriptBox[
+         StyleBox["Q", "TI"], "_"], "+"], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\bar{Q}_+", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "48ec6515-426b-4651-840d-ff01f98fb6f1"],
+ "-closed in 2-d are not here, so they\[CloseCurlyQuote]re not part of the \
+cohomology group! Let\[CloseCurlyQuote]s consider a free 3-d N=2 chiral \
+multiplet, ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox["\[CapitalPhi]", 
+        RowBox[{"3", 
+          StyleBox["d", "TI"]}]], TraditionalForm], "errors" -> {}, "input" -> 
+     "\\Phi_{3d}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "2c87f84d-1f30-4805-af2f-ef691b440a08"],
+ ", with a +1 flavor charge and no R-charge. We can decompose our 3-d \
+multiplet into a chiral and a Fermi multiplet from the 2-d perspective, so we \
+get that:\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox["\[CapitalPhi]", 
+          RowBox[{"3", 
+            StyleBox["d", "TI"]}]], "\[LongEqual]", "\[CapitalPhi]", 
+         "\[CirclePlus]", "\[CapitalPsi]"}], TraditionalForm], "errors" -> {},
+      "input" -> "\\Phi_{3d}=\\Phi \\bigoplus \\Psi", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "5598f56c-0bfb-4131-bdc9-311b678f7ea5"],
+ "\n\nwhere the multiplets can be expanded in Grassmann variables as:\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{"\[CapitalPhi]", "\[LongEqual]", "\[Phi]", "+", 
+         SuperscriptBox["\[Theta]", "+"], 
+         SubscriptBox["\[Psi]", "-"], "+", "..."}], TraditionalForm], 
+     "errors" -> {}, "input" -> "\\Phi = \\phi + \\theta^+ \\psi_- + ...", 
+     "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "2b7cc0bf-0b2f-4cd9-8e9f-28b087cc3bc1"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{"\[CapitalPsi]", "\[LongEqual]", 
+         SubscriptBox[
+          OverscriptBox["\[Psi]", "_"], "-"], "+", "..."}], TraditionalForm], 
+     "errors" -> {}, "input" -> "\\Psi = \\bar{\\psi}_- + ...", "state" -> 
+     "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "a7d40b4e-1d7d-4f0b-976a-49924c277ae7"],
+ "\n\nAgain, we\[CloseCurlyQuote]re interested in counting the operators in \
+the cohomology group of ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox[
+        OverscriptBox[
+         StyleBox["Q", "TI"], "_"], "+"], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\bar{Q}_+", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "c2af091b-2861-4204-9417-81b31b04df82"],
+ ". This time, however, the action of ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       SubscriptBox[
+        OverscriptBox[
+         StyleBox["Q", "TI"], "_"], "+"], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\bar{Q}_+", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "60ef22db-b3a6-4f4d-977d-84081986ee90"],
+ " on ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         OverscriptBox["\[Phi]", "_"]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\bar{\\phi}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "3bbecf89-9d9f-40f4-a438-414711ddcb18"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         SubscriptBox["\[Gamma]", "-"]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\gamma_-", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "3779f8c0-5aa3-44dc-8485-83962534ccdb"],
+ " does not make them vanish - we actually get that ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          OverscriptBox[
+           StyleBox["Q", "TI"], "_"], "+"], 
+         RowBox[{"(", 
+           RowBox[{
+             SubscriptBox["\[PartialD]", 
+              StyleBox["z", "TI"]], 
+             OverscriptBox["\[Phi]", "_"]}], ")"}], "\[Proportional]", 
+         SubscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"]], 
+         SubscriptBox[
+          OverscriptBox["\[Psi]", "_"], "+"]}], TraditionalForm], 
+     "errors" -> {}, "input" -> 
+     "\\bar{Q}_+(\\partial_z \\bar{\\phi}) \\propto \\partial_z \
+\\bar{\\psi}_+", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "ec12637c-4c79-44dc-9d97-ab6a8b293f01"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          OverscriptBox[
+           StyleBox["Q", "TI"], "_"], "+"], 
+         RowBox[{"(", 
+           RowBox[{
+             SubscriptBox["\[PartialD]", 
+              StyleBox["z", "TI"]], 
+             SubscriptBox["\[Psi]", "-"]}], ")"}], "\[Proportional]", 
+         SubscriptBox["\[PartialD]", "\[Perpendicular]"], "\[Phi]"}], 
+       TraditionalForm], "errors" -> {}, "input" -> 
+     "\\bar{Q}_+(\\partial_z \\psi_-) \\propto \\partial_{\\perp} \\phi", 
+     "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "56bfdfde-ed48-4216-a721-ae697fbf669d"],
+ ", which are not necessarily zero in the 3-d equations of motion. So, these \
+aren\[CloseCurlyQuote]t in the cohomology group! All we actually have are the \
+operators ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], "\[Phi]"}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\phi", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "85b718a8-fa22-4e1d-8e93-e30af23aa875"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         SubscriptBox[
+          OverscriptBox["\[Psi]", "_"], "-"]}], TraditionalForm], 
+     "errors" -> {}, "input" -> "\\partial^n_z \\bar{\\psi}_-", "state" -> 
+     "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "0dc53712-8709-4ddd-b172-5f04387788cc"],
+ ". These operators, based on the original multiplet, here have flavor \
+charges (+1, -1), R-charges (0, 1), and spins ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{"(", 
+         RowBox[{
+           StyleBox["n", "TI"], ",", 
+           StyleBox["n", "TI"], "+", 
+           FractionBox["1", "2"]}], ")"}], TraditionalForm], "errors" -> {}, 
+     "input" -> "(n, n+\\frac{1}{2})", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "dd7d20c7-e41b-4a6c-a5de-c7116a0685b4"],
+ ", respectively.\n\nBut here, we can also take into account the boundary \
+conditions! For a Neumann boundary condition, we have that all ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         SubscriptBox[
+          OverscriptBox["\[Psi]", "_"], "-"]}], TraditionalForm], 
+     "errors" -> {}, "input" -> "\\partial^n_z \\bar{\\psi}_-", "state" -> 
+     "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "70afe4fd-56d1-4b81-a353-1e9c4ce1ba5d"],
+ " vanish, while for a Dirichlet boundary condition, we have that all ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], "\[Phi]"}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\phi", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "43d9d61c-1d05-4cfb-83b8-316f75f272c1"],
+ " vanish. So, we once again substitute in our charges for our operators and \
+expand in power series to get that:\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          StyleBox["I", "TI"], 
+          StyleBox["N", "TI"]], 
+         RowBox[{"(", 
+           RowBox[{
+             StyleBox["x", "TI"], ";", 
+             StyleBox["q", "TI"]}], ")"}], "\[LongEqual]", 
+         FractionBox["1", 
+          SubscriptBox[
+           RowBox[{"(", 
+             RowBox[{
+               StyleBox["x", "TI"], ";", 
+               StyleBox["q", "TI"]}], ")"}], "\[Infinity]"]]}], 
+       TraditionalForm], "errors" -> {}, "input" -> 
+     "I_N(x;q) = \\frac{1}{(x;q)_{\\infty}}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "272fec0c-95eb-442e-abf7-e33c0c88b156"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          StyleBox["I", "TI"], 
+          StyleBox["D", "TI"]], 
+         RowBox[{"(", 
+           RowBox[{
+             StyleBox["x", "TI"], ";", 
+             StyleBox["q", "TI"]}], ")"}], "\[LongEqual]", 
+         SubscriptBox[
+          RowBox[{"(", 
+            RowBox[{
+              StyleBox["q", "TI"], 
+              SuperscriptBox[
+               StyleBox["x", "TI"], "-1"], ";", 
+              StyleBox["q", "TI"]}], ")"}], "\[Infinity]"]}], 
+       TraditionalForm], "errors" -> {}, "input" -> 
+     "I_D(x;q)=(qx^{-1};q)_{\\infty}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "349b416c-c5fd-451e-a497-dbce3e03deb6"],
+ "\n"
+}], "Text",
+ CellChangeTimes->{{3.8462041051366663`*^9, 3.8462042133594055`*^9}, {
+   3.8462042460365195`*^9, 3.84620431570002*^9}, {3.8462043890253763`*^9, 
+   3.8462044159575634`*^9}, {3.846204457744768*^9, 3.846204512760603*^9}, {
+   3.8462045439668636`*^9, 3.846204765783247*^9}, {3.846204813904123*^9, 
+   3.846204822657572*^9}, {3.8462048743381157`*^9, 3.846204876820609*^9}, {
+   3.8462049161589737`*^9, 3.8462049185877924`*^9}, {3.8462049520380416`*^9, 
+   3.846205067951872*^9}, {3.8462051364853535`*^9, 3.846205330326275*^9}, {
+   3.846205374495108*^9, 3.846205377673411*^9}, {3.846205465679619*^9, 
+   3.846205518026476*^9}, {3.8462055802879763`*^9, 3.846205586354691*^9}, 
+   3.846209078494268*^9, {3.8462574704547124`*^9, 
+   3.846257474885601*^9}},ExpressionUUID->"2459bb77-a005-4f3c-a8a6-\
+29aa0a152547"],
+
+Cell["\<\
+So, let\[CloseCurlyQuote]s define some 3-d half-index functions for our \
+different boundary conditions. Here, we only use ChiralPartial and \
+FermiPartialBar since ChiralPartialBar and FermiPartial are no longer \
+Q-closed and therefore no longer in the cohomology we are interested in.\
+\>", "Text",
+ CellChangeTimes->{{3.8462574768981576`*^9, 3.846257496776854*^9}, {
+  3.8462589526449385`*^9, 
+  3.8462590011889286`*^9}},ExpressionUUID->"e2db5523-0cf9-46df-9643-\
+b6984bcb35bc"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Chiral3dIndexN", "[", 
+    RowBox[{"r_", ",", "e_"}], "]"}], "=", 
+   RowBox[{"1", "/", 
+    RowBox[{"ChiralPartial", "[", 
+     RowBox[{"r", ",", "e"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Chiral3dIndexD", "[", 
+    RowBox[{"r_", ",", "e_"}], "]"}], "=", 
+   RowBox[{"FermiPartial", "[", 
+    RowBox[{"r", ",", "e"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.846257500307727*^9, 3.846257596300007*^9}, {
+  3.8462590148539333`*^9, 3.84625905322682*^9}},
+ CellLabel->"In[69]:=",ExpressionUUID->"ab6b904a-f19d-4a13-86b0-921e5f585550"],
+
+Cell["\<\
+Again, we can test and see that we get what we should with the charges we \
+used above:\
+\>", "Text",
+ CellChangeTimes->{{3.8462590587970257`*^9, 
+  3.846259072788519*^9}},ExpressionUUID->"7d177c9e-bad9-4a63-9f55-\
+c8269d583529"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Chiral3dIndexN", "[", 
+  RowBox[{"0", ",", " ", "1"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Chiral3dIndexD", "[", 
+  RowBox[{"1", ",", 
+   RowBox[{"-", "1"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.8462590741480694`*^9, 3.846259105642311*^9}, {
+  3.846259257718517*^9, 3.8462592605662622`*^9}},
+ CellLabel->"In[75]:=",ExpressionUUID->"0c754f63-3033-47b3-8b34-8ec4c120af95"],
+
+Cell[BoxData[
+ FractionBox["1", 
+  RowBox[{"QPochhammer", "[", 
+   RowBox[{"x", ",", "q"}], "]"}]]], "Output",
+ CellChangeTimes->{3.84625912984474*^9, 3.846259261906265*^9},
+ CellLabel->"Out[75]=",ExpressionUUID->"f87a1373-7d0d-439e-8fa9-7c9ad30a0f75"],
+
+Cell[BoxData[
+ RowBox[{"QPochhammer", "[", 
+  RowBox[{
+   FractionBox["q", "x"], ",", "q"}], "]"}]], "Output",
+ CellChangeTimes->{3.84625912984474*^9, 3.8462592619092646`*^9},
+ CellLabel->"Out[76]=",ExpressionUUID->"beb0b78a-0758-4997-bcca-d88ed52e61f2"]
+}, Open  ]],
+
+Cell["And we can series expand these indices:", "Text",
+ CellChangeTimes->{{3.846259279751176*^9, 
+  3.8462592852699137`*^9}},ExpressionUUID->"fc46c7ab-4d00-4d44-b78d-\
+f9de9c18605f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Series", "[", 
+   RowBox[{
+    RowBox[{"Chiral3dIndexN", "[", 
+     RowBox[{"0", ",", " ", "1"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"q", ",", " ", "0", ",", " ", "3"}], "}"}]}], "]"}], "//", 
+  "FullSimplify"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Series", "[", 
+   RowBox[{
+    RowBox[{"Chiral3dIndexD", "[", 
+     RowBox[{"1", ",", 
+      RowBox[{"-", "1"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"q", ",", "0", ",", "3"}], "}"}]}], "]"}], "//", 
+  "FullSimplify"}]}], "Input",
+ CellChangeTimes->{{3.8462592875191884`*^9, 3.846259329544934*^9}},
+ CellLabel->"In[79]:=",ExpressionUUID->"9a81166e-3ce3-48a6-b87a-d2ae73ba2869"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   FractionBox["1", 
+    RowBox[{"1", "-", "x"}]], "-", 
+   FractionBox[
+    RowBox[{"x", " ", "q"}], 
+    RowBox[{
+     RowBox[{"-", "1"}], "+", "x"}]], "-", 
+   FractionBox[
+    RowBox[{"x", " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "+", "x"}], ")"}], " ", 
+     SuperscriptBox["q", "2"]}], 
+    RowBox[{
+     RowBox[{"-", "1"}], "+", "x"}]], "-", 
+   FractionBox[
+    RowBox[{"x", " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "+", "x", "+", 
+       SuperscriptBox["x", "2"]}], ")"}], " ", 
+     SuperscriptBox["q", "3"]}], 
+    RowBox[{
+     RowBox[{"-", "1"}], "+", "x"}]], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "q", "]"}], "4"],
+    SeriesData[$CellContext`q, 0, {}, 0, 4, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`q, 
+   0, {(1 - $CellContext`x)^(-1), -(-1 + $CellContext`x)^(-1) $CellContext`x, \
+-(-1 + $CellContext`x)^(-1) $CellContext`x (
+     1 + $CellContext`x), -(-1 + $CellContext`x)^(-1) $CellContext`x (
+     1 + $CellContext`x + $CellContext`x^2)}, 0, 4, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.8462593182464123`*^9, 3.8462593314131136`*^9}},
+ CellLabel->"Out[79]=",ExpressionUUID->"32180e7d-09f1-4e63-a89e-ba60f0fa530a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"1", "-", 
+   FractionBox["q", "x"], "-", 
+   FractionBox[
+    SuperscriptBox["q", "2"], "x"], "+", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "-", "x"}], ")"}], " ", 
+     SuperscriptBox["q", "3"]}], 
+    SuperscriptBox["x", "2"]], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "q", "]"}], "4"],
+    SeriesData[$CellContext`q, 0, {}, 0, 4, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`q, 0, {
+   1, (-1)/$CellContext`x, (-1)/$CellContext`x, (
+     1 - $CellContext`x) $CellContext`x^(-2)}, 0, 4, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.8462593182464123`*^9, 3.8462593314171133`*^9}},
+ CellLabel->"Out[80]=",ExpressionUUID->"afa5fdd1-c069-43fb-a881-44528951a92f"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Computation of the half-index for the XYZ model", "Section",
+ CellChangeTimes->{{3.84620917780963*^9, 
+  3.846209185277869*^9}},ExpressionUUID->"67d7ca39-6163-4347-93c2-\
+75ba11f134e1"],
+
+Cell[TextData[{
+ "Now we\[CloseCurlyQuote]re equipped with the tools we need to try to \
+compute the half-index for the XYZ model. This will ultimately just be \
+counting up all the operators on the boundary again, except for three coupled \
+chiral multiplets in three dimensions. For simplicity, we will even set ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["W", "TI"], "\[LongEqual]", 
+         SubscriptBox[
+          StyleBox["X", "TI"], 
+          RowBox[{"3", 
+            StyleBox["d", "TI"]}]], 
+         SubscriptBox[
+          StyleBox["Y", "TI"], 
+          RowBox[{"3", 
+            StyleBox["d", "TI"]}]], 
+         SubscriptBox[
+          StyleBox["Z", "TI"], 
+          RowBox[{"3", 
+            StyleBox["d", "TI"]}]], "\[LongEqual]", "0"}], TraditionalForm], 
+     "errors" -> {}, "input" -> "W=X_{3d}Y_{3d}Z_{3d}=0", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "b5e2c3c5-ce0f-44c5-afae-02cbb88c0f55"],
+ ", by imposing that the boundary conditions are basically Dirichlet. Since \
+we\[CloseCurlyQuote]ve computed the half-index for 3-d chiral multiplets in \
+the preceding section, we are well equipped to do this. And, following the \
+discussion of the boundary conditions, we know what kinds of boundary \
+conditions we can impose on the XYZ model.\n\nSo ultimately, we just have \
+three chiral multiplets that each decompose into a chiral and a Fermi \
+multiplet, ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          StyleBox["X", "TI"], 
+          RowBox[{"3", 
+            StyleBox["d", "TI"]}]], "\[LongEqual]", 
+         StyleBox["Z", "TI"], "\[CirclePlus]", 
+         SubscriptBox["\[CapitalPsi]", 
+          StyleBox["X", "TI"]]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "X_{3d}=Z\\bigoplus\\Psi_X", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "7fa5e5d3-7c6d-457a-ac3e-b8e794f1399e"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          StyleBox["Y", "TI"], 
+          RowBox[{"3", 
+            StyleBox["d", "TI"]}]], "\[LongEqual]", 
+         StyleBox["Y", "TI"], "\[CirclePlus]", 
+         SubscriptBox["\[CapitalPsi]", 
+          StyleBox["Y", "TI"]]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "Y_{3d}=Y\\bigoplus \\Psi_Y", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "73bd90c6-57c2-4249-810b-f250458e6837"],
+ ", and ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          StyleBox["Z", "TI"], 
+          RowBox[{"3", 
+            StyleBox["d", "TI"]}]], "\[LongEqual]", 
+         StyleBox["Z", "TI"], "\[CirclePlus]", 
+         SubscriptBox["\[CapitalPsi]", 
+          StyleBox["Z", "TI"]]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "Z_{3d}=Z\\bigoplus\\Psi_Z", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "3a46c1f1-d7bf-4736-a3df-b00c5fdc3bc8"],
+ ". All we really need is the operators and the charges associated with each \
+multiplet, and then we shall take the product of the individual indices for \
+each multiplet, following the same process as described above.\n\nSince we \
+are dealing with chiral superfields that are of the same style as in the \
+preceding section, we then have the following operators in the ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    TemplateBox[Association["boxes" -> FormBox[
+        SubscriptBox[
+         OverscriptBox[
+          StyleBox["Q", "TI"], "_"], "+"], TraditionalForm], "errors" -> {}, 
+      "input" -> "\\bar{Q}_+", "state" -> "Boxes"],
+     "TeXAssistantTemplate"], " "}], TraditionalForm]],ExpressionUUID->
+  "b72fb95f-9cc0-4705-b2c7-2d347b6b0970"],
+ "cohomology since these are the ones that will be ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    TemplateBox[Association["boxes" -> FormBox[
+        SubscriptBox[
+         OverscriptBox[
+          StyleBox["Q", "TI"], "_"], "+"], TraditionalForm], "errors" -> {}, 
+      "input" -> "\\bar{Q}_+", "state" -> "Boxes"],
+     "TeXAssistantTemplate"], " "}], TraditionalForm]],ExpressionUUID->
+  "29831b0a-c928-49d2-9668-67e459dd490d"],
+ "- closed :\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         SubscriptBox["\[Phi]", 
+          StyleBox["X", "TI"]]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "\\partial^n_z \\phi_X", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "4127b5ec-eb64-4656-817d-6f138676a340"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         SubscriptBox["\[Phi]", 
+          StyleBox["Y", "TI"]]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "\\partial^n_z \\phi_Y", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "64ef73d3-e405-411d-aea3-18ac8f519fb8"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         SubscriptBox["\[Phi]", 
+          StyleBox["Z", "TI"]]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "\\partial^n_z \\phi_Z", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "0522ead2-2ee2-456d-97e9-d95c4f0cf032"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         SubscriptBox[
+          OverscriptBox["\[Psi]", "_"], 
+          RowBox[{"-", 
+            StyleBox["X", "TI"]}]]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\bar{\\psi}_{-X}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "289d2759-3c1c-4331-ae50-9bcc83aa8200"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         SubscriptBox[
+          OverscriptBox["\[Psi]", "_"], 
+          RowBox[{"-", 
+            StyleBox["Y", "TI"]}]]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\bar{\\psi}_{-Y}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "03b19fed-6299-4dd3-8c51-72bb65c63d08"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubsuperscriptBox["\[PartialD]", 
+          StyleBox["z", "TI"], 
+          StyleBox["n", "TI"]], 
+         SubscriptBox[
+          OverscriptBox["\[Psi]", "_"], 
+          RowBox[{"-", 
+            StyleBox["Z", "TI"]}]]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\partial^n_z \\bar{\\psi}_{-Z}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "815b3aa7-b6b2-46fe-b6c8-ec7938308899"],
+ "\n\nDepending on whether the particular field obeys Neumann or Dirichlet \
+boundary conditions, one of each pair will vanish, leaving a simple index to \
+be computed using only the charges of the field under the symmetries the \
+field obeys.\n\nThe equation of motion for for the XYZ model in 3d can be \
+computed by considering the action:\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          StyleBox["S", "TI"], 
+          RowBox[{
+            StyleBox["X", "TI"], 
+            StyleBox["Y", "TI"], 
+            StyleBox["Z", "TI"]}]], "\[LongEqual]", "\[Integral]", 
+         SuperscriptBox[
+          StyleBox["d", "TI"], "3"], 
+         StyleBox["x", "TI"], 
+         SuperscriptBox[
+          StyleBox["d", "TI"], "2"], "\[Theta]", 
+         SuperscriptBox[
+          StyleBox["d", "TI"], "2"], 
+         OverscriptBox["\[Theta]", "_"], 
+         RowBox[{"(", 
+           RowBox[{
+             SubscriptBox[
+              OverscriptBox[
+               StyleBox["X", "TI"], "_"], 
+              RowBox[{"3", 
+                StyleBox["d", "TI"]}]], 
+             SubscriptBox[
+              StyleBox["X", "TI"], 
+              RowBox[{"3", 
+                StyleBox["d", "TI"]}]], "+", 
+             SubscriptBox[
+              OverscriptBox[
+               StyleBox["Y", "TI"], "_"], 
+              RowBox[{"3", 
+                StyleBox["d", "TI"]}]], 
+             SubscriptBox[
+              StyleBox["Y", "TI"], 
+              RowBox[{"3", 
+                StyleBox["d", "TI"]}]], "+", 
+             SubscriptBox[
+              OverscriptBox[
+               StyleBox["Z", "TI"], "_"], 
+              RowBox[{"3", 
+                StyleBox["d", "TI"]}]], 
+             SubscriptBox[
+              StyleBox["Z", "TI"], 
+              RowBox[{"3", 
+                StyleBox["d", "TI"]}]]}], ")"}], "+", "\[Integral]", 
+         SuperscriptBox[
+          StyleBox["d", "TI"], "3"], 
+         StyleBox["x", "TI"], 
+         SuperscriptBox[
+          StyleBox["d", "TI"], "2"], "\[Theta]", 
+         RowBox[{"(", 
+           RowBox[{
+             SubscriptBox[
+              StyleBox["X", "TI"], 
+              RowBox[{"3", 
+                StyleBox["d", "TI"]}]], 
+             SubscriptBox[
+              StyleBox["Y", "TI"], 
+              RowBox[{"3", 
+                StyleBox["d", "TI"]}]], 
+             SubscriptBox[
+              StyleBox["Z", "TI"], 
+              RowBox[{"3", 
+                StyleBox["d", "TI"]}]]}], ")"}], "+", "\[Integral]", 
+         SuperscriptBox[
+          StyleBox["d", "TI"], "3"], 
+         StyleBox["x", "TI"], 
+         SuperscriptBox[
+          StyleBox["d", "TI"], "2"], 
+         OverscriptBox["\[Theta]", "_"], 
+         RowBox[{"(", 
+           RowBox[{
+             SubscriptBox[
+              OverscriptBox[
+               StyleBox["X", "TI"], "_"], 
+              RowBox[{"3", 
+                StyleBox["d", "TI"]}]], 
+             SubscriptBox[
+              OverscriptBox[
+               StyleBox["Y", "TI"], "_"], 
+              RowBox[{"3", 
+                StyleBox["d", "TI"]}]], 
+             SubscriptBox[
+              OverscriptBox[
+               StyleBox["Z", "TI"], "_"], 
+              RowBox[{"3", 
+                StyleBox["d", "TI"]}]]}], ")"}]}], TraditionalForm], 
+     "errors" -> {}, "input" -> 
+     "S_{XYZ}=\\int d^3x d^2\\theta d^2 \\bar{\\theta} (\\bar{X}_{3d} X_{3d} \
++ \\bar{Y}_{3d} Y_{3d} + \\bar{Z}_{3d} Z_{3d}) + \\int d^3x d^2\\theta \
+(X_{3d} Y_{3d} Z_{3d}) + \\int d^3x d^2\\bar{\\theta} (\\bar{X}_{3d} \
+\\bar{Y}_{3d} \\bar{Z}_{3d})", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "5781cf36-d47a-4d4e-8049-0413af6e962c"],
+ "\n\nPerforming the Grassmann integrals,\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          StyleBox["S", "TI"], 
+          RowBox[{
+            StyleBox["X", "TI"], 
+            StyleBox["Y", "TI"], 
+            StyleBox["Z", "TI"]}]], "\[LongEqual]", "\[Integral]", 
+         SuperscriptBox[
+          StyleBox["d", "TI"], "3"], 
+         StyleBox["x", "TI"], 
+         RowBox[{"(", 
+           RowBox[{
+             SubscriptBox["\[PartialD]", "\[Mu]"], 
+             OverscriptBox[
+              StyleBox["X", "TI"], "_"], 
+             SuperscriptBox["\[PartialD]", "\[Mu]"], 
+             StyleBox["X", "TI"], "+", 
+             SubscriptBox["\[PartialD]", "\[Mu]"], 
+             OverscriptBox[
+              StyleBox["Y", "TI"], "_"], 
+             SuperscriptBox["\[PartialD]", "\[Mu]"], 
+             StyleBox["Y", "TI"], "+", 
+             SubscriptBox["\[PartialD]", "\[Mu]"], 
+             OverscriptBox[
+              StyleBox["Z", "TI"], "_"], 
+             SuperscriptBox["\[PartialD]", "\[Mu]"], 
+             StyleBox["Z", "TI"], "+", 
+             StyleBox["i", "TI"], 
+             SubscriptBox[
+              OverscriptBox["\[Psi]", "_"], 
+              StyleBox["X", "TI"]], 
+             SubsuperscriptBox[
+              RowBox[{"(", 
+                RowBox[{
+                  SubscriptBox["\[Sigma]", "\[Mu]"], 
+                  SuperscriptBox["\[PartialD]", "\[Mu]"]}], ")"}], "\[Beta]", 
+              "\[Alpha]"], 
+             SubscriptBox["\[Psi]", 
+              StyleBox["X", "TI"]], "+", 
+             StyleBox["i", "TI"], 
+             SubscriptBox[
+              OverscriptBox["\[Psi]", "_"], 
+              StyleBox["Y", "TI"]], 
+             SubsuperscriptBox[
+              RowBox[{"(", 
+                RowBox[{
+                  SubscriptBox["\[Sigma]", "\[Mu]"], 
+                  SuperscriptBox["\[PartialD]", "\[Mu]"]}], ")"}], "\[Beta]", 
+              "\[Alpha]"], 
+             SubscriptBox["\[Psi]", 
+              StyleBox["Y", "TI"]], "+", 
+             StyleBox["i", "TI"], 
+             SubscriptBox[
+              OverscriptBox["\[Psi]", "_"], 
+              StyleBox["Y", "TI"]], 
+             SubsuperscriptBox[
+              RowBox[{"(", 
+                RowBox[{
+                  SubscriptBox["\[Sigma]", "\[Mu]"], 
+                  SuperscriptBox["\[PartialD]", "\[Mu]"]}], ")"}], "\[Beta]", 
+              "\[Alpha]"], 
+             SubscriptBox["\[Psi]", 
+              StyleBox["Y", "TI"]]}], ")"}], "+", 
+         SubscriptBox[
+          StyleBox["F", "TI"], 
+          StyleBox["X", "TI"]], 
+         SubscriptBox[
+          OverscriptBox[
+           StyleBox["F", "TI"], "_"], 
+          StyleBox["X", "TI"]], "+", 
+         SubscriptBox[
+          StyleBox["F", "TI"], 
+          StyleBox["Y", "TI"]], 
+         SubscriptBox[
+          OverscriptBox[
+           StyleBox["F", "TI"], "_"], 
+          StyleBox["Y", "TI"]], "+", 
+         SubscriptBox[
+          StyleBox["F", "TI"], 
+          StyleBox["Z", "TI"]], 
+         SubscriptBox[
+          OverscriptBox[
+           StyleBox["F", "TI"], "_"], 
+          StyleBox["Z", "TI"]], "+", 
+         StyleBox["X", "TI"], 
+         StyleBox["Y", "TI"], 
+         SubscriptBox[
+          StyleBox["F", "TI"], 
+          StyleBox["Z", "TI"]], "+", 
+         StyleBox["X", "TI"], 
+         StyleBox["Z", "TI"], 
+         SubscriptBox[
+          StyleBox["F", "TI"], 
+          StyleBox["Y", "TI"]], "+", 
+         StyleBox["Y", "TI"], 
+         StyleBox["Z", "TI"], 
+         SubscriptBox[
+          StyleBox["F", "TI"], 
+          StyleBox["X", "TI"]], "+", 
+         OverscriptBox[
+          StyleBox["X", "TI"], "_"], 
+         OverscriptBox[
+          StyleBox["Y", "TI"], "_"], 
+         SubscriptBox[
+          OverscriptBox[
+           StyleBox["F", "TI"], "_"], 
+          StyleBox["Z", "TI"]], "+", 
+         OverscriptBox[
+          StyleBox["X", "TI"], "_"], 
+         OverscriptBox[
+          StyleBox["Z", "TI"], "_"], 
+         SubscriptBox[
+          OverscriptBox[
+           StyleBox["F", "TI"], "_"], 
+          StyleBox["Y", "TI"]], "+", 
+         OverscriptBox[
+          StyleBox["Y", "TI"], "_"], 
+         OverscriptBox[
+          StyleBox["Z", "TI"], "_"], 
+         SubscriptBox[
+          OverscriptBox[
+           StyleBox["F", "TI"], "_"], 
+          StyleBox["X", "TI"]], "-", 
+         FractionBox["1", "2"], 
+         StyleBox["X", "TI"], 
+         SubscriptBox["\[Psi]", 
+          StyleBox["Y", "TI"]], 
+         SubscriptBox["\[Psi]", 
+          StyleBox["Z", "TI"]], "-", 
+         FractionBox["1", "2"], 
+         StyleBox["Y", "TI"], 
+         SubscriptBox["\[Psi]", 
+          StyleBox["X", "TI"]], 
+         SubscriptBox["\[Psi]", 
+          StyleBox["Z", "TI"]], "-", 
+         FractionBox["1", "2"], 
+         StyleBox["Z", "TI"], 
+         SubscriptBox["\[Psi]", 
+          StyleBox["X", "TI"]], 
+         SubscriptBox["\[Psi]", 
+          StyleBox["Y", "TI"]], "-", 
+         FractionBox["1", "2"], 
+         OverscriptBox[
+          StyleBox["X", "TI"], "_"], 
+         SubscriptBox[
+          OverscriptBox["\[Psi]", "_"], 
+          StyleBox["Y", "TI"]], 
+         SubscriptBox[
+          OverscriptBox["\[Psi]", "_"], 
+          StyleBox["Z", "TI"]], "-", 
+         FractionBox["1", "2"], 
+         OverscriptBox[
+          StyleBox["Y", "TI"], "_"], 
+         SubscriptBox[
+          OverscriptBox["\[Psi]", "_"], 
+          StyleBox["X", "TI"]], 
+         SubscriptBox[
+          OverscriptBox["\[Psi]", "_"], 
+          StyleBox["Z", "TI"]], "-", 
+         FractionBox["1", "2"], 
+         OverscriptBox[
+          StyleBox["Z", "TI"], "_"], 
+         SubscriptBox[
+          OverscriptBox["\[Psi]", "_"], 
+          StyleBox["X", "TI"]], 
+         SubscriptBox[
+          OverscriptBox["\[Psi]", "_"], 
+          StyleBox["Y", "TI"]], ")"}], TraditionalForm], "errors" -> {}, 
+     "input" -> 
+     "S_{XYZ} = \\int d^3x ( \\partial_\\mu \\bar{X} \\partial^\\mu X + \
+\\partial_\\mu \\bar{Y} \\partial^\\mu Y + \\partial_\\mu \\bar{Z} \\partial^\
+\\mu Z + i \\bar{\\psi}_X (\\sigma_\\mu \\partial^\\mu)^\\alpha_\\beta \
+\\psi_X + i \\bar{\\psi}_Y (\\sigma_\\mu \\partial^\\mu)^\\alpha_\\beta \
+\\psi_Y + i \\bar{\\psi}_Y (\\sigma_\\mu \\partial^\\mu)^\\alpha_\\beta \
+\\psi_Y) + F_X \\bar{F}_X + F_Y \\bar{F}_Y + F_Z \\bar{F}_Z + X Y F_Z + X Z \
+F_Y + Y Z F_X + \\bar{X} \\bar{Y} \\bar{F}_Z + \\bar{X} \\bar{Z} \\bar{F}_Y + \
+\\bar{Y} \\bar{Z} \\bar{F}_X - \\frac{1}{2} X \\psi_Y \\psi_Z - \\frac{1}{2} \
+Y \\psi_X \\psi_Z - \\frac{1}{2} Z \\psi_X \\psi_Y - \\frac{1}{2} \\bar{X} \
+\\bar{\\psi}_Y \\bar{\\psi}_Z - \\frac{1}{2} \\bar{Y} \\bar{\\psi}_X \
+\\bar{\\psi}_Z - \\frac{1}{2} \\bar{Z} \\bar{\\psi}_X \\bar{\\psi}_Y)", 
+     "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "ba4ab4fa-1aac-4be5-af03-025405417efb"],
+ "\n\nwhich we can now vary to get the equations of motion. Some of the terms \
+in this action will be Q-exact, so we can discard them; all of them are \
+Q-closed, since it\[CloseCurlyQuote]s a symmetry."
+}], "Text",
+ CellChangeTimes->{{3.8462091913124247`*^9, 3.8462092183030853`*^9}, {
+  3.846209306114234*^9, 3.846209395393568*^9}, {3.846209431742008*^9, 
+  3.846209529381427*^9}, {3.8462095806857243`*^9, 3.8462096404788733`*^9}, {
+  3.8462096781421804`*^9, 3.846209758168707*^9}, {3.846209790128275*^9, 
+  3.8462098036396303`*^9}, {3.846209857189531*^9, 3.846209958350109*^9}, {
+  3.8462101864142528`*^9, 3.8462102001735125`*^9}, {3.846210291951992*^9, 
+  3.8462103425904794`*^9}, {3.846248756240507*^9, 3.8462487874189425`*^9}, {
+  3.846249081406623*^9, 3.846249100528376*^9}, {3.8462497596234922`*^9, 
+  3.8462497721538124`*^9}, {3.846250147236204*^9, 
+  3.8462501711471767`*^9}},ExpressionUUID->"5fe61134-82ce-4ed0-b972-\
+23399ab63173"],
+
+Cell[TextData[{
+ "Ultimately, we really just need the charges for the operators, though, and \
+we can determine these by just considering what the theory we\
+\[CloseCurlyQuote]re looking at is. In this case, we want an XYZ model that \
+has a duality with sQED, so we will be able to figure out the charges based \
+on this requirement. The relevant boundary conditions (from Natalie\
+\[CloseCurlyQuote]s paper) are (D, N, N). This automatically sets W = 0 as \
+mentioned above, and thus we don\[CloseCurlyQuote]t need to add any boundary \
+multiplets which would then contribute their own indices to the overall \
+index.  In this case, we actually have three fugacities that will contribute; \
+there exist three ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["U", "TI"], "(", "1", ")"}], TraditionalForm], 
+     "errors" -> {}, "input" -> "U(1)", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "beea852b-2d78-431e-8b34-14d834a133ce"],
+ " symmetries, an axial ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["U", "TI"], 
+         SubscriptBox[
+          RowBox[{"(", "1", ")"}], 
+          StyleBox["a", "TI"]]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "U(1)_a", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "d57b899d-dea8-4706-9b36-c5990494e663"],
+ " symmetry, a topological ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["U", "TI"], 
+         SubscriptBox[
+          RowBox[{"(", "1", ")"}], 
+          StyleBox["y", "TI"]]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "U(1)_y", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "aa327572-f508-4d00-8132-84548b7e33e6"],
+ " symmetry, and the standard R-symmetry ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         StyleBox["U", "TI"], 
+         SubscriptBox[
+          RowBox[{"(", "1", ")"}], 
+          StyleBox["R", "TI"]]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "U(1)_R", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "0ac97479-fffa-404d-932b-d5bbdffa6041"],
+ ". So, this means that our trace will look like:\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          StyleBox["I", "TI"], 
+          RowBox[{
+            StyleBox["X", "TI"], 
+            StyleBox["Y", "TI"], 
+            StyleBox["Z", "TI"]}]], "\[LongEqual]", 
+         SubscriptBox[
+          StyleBox["Tr", FontSlant -> "Plain"], 
+          StyleBox["B", "TI"]], 
+         SuperscriptBox[
+          RowBox[{"(", "-1", ")"}], 
+          StyleBox["R", "TI"]], 
+         SuperscriptBox[
+          StyleBox["q", "TI"], 
+          RowBox[{
+            StyleBox["J", "TI"], "+", 
+            FractionBox[
+             StyleBox["R", "TI"], "2"]}]], 
+         SuperscriptBox[
+          StyleBox["x", "TI"], 
+          StyleBox["a", "TI"]], 
+         SuperscriptBox[
+          StyleBox["y", "TI"], 
+          StyleBox["e", "TI"]]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "I_{XYZ} = \\mathrm{Tr}_B (-1)^R q^{J+\\frac{R}{2}} x^a y^e", "state" -> 
+     "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "3fe37753-ac5f-40ba-ae98-7fa27eaa667c"],
+ "\n\nwhich translates to our operators becoming:\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          StyleBox["I", "TI"], 
+          StyleBox["i", "TI"]], "\[LongEqual]", 
+         UnderscriptBox["\[Product]", 
+          RowBox[{
+            StyleBox["n", "TI"], "\[GreaterEqual]", "0"}], LimitsPositioning -> 
+          True], 
+         FractionBox["1", 
+          RowBox[{"(", 
+            RowBox[{"1", "-", 
+              SuperscriptBox[
+               RowBox[{"(", "-1", ")"}], 
+               StyleBox["r", "TI"]], 
+              SuperscriptBox[
+               StyleBox["q", "TI"], 
+               RowBox[{
+                 StyleBox["n", "TI"], "+", 
+                 FractionBox[
+                  StyleBox["r", "TI"], "2"]}]], 
+              SuperscriptBox[
+               StyleBox["a", "TI"], 
+               StyleBox["x", "TI"]], 
+              SuperscriptBox[
+               StyleBox["y", "TI"], 
+               StyleBox["e", "TI"]]}], ")"}]]}], TraditionalForm], 
+     "errors" -> {}, "input" -> 
+     "I_{i} = \\prod_{n\\geq0}\\frac{1}{(1-(-1)^r q^{n+\\frac{r}{2}}a^x \
+y^e)}", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "ea2769f0-a3a0-4c7e-948c-489861608543"],
+ " for our Neumann conditions\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[Association["boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox[
+          StyleBox["I", "TI"], 
+          StyleBox["X", "TI"]], "\[LongEqual]", 
+         UnderscriptBox["\[Product]", 
+          RowBox[{
+            StyleBox["n", "TI"], "\[GreaterEqual]", "0"}], LimitsPositioning -> 
+          True], 
+         RowBox[{"(", 
+           RowBox[{"1", "-", 
+             SuperscriptBox[
+              RowBox[{"(", "-1", ")"}], 
+              StyleBox["r", "TI"]], 
+             SuperscriptBox[
+              StyleBox["q", "TI"], 
+              RowBox[{
+                StyleBox["n", "TI"], "+", 
+                FractionBox["1", "2"], "+", 
+                FractionBox[
+                 StyleBox["r", "TI"], "2"]}]], 
+             SuperscriptBox[
+              StyleBox["a", "TI"], 
+              StyleBox["x", "TI"]], 
+             SuperscriptBox[
+              StyleBox["y", "TI"], 
+              StyleBox["e", "TI"]]}], ")"}]}], TraditionalForm], 
+     "errors" -> {}, "input" -> 
+     "I_X = \\prod_{n\\geq0} (1-(-1)^r q^{n+\\frac{1}{2}+\\frac{r}{2}} a^x \
+y^e)", "state" -> "Boxes"],
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "c3b1d7a4-5320-4f62-a218-858e0e5329a2"],
+ " for our Dirichlet conditions"
+}], "Text",
+ CellChangeTimes->{{3.846249780415851*^9, 3.8462498827184887`*^9}, {
+   3.846259637016197*^9, 3.8462597267603216`*^9}, {3.8462598113999796`*^9, 
+   3.8462598150605326`*^9}, {3.8462598527902827`*^9, 
+   3.8462599426861467`*^9}, {3.8462606049645877`*^9, 3.8462606488438306`*^9}, 
+   3.846260815621224*^9, {3.8462608547771044`*^9, 3.8462608915776043`*^9}, {
+   3.8462609948048286`*^9, 
+   3.846260998884832*^9}},ExpressionUUID->"e969d276-2820-473c-a844-\
+46e15d2fe875"],
+
+Cell["Let us now define these operators in Mathematica:", "Text",
+ CellChangeTimes->{{3.846261301141777*^9, 
+  3.846261309446637*^9}},ExpressionUUID->"54ca412c-e087-4616-83b4-\
+871fa0b6788c"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"XYZNeumannIndex", "[", 
+    RowBox[{"r_", ",", "x_", ",", "e_"}], "]"}], "=", 
+   RowBox[{"1", "/", 
+    RowBox[{"QPochhammer", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"-", "1"}], ")"}], "^", "r"}], " ", 
+      RowBox[{"q", "^", 
+       RowBox[{"(", 
+        RowBox[{"r", "/", "2"}], ")"}]}], " ", 
+      RowBox[{"a", "^", "x"}], " ", 
+      RowBox[{"y", "^", "e"}]}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"XYZDirichletIndex", "[", 
+    RowBox[{"r_", ",", "x_", ",", "e_"}], "]"}], "=", 
+   RowBox[{"QPochhammer", "[", 
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"-", "1"}], ")"}], "^", "r"}]}], " ", 
+     RowBox[{"q", "^", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"1", "/", "2"}], "+", 
+        RowBox[{"r", "/", "2"}]}], ")"}]}], 
+     RowBox[{"a", "^", "x"}], " ", 
+     RowBox[{"y", "^", "e"}]}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8462613195245485`*^9, 3.8462614374027095`*^9}, {
+  3.8462615423616114`*^9, 3.8462615600541596`*^9}},
+ CellLabel->"In[84]:=",ExpressionUUID->"8d2bd366-dcc8-46ad-86f4-63d1b8d87519"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"XYZNeumannIndex", "[", 
+   RowBox[{"1", ",", 
+    RowBox[{"-", "1"}], ",", "1"}], "]"}], " ", 
+  RowBox[{"XYZNeumannIndex", "[", 
+   RowBox[{"1", ",", 
+    RowBox[{"-", "1"}], ",", 
+    RowBox[{"-", "1"}]}], "]"}], " ", 
+  RowBox[{"XYZDirichletIndex", "[", 
+   RowBox[{"0", ",", "2", ",", "0"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.846261446398287*^9, 3.8462614722965603`*^9}, {
+  3.846261573402689*^9, 3.8462616207557077`*^9}},
+ CellLabel->"In[89]:=",ExpressionUUID->"66584308-752a-444e-8774-a5636435c3f2"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"QPochhammer", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", 
+      SuperscriptBox["a", "2"]}], " ", 
+     SqrtBox["q"]}], ",", 
+    RowBox[{
+     RowBox[{"-", 
+      SuperscriptBox["a", "2"]}], " ", 
+     SqrtBox["q"]}]}], "]"}], 
+  RowBox[{
+   RowBox[{"QPochhammer", "[", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox[
+       SqrtBox["q"], 
+       RowBox[{"a", " ", "y"}]]}], ",", 
+     RowBox[{"-", 
+      FractionBox[
+       SqrtBox["q"], 
+       RowBox[{"a", " ", "y"}]]}]}], "]"}], " ", 
+   RowBox[{"QPochhammer", "[", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{
+        SqrtBox["q"], " ", "y"}], "a"]}], ",", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{
+        SqrtBox["q"], " ", "y"}], "a"]}]}], "]"}]}]]], "Output",
+ CellChangeTimes->{
+  3.846261474144113*^9, {3.8462615634642925`*^9, 3.8462615949183397`*^9}, 
+   3.846261628420666*^9},
+ CellLabel->"Out[89]=",ExpressionUUID->"3a04ca37-8b9d-467b-8417-d0ceda4b54a3"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1920, 997},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (July 9, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"164da3ba-5146-4d2a-90df-10716b76e9e0"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 241, 6, 71, "Input",ExpressionUUID->"8d03b0cb-8f11-4f60-b47f-a96d51e14703"],
+Cell[802, 28, 288, 6, 46, "Text",ExpressionUUID->"4b75c533-4db0-4eba-ab7c-6f180692844b"],
+Cell[1093, 36, 221, 3, 29, "Input",ExpressionUUID->"ee913cc2-73d0-4c49-8115-dbbb2ef6e059"],
+Cell[1317, 41, 176, 3, 35, "Text",ExpressionUUID->"1b0ccf9d-a733-447e-bb1b-f45788678661"],
+Cell[1496, 46, 679, 17, 29, "Input",ExpressionUUID->"80c74e55-015d-43c0-84a6-7c525554e7b2"],
+Cell[2178, 65, 353, 7, 35, "Text",ExpressionUUID->"568f6be0-30cc-490f-9c35-a671b9a37f48"],
+Cell[2534, 74, 416, 9, 29, "Input",ExpressionUUID->"ef1f2adb-2f97-4796-8642-b5d60940e13f"],
+Cell[2953, 85, 181, 3, 35, "Text",ExpressionUUID->"1bf16049-fa9b-4a47-bb60-da84c82e503e"],
+Cell[3137, 90, 645, 16, 50, "Input",ExpressionUUID->"09fd5bab-ad4a-4fbc-9202-264d77405b66"],
+Cell[CellGroupData[{
+Cell[3807, 110, 186, 3, 67, "Section",ExpressionUUID->"be73eced-2d23-492c-ba32-534e41ea9a04"],
+Cell[3996, 115, 12672, 291, 413, "Text",ExpressionUUID->"c83a0012-fcc2-4fb7-b171-436fcb8fa540"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16705, 411, 182, 3, 67, "Section",ExpressionUUID->"ece8e3ee-8659-4255-b3d1-2d85fd99e09c"],
+Cell[16890, 416, 36008, 882, 1252, "Text",ExpressionUUID->"5624b283-a443-4923-adea-af9bd2abc54f"],
+Cell[52901, 1300, 324, 7, 35, "Text",ExpressionUUID->"0ecb792a-6836-4247-ae93-56a1ba732362"],
+Cell[53228, 1309, 3879, 112, 150, "Input",ExpressionUUID->"64d89c98-dd90-4392-b918-dd076502e19e"],
+Cell[57110, 1423, 8412, 203, 183, "Text",ExpressionUUID->"1e22699b-9028-49c0-a894-246179ee1bcf"],
+Cell[CellGroupData[{
+Cell[65547, 1630, 494, 9, 50, "Input",ExpressionUUID->"814dd3b3-da9e-40c4-940d-2effdc697eea"],
+Cell[66044, 1641, 492, 11, 59, "Output",ExpressionUUID->"73ab07c7-dfb5-4d77-ba41-d0e7ba934f8e"],
+Cell[66539, 1654, 466, 10, 48, "Output",ExpressionUUID->"b1a734e0-d59a-4d86-b82a-068fe6fa6d52"]
+}, Open  ]],
+Cell[67020, 1667, 198, 3, 35, "Text",ExpressionUUID->"dfdb83c2-b2b2-4458-bbd3-baf34cfe51fd"],
+Cell[CellGroupData[{
+Cell[67243, 1674, 718, 20, 50, "Input",ExpressionUUID->"8c5525ab-4ce1-4703-a44c-ab2e22419617"],
+Cell[67964, 1696, 2564, 75, 59, "Output",ExpressionUUID->"35429428-1ea7-44e6-968b-35f223f59450"],
+Cell[70531, 1773, 2174, 66, 56, "Output",ExpressionUUID->"21493c1c-f918-4c73-8e03-1f64ae43c5e3"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[72754, 1845, 232, 4, 67, "Section",ExpressionUUID->"192d6f55-aea6-420f-9768-c233909a6262"],
+Cell[72989, 1851, 11209, 271, 510, "Text",ExpressionUUID->"2459bb77-a005-4f3c-a8a6-29aa0a152547"],
+Cell[84201, 2124, 492, 9, 35, "Text",ExpressionUUID->"e2db5523-0cf9-46df-9643-b6984bcb35bc"],
+Cell[84696, 2135, 627, 16, 50, "Input",ExpressionUUID->"ab6b904a-f19d-4a13-86b0-921e5f585550"],
+Cell[85326, 2153, 239, 6, 35, "Text",ExpressionUUID->"7d177c9e-bad9-4a63-9f55-c8269d583529"],
+Cell[CellGroupData[{
+Cell[85590, 2163, 405, 8, 50, "Input",ExpressionUUID->"0c754f63-3033-47b3-8b34-8ec4c120af95"],
+Cell[85998, 2173, 252, 5, 53, "Output",ExpressionUUID->"f87a1373-7d0d-439e-8fa9-7c9ad30a0f75"],
+Cell[86253, 2180, 254, 5, 48, "Output",ExpressionUUID->"beb0b78a-0758-4997-bcca-d88ed52e61f2"]
+}, Open  ]],
+Cell[86522, 2188, 183, 3, 35, "Text",ExpressionUUID->"fc46c7ab-4d00-4d44-b78d-f9de9c18605f"],
+Cell[CellGroupData[{
+Cell[86730, 2195, 689, 19, 50, "Input",ExpressionUUID->"9a81166e-3ce3-48a6-b87a-d2ae73ba2869"],
+Cell[87422, 2216, 1246, 36, 55, "Output",ExpressionUUID->"32180e7d-09f1-4e63-a89e-ba60f0fa530a"],
+Cell[88671, 2254, 783, 22, 54, "Output",ExpressionUUID->"afa5fdd1-c069-43fb-a881-44528951a92f"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[89503, 2282, 191, 3, 67, "Section",ExpressionUUID->"67d7ca39-6163-4347-93c2-75ba11f134e1"],
+Cell[89697, 2287, 18996, 488, 554, "Text",ExpressionUUID->"5fe61134-82ce-4ed0-b972-23399ab63173"],
+Cell[108696, 2777, 6577, 167, 299, "Text",ExpressionUUID->"e969d276-2820-473c-a844-46e15d2fe875"],
+Cell[115276, 2946, 191, 3, 35, "Text",ExpressionUUID->"54ca412c-e087-4616-83b4-871fa0b6788c"],
+Cell[115470, 2951, 1200, 35, 50, "Input",ExpressionUUID->"8d2bd366-dcc8-46ad-86f4-63d1b8d87519"],
+Cell[CellGroupData[{
+Cell[116695, 2990, 547, 13, 29, "Input",ExpressionUUID->"66584308-752a-444e-8774-a5636435c3f2"],
+Cell[117245, 3005, 1005, 36, 69, "Output",ExpressionUUID->"3a04ca37-8b9d-467b-8417-d0ceda4b54a3"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

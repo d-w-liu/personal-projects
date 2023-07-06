@@ -1,0 +1,557 @@
+SciDAVis 1.22.0 project file
+<scripting-lang>	muParser
+<windows>	3
+<table>
+1485
+<table creation_time="2018-26-02 14:15:32:000" caption_spec="%n%C{ - }%c" name="Table1" columns="2" rows="30"><comment><![CDATA[]]></comment><column creation_time="2018-26-02 14:15:32:346" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2018-26-02 14:15:32:346" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2018-26-02 14:15:32:346" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter></column><column creation_time="2018-26-02 14:15:32:346" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2018-26-02 14:15:32:346" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2018-26-02 14:15:32:346" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	-156	7	573	382	
+
+</table>
+<table>
+31579
+<table creation_time="2018-26-02 14:15:38:000" caption_spec="%n%C{ - }%c" name="Table2" columns="2" rows="199"><comment><![CDATA[C:/Users/liu.2101/Documents/3700/Lab 4/Sodium22 Data.txt]]></comment><column creation_time="2018-26-02 14:15:38:481" caption_spec="%n%C{ - }%c" name="0.013" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2018-26-02 14:15:38:481" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2018-26-02 14:15:38:481" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">3.7999999999999999e-02</row><row type="TypeDouble" index="1" invalid="no">6.2000000000000000e-02</row><row type="TypeDouble" index="2" invalid="no">8.6999999999999994e-02</row><row type="TypeDouble" index="3" invalid="no">1.1200000000000000e-01</row><row type="TypeDouble" index="4" invalid="no">1.3800000000000001e-01</row><row type="TypeDouble" index="5" invalid="no">1.6200000000000001e-01</row><row type="TypeDouble" index="6" invalid="no">1.8700000000000000e-01</row><row type="TypeDouble" index="7" invalid="no">2.1299999999999999e-01</row><row type="TypeDouble" index="8" invalid="no">2.3699999999999999e-01</row><row type="TypeDouble" index="9" invalid="no">2.6200000000000001e-01</row><row type="TypeDouble" index="10" invalid="no">2.8699999999999998e-01</row><row type="TypeDouble" index="11" invalid="no">3.1200000000000000e-01</row><row type="TypeDouble" index="12" invalid="no">3.3800000000000002e-01</row><row type="TypeDouble" index="13" invalid="no">3.6299999999999999e-01</row><row type="TypeDouble" index="14" invalid="no">3.8700000000000001e-01</row><row type="TypeDouble" index="15" invalid="no">4.1199999999999998e-01</row><row type="TypeDouble" index="16" invalid="no">4.3700000000000000e-01</row><row type="TypeDouble" index="17" invalid="no">4.6300000000000002e-01</row><row type="TypeDouble" index="18" invalid="no">4.8799999999999999e-01</row><row type="TypeDouble" index="19" invalid="no">5.1200000000000001e-01</row><row type="TypeDouble" index="20" invalid="no">5.3800000000000003e-01</row><row type="TypeDouble" index="21" invalid="no">5.6200000000000006e-01</row><row type="TypeDouble" index="22" invalid="no">5.8699999999999997e-01</row><row type="TypeDouble" index="23" invalid="no">6.1299999999999999e-01</row><row type="TypeDouble" index="24" invalid="no">6.3700000000000001e-01</row><row type="TypeDouble" index="25" invalid="no">6.6300000000000003e-01</row><row type="TypeDouble" index="26" invalid="no">6.8700000000000006e-01</row><row type="TypeDouble" index="27" invalid="no">7.1199999999999997e-01</row><row type="TypeDouble" index="28" invalid="no">7.3799999999999999e-01</row><row type="TypeDouble" index="29" invalid="no">7.6200000000000001e-01</row><row type="TypeDouble" index="30" invalid="no">7.8800000000000003e-01</row><row type="TypeDouble" index="31" invalid="no">8.1200000000000006e-01</row><row type="TypeDouble" index="32" invalid="no">8.3699999999999997e-01</row><row type="TypeDouble" index="33" invalid="no">8.6299999999999999e-01</row><row type="TypeDouble" index="34" invalid="no">8.8700000000000001e-01</row><row type="TypeDouble" index="35" invalid="no">9.1300000000000003e-01</row><row type="TypeDouble" index="36" invalid="no">9.3700000000000006e-01</row><row type="TypeDouble" index="37" invalid="no">9.6199999999999997e-01</row><row type="TypeDouble" index="38" invalid="no">9.8799999999999999e-01</row><row type="TypeDouble" index="39" invalid="no">1.0129999999999999e+00</row><row type="TypeDouble" index="40" invalid="no">1.0380000000000000e+00</row><row type="TypeDouble" index="41" invalid="no">1.0620000000000001e+00</row><row type="TypeDouble" index="42" invalid="no">1.0870000000000000e+00</row><row type="TypeDouble" index="43" invalid="no">1.1120000000000001e+00</row><row type="TypeDouble" index="44" invalid="no">1.1379999999999999e+00</row><row type="TypeDouble" index="45" invalid="no">1.1630000000000000e+00</row><row type="TypeDouble" index="46" invalid="no">1.1870000000000001e+00</row><row type="TypeDouble" index="47" invalid="no">1.2120000000000000e+00</row><row type="TypeDouble" index="48" invalid="no">1.2370000000000001e+00</row><row type="TypeDouble" index="49" invalid="no">1.2629999999999999e+00</row><row type="TypeDouble" index="50" invalid="no">1.2880000000000000e+00</row><row type="TypeDouble" index="51" invalid="no">1.3120000000000001e+00</row><row type="TypeDouble" index="52" invalid="no">1.3370000000000000e+00</row><row type="TypeDouble" index="53" invalid="no">1.3620000000000001e+00</row><row type="TypeDouble" index="54" invalid="no">1.3879999999999999e+00</row><row type="TypeDouble" index="55" invalid="no">1.4130000000000000e+00</row><row type="TypeDouble" index="56" invalid="no">1.4370000000000001e+00</row><row type="TypeDouble" index="57" invalid="no">1.4620000000000000e+00</row><row type="TypeDouble" index="58" invalid="no">1.4870000000000001e+00</row><row type="TypeDouble" index="59" invalid="no">1.5129999999999999e+00</row><row type="TypeDouble" index="60" invalid="no">1.5380000000000000e+00</row><row type="TypeDouble" index="61" invalid="no">1.5620000000000001e+00</row><row type="TypeDouble" index="62" invalid="no">1.5870000000000000e+00</row><row type="TypeDouble" index="63" invalid="no">1.6120000000000001e+00</row><row type="TypeDouble" index="64" invalid="no">1.6379999999999999e+00</row><row type="TypeDouble" index="65" invalid="no">1.6630000000000000e+00</row><row type="TypeDouble" index="66" invalid="no">1.6870000000000001e+00</row><row type="TypeDouble" index="67" invalid="no">1.7120000000000000e+00</row><row type="TypeDouble" index="68" invalid="no">1.7370000000000001e+00</row><row type="TypeDouble" index="69" invalid="no">1.7629999999999999e+00</row><row type="TypeDouble" index="70" invalid="no">1.7880000000000000e+00</row><row type="TypeDouble" index="71" invalid="no">1.8120000000000001e+00</row><row type="TypeDouble" index="72" invalid="no">1.8370000000000000e+00</row><row type="TypeDouble" index="73" invalid="no">1.8620000000000001e+00</row><row type="TypeDouble" index="74" invalid="no">1.8879999999999999e+00</row><row type="TypeDouble" index="75" invalid="no">1.9130000000000000e+00</row><row type="TypeDouble" index="76" invalid="no">1.9370000000000001e+00</row><row type="TypeDouble" index="77" invalid="no">1.9620000000000000e+00</row><row type="TypeDouble" index="78" invalid="no">1.9870000000000001e+00</row><row type="TypeDouble" index="79" invalid="no">2.0129999999999999e+00</row><row type="TypeDouble" index="80" invalid="no">2.0369999999999999e+00</row><row type="TypeDouble" index="81" invalid="no">2.0619999999999998e+00</row><row type="TypeDouble" index="82" invalid="no">2.0880000000000001e+00</row><row type="TypeDouble" index="83" invalid="no">2.1120000000000001e+00</row><row type="TypeDouble" index="84" invalid="no">2.1379999999999999e+00</row><row type="TypeDouble" index="85" invalid="no">2.1619999999999999e+00</row><row type="TypeDouble" index="86" invalid="no">2.1869999999999998e+00</row><row type="TypeDouble" index="87" invalid="no">2.2130000000000001e+00</row><row type="TypeDouble" index="88" invalid="no">2.2370000000000001e+00</row><row type="TypeDouble" index="89" invalid="no">2.2629999999999999e+00</row><row type="TypeDouble" index="90" invalid="no">2.2869999999999999e+00</row><row type="TypeDouble" index="91" invalid="no">2.3119999999999998e+00</row><row type="TypeDouble" index="92" invalid="no">2.3380000000000001e+00</row><row type="TypeDouble" index="93" invalid="no">2.3620000000000001e+00</row><row type="TypeDouble" index="94" invalid="no">2.3879999999999999e+00</row><row type="TypeDouble" index="95" invalid="no">2.4119999999999999e+00</row><row type="TypeDouble" index="96" invalid="no">2.4369999999999998e+00</row><row type="TypeDouble" index="97" invalid="no">2.4630000000000001e+00</row><row type="TypeDouble" index="98" invalid="no">2.4870000000000001e+00</row><row type="TypeDouble" index="99" invalid="no">2.5129999999999999e+00</row><row type="TypeDouble" index="100" invalid="no">2.5369999999999999e+00</row><row type="TypeDouble" index="101" invalid="no">2.5619999999999998e+00</row><row type="TypeDouble" index="102" invalid="no">2.5880000000000001e+00</row><row type="TypeDouble" index="103" invalid="no">2.6120000000000001e+00</row><row type="TypeDouble" index="104" invalid="no">2.6379999999999999e+00</row><row type="TypeDouble" index="105" invalid="no">2.6619999999999999e+00</row><row type="TypeDouble" index="106" invalid="no">2.6869999999999998e+00</row><row type="TypeDouble" index="107" invalid="no">2.7130000000000001e+00</row><row type="TypeDouble" index="108" invalid="no">2.7370000000000001e+00</row><row type="TypeDouble" index="109" invalid="no">2.7629999999999999e+00</row><row type="TypeDouble" index="110" invalid="no">2.7869999999999999e+00</row><row type="TypeDouble" index="111" invalid="no">2.8119999999999998e+00</row><row type="TypeDouble" index="112" invalid="no">2.8380000000000001e+00</row><row type="TypeDouble" index="113" invalid="no">2.8620000000000001e+00</row><row type="TypeDouble" index="114" invalid="no">2.8879999999999999e+00</row><row type="TypeDouble" index="115" invalid="no">2.9119999999999999e+00</row><row type="TypeDouble" index="116" invalid="no">2.9369999999999998e+00</row><row type="TypeDouble" index="117" invalid="no">2.9630000000000001e+00</row><row type="TypeDouble" index="118" invalid="no">2.9870000000000001e+00</row><row type="TypeDouble" index="119" invalid="no">3.0129999999999999e+00</row><row type="TypeDouble" index="120" invalid="no">3.0369999999999999e+00</row><row type="TypeDouble" index="121" invalid="no">3.0619999999999998e+00</row><row type="TypeDouble" index="122" invalid="no">3.0880000000000001e+00</row><row type="TypeDouble" index="123" invalid="no">3.1120000000000001e+00</row><row type="TypeDouble" index="124" invalid="no">3.1379999999999999e+00</row><row type="TypeDouble" index="125" invalid="no">3.1619999999999999e+00</row><row type="TypeDouble" index="126" invalid="no">3.1869999999999998e+00</row><row type="TypeDouble" index="127" invalid="no">3.2130000000000001e+00</row><row type="TypeDouble" index="128" invalid="no">3.2370000000000001e+00</row><row type="TypeDouble" index="129" invalid="no">3.2629999999999999e+00</row><row type="TypeDouble" index="130" invalid="no">3.2869999999999999e+00</row><row type="TypeDouble" index="131" invalid="no">3.3119999999999998e+00</row><row type="TypeDouble" index="132" invalid="no">3.3380000000000001e+00</row><row type="TypeDouble" index="133" invalid="no">3.3620000000000001e+00</row><row type="TypeDouble" index="134" invalid="no">3.3879999999999999e+00</row><row type="TypeDouble" index="135" invalid="no">3.4119999999999999e+00</row><row type="TypeDouble" index="136" invalid="no">3.4369999999999998e+00</row><row type="TypeDouble" index="137" invalid="no">3.4630000000000001e+00</row><row type="TypeDouble" index="138" invalid="no">3.4870000000000001e+00</row><row type="TypeDouble" index="139" invalid="no">3.5129999999999999e+00</row><row type="TypeDouble" index="140" invalid="no">3.5369999999999999e+00</row><row type="TypeDouble" index="141" invalid="no">3.5619999999999998e+00</row><row type="TypeDouble" index="142" invalid="no">3.5880000000000001e+00</row><row type="TypeDouble" index="143" invalid="no">3.6120000000000001e+00</row><row type="TypeDouble" index="144" invalid="no">3.6379999999999999e+00</row><row type="TypeDouble" index="145" invalid="no">3.6619999999999999e+00</row><row type="TypeDouble" index="146" invalid="no">3.6869999999999998e+00</row><row type="TypeDouble" index="147" invalid="no">3.7130000000000001e+00</row><row type="TypeDouble" index="148" invalid="no">3.7370000000000001e+00</row><row type="TypeDouble" index="149" invalid="no">3.7629999999999999e+00</row><row type="TypeDouble" index="150" invalid="no">3.7869999999999999e+00</row><row type="TypeDouble" index="151" invalid="no">3.8119999999999998e+00</row><row type="TypeDouble" index="152" invalid="no">3.8380000000000001e+00</row><row type="TypeDouble" index="153" invalid="no">3.8620000000000001e+00</row><row type="TypeDouble" index="154" invalid="no">3.8879999999999999e+00</row><row type="TypeDouble" index="155" invalid="no">3.9119999999999999e+00</row><row type="TypeDouble" index="156" invalid="no">3.9369999999999998e+00</row><row type="TypeDouble" index="157" invalid="no">3.9630000000000001e+00</row><row type="TypeDouble" index="158" invalid="no">3.9870000000000001e+00</row><row type="TypeDouble" index="159" invalid="no">4.0119999999999996e+00</row><row type="TypeDouble" index="160" invalid="no">4.0369999999999999e+00</row><row type="TypeDouble" index="161" invalid="no">4.0620000000000003e+00</row><row type="TypeDouble" index="162" invalid="no">4.0880000000000001e+00</row><row type="TypeDouble" index="163" invalid="no">4.1130000000000004e+00</row><row type="TypeDouble" index="164" invalid="no">4.1369999999999996e+00</row><row type="TypeDouble" index="165" invalid="no">4.1619999999999999e+00</row><row type="TypeDouble" index="166" invalid="no">4.1870000000000003e+00</row><row type="TypeDouble" index="167" invalid="no">4.2130000000000001e+00</row><row type="TypeDouble" index="168" invalid="no">4.2380000000000004e+00</row><row type="TypeDouble" index="169" invalid="no">4.2619999999999996e+00</row><row type="TypeDouble" index="170" invalid="no">4.2869999999999999e+00</row><row type="TypeDouble" index="171" invalid="no">4.3120000000000003e+00</row><row type="TypeDouble" index="172" invalid="no">4.3380000000000001e+00</row><row type="TypeDouble" index="173" invalid="no">4.3630000000000004e+00</row><row type="TypeDouble" index="174" invalid="no">4.3869999999999996e+00</row><row type="TypeDouble" index="175" invalid="no">4.4119999999999999e+00</row><row type="TypeDouble" index="176" invalid="no">4.4370000000000003e+00</row><row type="TypeDouble" index="177" invalid="no">4.4630000000000001e+00</row><row type="TypeDouble" index="178" invalid="no">4.4880000000000004e+00</row><row type="TypeDouble" index="179" invalid="no">4.5119999999999996e+00</row><row type="TypeDouble" index="180" invalid="no">4.5369999999999999e+00</row><row type="TypeDouble" index="181" invalid="no">4.5620000000000003e+00</row><row type="TypeDouble" index="182" invalid="no">4.5880000000000001e+00</row><row type="TypeDouble" index="183" invalid="no">4.6130000000000004e+00</row><row type="TypeDouble" index="184" invalid="no">4.6369999999999996e+00</row><row type="TypeDouble" index="185" invalid="no">4.6619999999999999e+00</row><row type="TypeDouble" index="186" invalid="no">4.6870000000000003e+00</row><row type="TypeDouble" index="187" invalid="no">4.7130000000000001e+00</row><row type="TypeDouble" index="188" invalid="no">4.7380000000000004e+00</row><row type="TypeDouble" index="189" invalid="no">4.7619999999999996e+00</row><row type="TypeDouble" index="190" invalid="no">4.7869999999999999e+00</row><row type="TypeDouble" index="191" invalid="no">4.8120000000000003e+00</row><row type="TypeDouble" index="192" invalid="no">4.8380000000000001e+00</row><row type="TypeDouble" index="193" invalid="no">4.8630000000000004e+00</row><row type="TypeDouble" index="194" invalid="no">4.8869999999999996e+00</row><row type="TypeDouble" index="195" invalid="no">4.9119999999999999e+00</row><row type="TypeDouble" index="196" invalid="no">4.9370000000000003e+00</row><row type="TypeDouble" index="197" invalid="no">4.9630000000000001e+00</row><row type="TypeDouble" index="198" invalid="no">4.9880000000000004e+00</row></column><column creation_time="2018-26-02 14:15:38:482" caption_spec="%n%C{ - }%c" name="68.000" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2018-26-02 14:15:38:482" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2018-26-02 14:15:38:482" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">7.5000000000000000e+01</row><row type="TypeDouble" index="1" invalid="no">9.0000000000000000e+01</row><row type="TypeDouble" index="2" invalid="no">1.1500000000000000e+02</row><row type="TypeDouble" index="3" invalid="no">1.5000000000000000e+02</row><row type="TypeDouble" index="4" invalid="no">5.0000000000000000e+02</row><row type="TypeDouble" index="5" invalid="no">1.2760000000000000e+03</row><row type="TypeDouble" index="6" invalid="no">1.8610000000000000e+03</row><row type="TypeDouble" index="7" invalid="no">2.2070000000000000e+03</row><row type="TypeDouble" index="8" invalid="no">2.3540000000000000e+03</row><row type="TypeDouble" index="9" invalid="no">2.3080000000000000e+03</row><row type="TypeDouble" index="10" invalid="no">2.4600000000000000e+03</row><row type="TypeDouble" index="11" invalid="no">2.2990000000000000e+03</row><row type="TypeDouble" index="12" invalid="no">2.4280000000000000e+03</row><row type="TypeDouble" index="13" invalid="no">2.4910000000000000e+03</row><row type="TypeDouble" index="14" invalid="no">2.4160000000000000e+03</row><row type="TypeDouble" index="15" invalid="no">2.5130000000000000e+03</row><row type="TypeDouble" index="16" invalid="no">2.5250000000000000e+03</row><row type="TypeDouble" index="17" invalid="no">2.5040000000000000e+03</row><row type="TypeDouble" index="18" invalid="no">2.7810000000000000e+03</row><row type="TypeDouble" index="19" invalid="no">3.1270000000000000e+03</row><row type="TypeDouble" index="20" invalid="no">3.5110000000000000e+03</row><row type="TypeDouble" index="21" invalid="no">3.3720000000000000e+03</row><row type="TypeDouble" index="22" invalid="no">2.9870000000000000e+03</row><row type="TypeDouble" index="23" invalid="no">2.9140000000000000e+03</row><row type="TypeDouble" index="24" invalid="no">2.7670000000000000e+03</row><row type="TypeDouble" index="25" invalid="no">2.8130000000000000e+03</row><row type="TypeDouble" index="26" invalid="no">2.6150000000000000e+03</row><row type="TypeDouble" index="27" invalid="no">2.4850000000000000e+03</row><row type="TypeDouble" index="28" invalid="no">2.3170000000000000e+03</row><row type="TypeDouble" index="29" invalid="no">2.3220000000000000e+03</row><row type="TypeDouble" index="30" invalid="no">2.3030000000000000e+03</row><row type="TypeDouble" index="31" invalid="no">2.2920000000000000e+03</row><row type="TypeDouble" index="32" invalid="no">2.1740000000000000e+03</row><row type="TypeDouble" index="33" invalid="no">2.2040000000000000e+03</row><row type="TypeDouble" index="34" invalid="no">2.1380000000000000e+03</row><row type="TypeDouble" index="35" invalid="no">2.1940000000000000e+03</row><row type="TypeDouble" index="36" invalid="no">2.1400000000000000e+03</row><row type="TypeDouble" index="37" invalid="no">1.9180000000000000e+03</row><row type="TypeDouble" index="38" invalid="no">1.7260000000000000e+03</row><row type="TypeDouble" index="39" invalid="no">1.3470000000000000e+03</row><row type="TypeDouble" index="40" invalid="no">1.2550000000000000e+03</row><row type="TypeDouble" index="41" invalid="no">1.1010000000000000e+03</row><row type="TypeDouble" index="42" invalid="no">1.0520000000000000e+03</row><row type="TypeDouble" index="43" invalid="no">9.7100000000000000e+02</row><row type="TypeDouble" index="44" invalid="no">9.0500000000000000e+02</row><row type="TypeDouble" index="45" invalid="no">9.3300000000000000e+02</row><row type="TypeDouble" index="46" invalid="no">8.9900000000000000e+02</row><row type="TypeDouble" index="47" invalid="no">8.4100000000000000e+02</row><row type="TypeDouble" index="48" invalid="no">9.5400000000000000e+02</row><row type="TypeDouble" index="49" invalid="no">9.9200000000000000e+02</row><row type="TypeDouble" index="50" invalid="no">1.0250000000000000e+03</row><row type="TypeDouble" index="51" invalid="no">1.0180000000000000e+03</row><row type="TypeDouble" index="52" invalid="no">1.1320000000000000e+03</row><row type="TypeDouble" index="53" invalid="no">1.5610000000000000e+03</row><row type="TypeDouble" index="54" invalid="no">2.5070000000000000e+03</row><row type="TypeDouble" index="55" invalid="no">4.6930000000000000e+03</row><row type="TypeDouble" index="56" invalid="no">8.4430000000000000e+03</row><row type="TypeDouble" index="57" invalid="no">1.2158000000000000e+04</row><row type="TypeDouble" index="58" invalid="no">1.4737000000000000e+04</row><row type="TypeDouble" index="59" invalid="no">1.3964000000000000e+04</row><row type="TypeDouble" index="60" invalid="no">1.0111000000000000e+04</row><row type="TypeDouble" index="61" invalid="no">5.4590000000000000e+03</row><row type="TypeDouble" index="62" invalid="no">2.3820000000000000e+03</row><row type="TypeDouble" index="63" invalid="no">1.0680000000000000e+03</row><row type="TypeDouble" index="64" invalid="no">6.8700000000000000e+02</row><row type="TypeDouble" index="65" invalid="no">6.1700000000000000e+02</row><row type="TypeDouble" index="66" invalid="no">7.0500000000000000e+02</row><row type="TypeDouble" index="67" invalid="no">6.1700000000000000e+02</row><row type="TypeDouble" index="68" invalid="no">5.9800000000000000e+02</row><row type="TypeDouble" index="69" invalid="no">6.0100000000000000e+02</row><row type="TypeDouble" index="70" invalid="no">5.8500000000000000e+02</row><row type="TypeDouble" index="71" invalid="no">6.3200000000000000e+02</row><row type="TypeDouble" index="72" invalid="no">6.0500000000000000e+02</row><row type="TypeDouble" index="73" invalid="no">6.1100000000000000e+02</row><row type="TypeDouble" index="74" invalid="no">6.1600000000000000e+02</row><row type="TypeDouble" index="75" invalid="no">6.6600000000000000e+02</row><row type="TypeDouble" index="76" invalid="no">6.6900000000000000e+02</row><row type="TypeDouble" index="77" invalid="no">7.0100000000000000e+02</row><row type="TypeDouble" index="78" invalid="no">7.3900000000000000e+02</row><row type="TypeDouble" index="79" invalid="no">7.2600000000000000e+02</row><row type="TypeDouble" index="80" invalid="no">7.7700000000000000e+02</row><row type="TypeDouble" index="81" invalid="no">7.3900000000000000e+02</row><row type="TypeDouble" index="82" invalid="no">6.7500000000000000e+02</row><row type="TypeDouble" index="83" invalid="no">6.6200000000000000e+02</row><row type="TypeDouble" index="84" invalid="no">5.9000000000000000e+02</row><row type="TypeDouble" index="85" invalid="no">5.7500000000000000e+02</row><row type="TypeDouble" index="86" invalid="no">6.1100000000000000e+02</row><row type="TypeDouble" index="87" invalid="no">5.3400000000000000e+02</row><row type="TypeDouble" index="88" invalid="no">5.8200000000000000e+02</row><row type="TypeDouble" index="89" invalid="no">5.6600000000000000e+02</row><row type="TypeDouble" index="90" invalid="no">5.2100000000000000e+02</row><row type="TypeDouble" index="91" invalid="no">5.5800000000000000e+02</row><row type="TypeDouble" index="92" invalid="no">5.5400000000000000e+02</row><row type="TypeDouble" index="93" invalid="no">5.7700000000000000e+02</row><row type="TypeDouble" index="94" invalid="no">5.7000000000000000e+02</row><row type="TypeDouble" index="95" invalid="no">5.1600000000000000e+02</row><row type="TypeDouble" index="96" invalid="no">5.1000000000000000e+02</row><row type="TypeDouble" index="97" invalid="no">5.3500000000000000e+02</row><row type="TypeDouble" index="98" invalid="no">4.9100000000000000e+02</row><row type="TypeDouble" index="99" invalid="no">5.4500000000000000e+02</row><row type="TypeDouble" index="100" invalid="no">5.1600000000000000e+02</row><row type="TypeDouble" index="101" invalid="no">5.1300000000000000e+02</row><row type="TypeDouble" index="102" invalid="no">5.1600000000000000e+02</row><row type="TypeDouble" index="103" invalid="no">5.4700000000000000e+02</row><row type="TypeDouble" index="104" invalid="no">5.3900000000000000e+02</row><row type="TypeDouble" index="105" invalid="no">5.2200000000000000e+02</row><row type="TypeDouble" index="106" invalid="no">6.0100000000000000e+02</row><row type="TypeDouble" index="107" invalid="no">5.6700000000000000e+02</row><row type="TypeDouble" index="108" invalid="no">5.3600000000000000e+02</row><row type="TypeDouble" index="109" invalid="no">5.4800000000000000e+02</row><row type="TypeDouble" index="110" invalid="no">5.6200000000000000e+02</row><row type="TypeDouble" index="111" invalid="no">5.7000000000000000e+02</row><row type="TypeDouble" index="112" invalid="no">6.0000000000000000e+02</row><row type="TypeDouble" index="113" invalid="no">5.5700000000000000e+02</row><row type="TypeDouble" index="114" invalid="no">6.0100000000000000e+02</row><row type="TypeDouble" index="115" invalid="no">6.0400000000000000e+02</row><row type="TypeDouble" index="116" invalid="no">5.6400000000000000e+02</row><row type="TypeDouble" index="117" invalid="no">5.1000000000000000e+02</row><row type="TypeDouble" index="118" invalid="no">4.4600000000000000e+02</row><row type="TypeDouble" index="119" invalid="no">4.3300000000000000e+02</row><row type="TypeDouble" index="120" invalid="no">3.5000000000000000e+02</row><row type="TypeDouble" index="121" invalid="no">3.2800000000000000e+02</row><row type="TypeDouble" index="122" invalid="no">3.0700000000000000e+02</row><row type="TypeDouble" index="123" invalid="no">2.7300000000000000e+02</row><row type="TypeDouble" index="124" invalid="no">2.8800000000000000e+02</row><row type="TypeDouble" index="125" invalid="no">2.7300000000000000e+02</row><row type="TypeDouble" index="126" invalid="no">2.1200000000000000e+02</row><row type="TypeDouble" index="127" invalid="no">2.2400000000000000e+02</row><row type="TypeDouble" index="128" invalid="no">2.0800000000000000e+02</row><row type="TypeDouble" index="129" invalid="no">2.2100000000000000e+02</row><row type="TypeDouble" index="130" invalid="no">2.5800000000000000e+02</row><row type="TypeDouble" index="131" invalid="no">2.3200000000000000e+02</row><row type="TypeDouble" index="132" invalid="no">2.2900000000000000e+02</row><row type="TypeDouble" index="133" invalid="no">2.4900000000000000e+02</row><row type="TypeDouble" index="134" invalid="no">2.6200000000000000e+02</row><row type="TypeDouble" index="135" invalid="no">2.9800000000000000e+02</row><row type="TypeDouble" index="136" invalid="no">3.8700000000000000e+02</row><row type="TypeDouble" index="137" invalid="no">4.9300000000000000e+02</row><row type="TypeDouble" index="138" invalid="no">7.4000000000000000e+02</row><row type="TypeDouble" index="139" invalid="no">9.4200000000000000e+02</row><row type="TypeDouble" index="140" invalid="no">1.2200000000000000e+03</row><row type="TypeDouble" index="141" invalid="no">1.4070000000000000e+03</row><row type="TypeDouble" index="142" invalid="no">1.5060000000000000e+03</row><row type="TypeDouble" index="143" invalid="no">1.5670000000000000e+03</row><row type="TypeDouble" index="144" invalid="no">1.4670000000000000e+03</row><row type="TypeDouble" index="145" invalid="no">1.2790000000000000e+03</row><row type="TypeDouble" index="146" invalid="no">9.4700000000000000e+02</row><row type="TypeDouble" index="147" invalid="no">7.2700000000000000e+02</row><row type="TypeDouble" index="148" invalid="no">5.4300000000000000e+02</row><row type="TypeDouble" index="149" invalid="no">4.1000000000000000e+02</row><row type="TypeDouble" index="150" invalid="no">3.0500000000000000e+02</row><row type="TypeDouble" index="151" invalid="no">2.6700000000000000e+02</row><row type="TypeDouble" index="152" invalid="no">2.1000000000000000e+02</row><row type="TypeDouble" index="153" invalid="no">2.0000000000000000e+02</row><row type="TypeDouble" index="154" invalid="no">2.0300000000000000e+02</row><row type="TypeDouble" index="155" invalid="no">2.0500000000000000e+02</row><row type="TypeDouble" index="156" invalid="no">2.1000000000000000e+02</row><row type="TypeDouble" index="157" invalid="no">1.9700000000000000e+02</row><row type="TypeDouble" index="158" invalid="no">2.1800000000000000e+02</row><row type="TypeDouble" index="159" invalid="no">2.0400000000000000e+02</row><row type="TypeDouble" index="160" invalid="no">2.0100000000000000e+02</row><row type="TypeDouble" index="161" invalid="no">2.1300000000000000e+02</row><row type="TypeDouble" index="162" invalid="no">2.1500000000000000e+02</row><row type="TypeDouble" index="163" invalid="no">2.0600000000000000e+02</row><row type="TypeDouble" index="164" invalid="no">1.9100000000000000e+02</row><row type="TypeDouble" index="165" invalid="no">2.1200000000000000e+02</row><row type="TypeDouble" index="166" invalid="no">2.2500000000000000e+02</row><row type="TypeDouble" index="167" invalid="no">2.1500000000000000e+02</row><row type="TypeDouble" index="168" invalid="no">2.0700000000000000e+02</row><row type="TypeDouble" index="169" invalid="no">2.0100000000000000e+02</row><row type="TypeDouble" index="170" invalid="no">1.8800000000000000e+02</row><row type="TypeDouble" index="171" invalid="no">2.1700000000000000e+02</row><row type="TypeDouble" index="172" invalid="no">1.9400000000000000e+02</row><row type="TypeDouble" index="173" invalid="no">1.7900000000000000e+02</row><row type="TypeDouble" index="174" invalid="no">1.8000000000000000e+02</row><row type="TypeDouble" index="175" invalid="no">1.3500000000000000e+02</row><row type="TypeDouble" index="176" invalid="no">1.5700000000000000e+02</row><row type="TypeDouble" index="177" invalid="no">1.4400000000000000e+02</row><row type="TypeDouble" index="178" invalid="no">1.4200000000000000e+02</row><row type="TypeDouble" index="179" invalid="no">1.4700000000000000e+02</row><row type="TypeDouble" index="180" invalid="no">1.2200000000000000e+02</row><row type="TypeDouble" index="181" invalid="no">1.0900000000000000e+02</row><row type="TypeDouble" index="182" invalid="no">9.7000000000000000e+01</row><row type="TypeDouble" index="183" invalid="no">7.1000000000000000e+01</row><row type="TypeDouble" index="184" invalid="no">7.3000000000000000e+01</row><row type="TypeDouble" index="185" invalid="no">6.5000000000000000e+01</row><row type="TypeDouble" index="186" invalid="no">7.2000000000000000e+01</row><row type="TypeDouble" index="187" invalid="no">7.3000000000000000e+01</row><row type="TypeDouble" index="188" invalid="no">6.3000000000000000e+01</row><row type="TypeDouble" index="189" invalid="no">6.6000000000000000e+01</row><row type="TypeDouble" index="190" invalid="no">5.3000000000000000e+01</row><row type="TypeDouble" index="191" invalid="no">5.0000000000000000e+01</row><row type="TypeDouble" index="192" invalid="no">6.7000000000000000e+01</row><row type="TypeDouble" index="193" invalid="no">7.1000000000000000e+01</row><row type="TypeDouble" index="194" invalid="no">7.4000000000000000e+01</row><row type="TypeDouble" index="195" invalid="no">1.1500000000000000e+02</row><row type="TypeDouble" index="196" invalid="no">1.2400000000000000e+02</row><row type="TypeDouble" index="197" invalid="no">1.5100000000000000e+02</row><row type="TypeDouble" index="198" invalid="no">1.9600000000000000e+02</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	-156	7	573	382	
+
+</table>
+<multiLayer>
+Graph1	1	1	2/26/2018 2:15:43 PM
+geometry	17	-13	1062	794	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	418	307
+Alignement	0	0
+<graph>
+ggeometry	6	6	1038	726
+PlotTitle	Sodium-22 Gamma Ray Energy Spectrum	#000000	4
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0	#a0a0a4	2	0	#0000ff	0	0	#a0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	Voltage	Detections			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	4	4	4
+TitleFont	MS Shell Dlg 2	19	75	0	0	0
+ScaleFont0	MS Shell Dlg 2	15	75	0	0	0
+ScaleFont1	MS Shell Dlg 2	15	75	0	0	0
+ScaleFont2	MS Shell Dlg 2	15	75	0	0	0
+ScaleFont3	MS Shell Dlg 2	15	75	0	0	0
+AxisFont0	MS Shell Dlg 2	15	50	0	0	0
+AxisFont1	MS Shell Dlg 2	15	50	0	0	0
+AxisFont2	MS Shell Dlg 2	15	50	0	0	0
+AxisFont3	MS Shell Dlg 2	15	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Table2_0.013	Table2_68.000	1	0	0	0	1	7	1	0	0	0	0	14	0	2	0	0	198	1
+FunctionCurve	0,NonLinearFit1,x,1.312,1.638	100			0	1	1	0	1	0	0	0	19	0	0	14	0	2	0	128127544	6	1
+<formula>
+A=1731.81257715459
+C=4026.65578735238
+D=-2204.13918380425
+M=1.49224924634772
+S=0.0484143552277229
+
+C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+
+
+</formula>
+scale	0	0	16000	0	10	5	0	0
+scale	1	0	16000	0	8	5	0	0
+scale	2	1.2	1.8	0	5	5	0	0
+scale	3	1.2	1.8	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<line>	1.49297658862876	15295.2691680261	1.49230769230769	-182.707993474714	1	#000000	SolidLine	0	0	4	45	1</line>
+<legend>	1.55814977973568	15233.2268370607	MS Shell Dlg 2	15	50	0	0	0	#000000	1	0	#ffffff	0	Na-22 Energy Spectrum	\c{2}Fit for 0.511 MeV</legend>
+<text>	1.46220735785953	15869.4942903752	MS Shell Dlg 2	8	50	0	0	0	#000000	1	0	#ffffff	0	0.511 MeV γ</text>
+</graph>
+</multiLayer>
+<log>
+[3/26/2018 2:04:58 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 0.038 to x = 4.988
+A  = 1,813.99641332493 +/- 0.692848097536498
+C  = 1,109.03838732101 +/- 1.39800626143972
+D  = -219.82394323453 +/- 0.536197962332247
+M  = 1.49643097602039 +/- 2.70931232256478e-05
+S  = 0.0451679776826939 +/- 5.03125433546107e-05
+--------------------------------------------------------------------------------------
+Chi^2/doF = 418.982379589268
+R^2 = 0.527915252389408
+---------------------------------------------------------------------------------------
+Iterations = 4
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[3/26/2018 2:05:00 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 0.038 to x = 4.988
+A  = 1,813.99641332493 +/- 0.69282647730818
+C  = 1,109.03838732101 +/- 1.39800496360706
+D  = -219.82394323453 +/- 0.536197579586315
+M  = 1.49643097602039 +/- 2.70931261416391e-05
+S  = 0.0451679776826939 +/- 5.03122883087047e-05
+--------------------------------------------------------------------------------------
+Chi^2/doF = 418.982379589262
+R^2 = 0.527915252389415
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[3/26/2018 2:05:00 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 0.038 to x = 4.988
+A  = 1,813.99641332493 +/- 0.69282647730818
+C  = 1,109.03838732101 +/- 1.39800496360706
+D  = -219.82394323453 +/- 0.536197579586315
+M  = 1.49643097602039 +/- 2.70931261416391e-05
+S  = 0.0451679776826939 +/- 5.03122883087047e-05
+--------------------------------------------------------------------------------------
+Chi^2/doF = 418.982379589262
+R^2 = 0.527915252389415
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[3/26/2018 2:05:11 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 0.038 to x = 4.988
+A  = 1,787.25379572552 +/- 0.692930986222657
+C  = 1,112.26429630769 +/- 1.39804890405184
+D  = -220.817842920014 +/- 0.536208737764741
+M  = 1.49571500865722 +/- 2.7510547093283e-05
+S  = 0.0451806836017768 +/- 5.10778322183148e-05
+--------------------------------------------------------------------------------------
+Chi^2/doF = 418.097082989765
+R^2 = 0.528912752623538
+---------------------------------------------------------------------------------------
+Iterations = 2
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[3/26/2018 2:05:12 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 0.038 to x = 4.988
+A  = 1,787.25379572552 +/- 0.692908015324911
+C  = 1,112.26429630769 +/- 1.39804914043876
+D  = -220.817842920014 +/- 0.536209156507695
+M  = 1.49571500865722 +/- 2.75105434997613e-05
+S  = 0.0451806836017768 +/- 5.10780142853793e-05
+--------------------------------------------------------------------------------------
+Chi^2/doF = 418.09708298977
+R^2 = 0.528912752623533
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[3/26/2018 2:05:22 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 0.038 to x = 4.988
+A  = 1,787.14548531959 +/- 0.693168623794518
+C  = 1,112.63152410897 +/- 1.39788066952322
+D  = -220.731087110621 +/- 0.536158448005104
+M  = 1.49970461997 +/- 2.75205748393136e-05
+S  = 0.0451885984546142 +/- 5.11453129648048e-05
+--------------------------------------------------------------------------------------
+Chi^2/doF = 425.534716395048
+R^2 = 0.520532463952699
+---------------------------------------------------------------------------------------
+Iterations = 1
+Status = success
+---------------------------------------------------------------------------------------
+[3/26/2018 2:06:05 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.413 to x = 1.587
+A  = 1,835.5187095464 +/- 53.0283074850888
+C  = 7,940.02580596151 +/- 2,162.69527741797
+D  = -5,133.60652570858 +/- 1,612.56909103776
+M  = 1.49372137850729 +/- 0.000715268084492379
+S  = 0.049978633255107 +/- 0.001320905208772
+--------------------------------------------------------------------------------------
+Chi^2/doF = 8.36329094156822
+R^2 = 0.998802786377897
+---------------------------------------------------------------------------------------
+Iterations = 16
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[3/26/2018 2:06:07 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.413 to x = 1.587
+A  = 1,835.5187095464 +/- 53.071289027267
+C  = 7,940.02580596151 +/- 2,161.46762132986
+D  = -5,133.60652570858 +/- 1,611.14135706866
+M  = 1.49372137850729 +/- 0.000713615367296378
+S  = 0.049978633255107 +/- 0.00132212699682956
+--------------------------------------------------------------------------------------
+Chi^2/doF = 8.36329094157041
+R^2 = 0.998802786377897
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[3/26/2018 2:06:08 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.413 to x = 1.587
+A  = 1,835.5187095464 +/- 53.071289027267
+C  = 7,940.02580596151 +/- 2,161.46762132986
+D  = -5,133.60652570858 +/- 1,611.14135706866
+M  = 1.49372137850729 +/- 0.000713615367296378
+S  = 0.049978633255107 +/- 0.00132212699682956
+--------------------------------------------------------------------------------------
+Chi^2/doF = 8.36329094157041
+R^2 = 0.998802786377897
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[3/26/2018 2:06:16 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.312 to x = 1.587
+A  = 1,862.14530850963 +/- 12.5443999615775
+C  = 8,062.05281550894 +/- 396.994350666403
+D  = -5,278.75095878087 +/- 350.293270060199
+M  = 1.49361242315115 +/- 0.000219160823098186
+S  = 0.0506770188943522 +/- 0.000433764212846448
+--------------------------------------------------------------------------------------
+Chi^2/doF = 10.4888451332297
+R^2 = 0.998314176815988
+---------------------------------------------------------------------------------------
+Iterations = 6
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[3/26/2018 2:06:21 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.413 to x = 1.587
+A  = 1,801.13800250168 +/- 50.7619878871597
+C  = 10,031.5888383383 +/- 2,087.99732886655
+D  = -6,430.67667056989 +/- 1,563.96153441462
+M  = 1.49424180163384 +/- 0.000699774091923994
+S  = 0.0495091273020289 +/- 0.00128826617999427
+--------------------------------------------------------------------------------------
+Chi^2/doF = 7.75735553935193
+R^2 = 0.99888952664829
+---------------------------------------------------------------------------------------
+Iterations = 44
+Status = success
+---------------------------------------------------------------------------------------
+[3/26/2018 2:07:13 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.362 to x = 1.638
+A  = 1,690.80932827319 +/- 7.54902371689906
+C  = 5,754.75480211611 +/- 320.381429526826
+D  = -3,254.01400284021 +/- 285.212979499666
+M  = 1.49287951843528 +/- 0.000290013782133996
+S  = 0.0476019007509863 +/- 0.000451702805301887
+--------------------------------------------------------------------------------------
+Chi^2/doF = 12.5820074592388
+R^2 = 0.998127834692374
+---------------------------------------------------------------------------------------
+Iterations = 29
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[3/26/2018 2:07:14 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.362 to x = 1.638
+A  = 1,693.90552991904 +/- 7.56190272556184
+C  = 5,462.14278928007 +/- 320.680778313662
+D  = -3,066.11941564322 +/- 285.387636434087
+M  = 1.49275975851549 +/- 0.000290019890493874
+S  = 0.0476288201113326 +/- 0.000451641944182369
+--------------------------------------------------------------------------------------
+Chi^2/doF = 11.867324080225
+R^2 = 0.998234177454645
+---------------------------------------------------------------------------------------
+Iterations = 6
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[3/26/2018 2:07:14 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.362 to x = 1.638
+A  = 1,693.90552991904 +/- 7.56235588790492
+C  = 5,462.14278928007 +/- 320.552358930375
+D  = -3,066.11941564322 +/- 285.268109299259
+M  = 1.49275975851549 +/- 0.000289831093727825
+S  = 0.0476288201113326 +/- 0.000451658691504041
+--------------------------------------------------------------------------------------
+Chi^2/doF = 11.8673240802291
+R^2 = 0.998234177454644
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[3/26/2018 2:07:23 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.362 to x = 1.638
+A  = 1,680.49128040269 +/- 7.50575530026194
+C  = 5,337.20063150428 +/- 319.889915102986
+D  = -2,967.99806337301 +/- 284.693324656924
+M  = 1.49269460052994 +/- 0.000290070828467023
+S  = 0.0474717006424782 +/- 0.000451288623024826
+--------------------------------------------------------------------------------------
+Chi^2/doF = 11.2633612402251
+R^2 = 0.998324045329847
+---------------------------------------------------------------------------------------
+Iterations = 5
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[3/26/2018 2:07:24 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.362 to x = 1.638
+A  = 1,680.49128040269 +/- 7.50579189865836
+C  = 5,337.20063150428 +/- 319.987815434269
+D  = -2,967.99806337301 +/- 284.789529770185
+M  = 1.49269460052994 +/- 0.000290084810747726
+S  = 0.0474717006424782 +/- 0.000451278616942715
+--------------------------------------------------------------------------------------
+Chi^2/doF = 11.2633612402181
+R^2 = 0.998324045329848
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[3/26/2018 2:07:24 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.362 to x = 1.638
+A  = 1,680.49128040269 +/- 7.50579189865836
+C  = 5,337.20063150428 +/- 319.987815434269
+D  = -2,967.99806337301 +/- 284.789529770185
+M  = 1.49269460052994 +/- 0.000290084810747726
+S  = 0.0474717006424782 +/- 0.000451278616942715
+--------------------------------------------------------------------------------------
+Chi^2/doF = 11.2633612402181
+R^2 = 0.998324045329848
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[3/26/2018 2:07:33 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.362 to x = 1.638
+A  = 1,695.62378803384 +/- 7.52452776681025
+C  = 5,450.97241529275 +/- 320.237811371464
+D  = -3,054.70482853327 +/- 285.052412954286
+M  = 1.49275657191896 +/- 0.000288290160023949
+S  = 0.0475299297307793 +/- 0.000448632340086645
+--------------------------------------------------------------------------------------
+Chi^2/doF = 11.7787357192054
+R^2 = 0.998247359139419
+---------------------------------------------------------------------------------------
+Iterations = 7
+Status = success
+---------------------------------------------------------------------------------------
+[3/26/2018 2:07:38 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.362 to x = 1.638
+A  = 1,695.60373679987 +/- 7.52596998988689
+C  = 5,450.88212248084 +/- 320.424269512516
+D  = -3,054.78798377255 +/- 285.198414119926
+M  = 1.49275663701445 +/- 0.000288465906628784
+S  = 0.0475313059686941 +/- 0.000448719378660746
+--------------------------------------------------------------------------------------
+Chi^2/doF = 11.7787092425886
+R^2 = 0.998247363079061
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = success
+---------------------------------------------------------------------------------------
+[3/26/2018 2:07:41 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.362 to x = 1.638
+A  = 1,695.60373679987 +/- 7.52550920583617
+C  = 5,450.88212248084 +/- 320.197771327711
+D  = -3,054.78798377255 +/- 285.001832893177
+M  = 1.49275663701445 +/- 0.000288277177323022
+S  = 0.0475313059686941 +/- 0.000448711827814864
+--------------------------------------------------------------------------------------
+Chi^2/doF = 11.778709242597
+R^2 = 0.99824736307906
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[3/26/2018 2:07:42 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.362 to x = 1.638
+A  = 1,695.60373679987 +/- 7.52550920583617
+C  = 5,450.88212248084 +/- 320.197771327711
+D  = -3,054.78798377255 +/- 285.001832893177
+M  = 1.49275663701445 +/- 0.000288277177323022
+S  = 0.0475313059686941 +/- 0.000448711827814864
+--------------------------------------------------------------------------------------
+Chi^2/doF = 11.778709242597
+R^2 = 0.99824736307906
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[3/26/2018 2:07:49 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.362 to x = 1.638
+A  = 1,680.99176635633 +/- 7.51200506307798
+C  = 5,332.80125926368 +/- 320.067995999798
+D  = -2,967.23090349109 +/- 284.87108992806
+M  = 1.49271420339725 +/- 0.000290299487878421
+S  = 0.0474897130064384 +/- 0.00045154830537866
+--------------------------------------------------------------------------------------
+Chi^2/doF = 11.3251407119612
+R^2 = 0.998314852728103
+---------------------------------------------------------------------------------------
+Iterations = 5
+Status = success
+---------------------------------------------------------------------------------------
+[3/26/2018 2:07:55 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.312 to x = 1.638
+A  = 1,730.44573102601 +/- 5.13156499808465
+C  = 4,033.94993446246 +/- 153.00999045337
+D  = -2,210.65080547937 +/- 124.814893442459
+M  = 1.49225822694201 +/- 0.000147935358605582
+S  = 0.0484379942471152 +/- 0.000249984112278876
+--------------------------------------------------------------------------------------
+Chi^2/doF = 14.6245529646494
+R^2 = 0.997367937541274
+---------------------------------------------------------------------------------------
+Iterations = 12
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[3/26/2018 2:07:57 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.312 to x = 1.638
+A  = 1,730.28666070394 +/- 5.13202187706667
+C  = 4,033.42502331596 +/- 153.001941364062
+D  = -2,210.23368433984 +/- 124.80942528115
+M  = 1.49225787018721 +/- 0.000147972710140693
+S  = 0.0484388572896184 +/- 0.000250026229012918
+--------------------------------------------------------------------------------------
+Chi^2/doF = 14.6209697946308
+R^2 = 0.99736858242439
+---------------------------------------------------------------------------------------
+Iterations = 1
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[3/26/2018 2:07:58 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.312 to x = 1.638
+A  = 1,730.28666070394 +/- 5.13178357995792
+C  = 4,033.42502331596 +/- 152.969297547974
+D  = -2,210.23368433984 +/- 124.784137709311
+M  = 1.49225787018721 +/- 0.000147960650046384
+S  = 0.0484388572896184 +/- 0.000250030989614776
+--------------------------------------------------------------------------------------
+Chi^2/doF = 14.6209697946281
+R^2 = 0.99736858242439
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[3/26/2018 2:08:04 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.312 to x = 1.638
+A  = 1,730.60510768079 +/- 5.13088921065213
+C  = 4,030.29658278235 +/- 152.994237817
+D  = -2,208.2140746429 +/- 124.800436180725
+M  = 1.49225678850273 +/- 0.000147881687690212
+S  = 0.0484354393501191 +/- 0.000249923719991577
+--------------------------------------------------------------------------------------
+Chi^2/doF = 14.6138631373247
+R^2 = 0.997369861449188
+---------------------------------------------------------------------------------------
+Iterations = 12
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[3/26/2018 2:08:05 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.312 to x = 1.638
+A  = 1,730.60510768079 +/- 5.13137315366403
+C  = 4,030.29658278235 +/- 152.980985979223
+D  = -2,208.2140746429 +/- 124.791920970487
+M  = 1.49225678850273 +/- 0.000147898441903514
+S  = 0.0484354393501191 +/- 0.000249933721170062
+--------------------------------------------------------------------------------------
+Chi^2/doF = 14.6138631373341
+R^2 = 0.997369861449186
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[3/26/2018 2:08:11 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table2_68.000, using function: C + D * x + A / (S * (2 * 3.14159) ^ (1/2)) * E^(-(x - M)^2 / (2*S^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.312 to x = 1.638
+A  = 1,731.81257715459 +/- 5.12691029300608
+C  = 4,026.65578735238 +/- 152.946407410987
+D  = -2,204.13918380425 +/- 124.757199189071
+M  = 1.49224924634772 +/- 0.000147648991106215
+S  = 0.0484143552277229 +/- 0.000249487282379221
+--------------------------------------------------------------------------------------
+Chi^2/doF = 14.5935715546109
+R^2 = 0.997373513438635
+---------------------------------------------------------------------------------------
+Iterations = 4
+Status = success
+---------------------------------------------------------------------------------------
+</log>

@@ -1,0 +1,1073 @@
+SciDAVis 1.22.0 project file
+<scripting-lang>	muParser
+<windows>	4
+<table>
+8524
+<table creation_time="2018-15-04 21:47:44:957" caption_spec="%n%C{ - }%c" name="Table1" columns="2" rows="53"><comment><![CDATA[]]></comment><column creation_time="2018-15-04 21:47:44:957" caption_spec="%n%C{ - }%c" name="1" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2018-15-04 21:47:44:957" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2018-15-04 21:47:44:957" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">1.0794999999999999e+00</row><row type="TypeDouble" index="1" invalid="no">1.0805000000000000e+00</row><row type="TypeDouble" index="2" invalid="no">1.0814999999999999e+00</row><row type="TypeDouble" index="3" invalid="no">1.0825000000000000e+00</row><row type="TypeDouble" index="4" invalid="no">1.0834999999999999e+00</row><row type="TypeDouble" index="5" invalid="no">1.0845000000000000e+00</row><row type="TypeDouble" index="6" invalid="no">1.0854999999999999e+00</row><row type="TypeDouble" index="7" invalid="no">1.0865000000000000e+00</row><row type="TypeDouble" index="8" invalid="no">1.0874999999999999e+00</row><row type="TypeDouble" index="9" invalid="no">1.0885000000000000e+00</row><row type="TypeDouble" index="10" invalid="no">1.0894999999999999e+00</row><row type="TypeDouble" index="11" invalid="no">1.0905000000000000e+00</row><row type="TypeDouble" index="12" invalid="no">1.0914999999999999e+00</row><row type="TypeDouble" index="13" invalid="no">1.2740000000000000e+00</row><row type="TypeDouble" index="14" invalid="no">1.2749999999999999e+00</row><row type="TypeDouble" index="15" invalid="no">1.2760000000000000e+00</row><row type="TypeDouble" index="16" invalid="no">1.2769999999999999e+00</row><row type="TypeDouble" index="17" invalid="no">1.2780000000000000e+00</row><row type="TypeDouble" index="18" invalid="no">1.2789999999999999e+00</row><row type="TypeDouble" index="19" invalid="no">1.2800000000000000e+00</row><row type="TypeDouble" index="20" invalid="no">1.2809999999999999e+00</row><row type="TypeDouble" index="21" invalid="no">1.2820000000000000e+00</row><row type="TypeDouble" index="22" invalid="no">1.2829999999999999e+00</row><row type="TypeDouble" index="23" invalid="no">1.2840000000000000e+00</row><row type="TypeDouble" index="24" invalid="no">1.2849999999999999e+00</row><row type="TypeDouble" index="25" invalid="no">1.2860000000000000e+00</row><row type="TypeDouble" index="26" invalid="no">1.2869999999999999e+00</row><row type="TypeDouble" index="27" invalid="no">1.2880000000000000e+00</row><row type="TypeDouble" index="28" invalid="no">1.2889999999999999e+00</row><row type="TypeDouble" index="29" invalid="no">2.3570000000000002e+00</row><row type="TypeDouble" index="30" invalid="no">2.3590000000000000e+00</row><row type="TypeDouble" index="31" invalid="no">2.3610000000000002e+00</row><row type="TypeDouble" index="32" invalid="no">2.3630000000000000e+00</row><row type="TypeDouble" index="33" invalid="no">2.3650000000000002e+00</row><row type="TypeDouble" index="34" invalid="no">2.3670000000000000e+00</row><row type="TypeDouble" index="35" invalid="no">2.3690000000000002e+00</row><row type="TypeDouble" index="36" invalid="no">2.3710000000000000e+00</row><row type="TypeDouble" index="37" invalid="no">2.3730000000000002e+00</row><row type="TypeDouble" index="38" invalid="no">2.3750000000000000e+00</row><row type="TypeDouble" index="39" invalid="no">2.3769999999999998e+00</row><row type="TypeDouble" index="40" invalid="no">2.3790000000000000e+00</row><row type="TypeDouble" index="41" invalid="no">2.3809999999999998e+00</row><row type="TypeDouble" index="42" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="43" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="44" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="45" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="46" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="47" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="48" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="49" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="50" invalid="yes">0.0000000000000000e+00</row><row type="TypeDouble" index="51" invalid="no">2.3799999999999999e+00</row></column><column creation_time="2018-15-04 21:47:44:958" caption_spec="%n%C{ - }%c" name="2" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2018-15-04 21:47:44:958" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2018-15-04 21:47:44:958" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">1.0000000000000000e+00</row><row type="TypeDouble" index="1" invalid="no">4.0000000000000000e+00</row><row type="TypeDouble" index="2" invalid="no">6.0000000000000000e+00</row><row type="TypeDouble" index="3" invalid="no">7.0000000000000000e+00</row><row type="TypeDouble" index="4" invalid="no">1.1000000000000000e+01</row><row type="TypeDouble" index="5" invalid="no">1.7000000000000000e+01</row><row type="TypeDouble" index="6" invalid="no">1.2000000000000000e+01</row><row type="TypeDouble" index="7" invalid="no">1.4000000000000000e+01</row><row type="TypeDouble" index="8" invalid="no">7.0000000000000000e+00</row><row type="TypeDouble" index="9" invalid="no">8.0000000000000000e+00</row><row type="TypeDouble" index="10" invalid="no">8.0000000000000000e+00</row><row type="TypeDouble" index="11" invalid="no">3.0000000000000000e+00</row><row type="TypeDouble" index="12" invalid="no">1.0000000000000000e+00</row><row type="TypeDouble" index="13" invalid="no">1.0000000000000000e+00</row><row type="TypeDouble" index="14" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="15" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="16" invalid="no">1.0000000000000000e+00</row><row type="TypeDouble" index="17" invalid="no">1.0000000000000000e+01</row><row type="TypeDouble" index="18" invalid="no">1.0000000000000000e+01</row><row type="TypeDouble" index="19" invalid="no">1.9000000000000000e+01</row><row type="TypeDouble" index="20" invalid="no">1.8000000000000000e+01</row><row type="TypeDouble" index="21" invalid="no">1.7000000000000000e+01</row><row type="TypeDouble" index="22" invalid="no">1.1000000000000000e+01</row><row type="TypeDouble" index="23" invalid="no">4.0000000000000000e+00</row><row type="TypeDouble" index="24" invalid="no">3.0000000000000000e+00</row><row type="TypeDouble" index="25" invalid="no">2.0000000000000000e+00</row><row type="TypeDouble" index="26" invalid="no">1.0000000000000000e+00</row><row type="TypeDouble" index="27" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="28" invalid="no">0.0000000000000000e+00</row><row type="TypeDouble" index="29" invalid="no">1.0000000000000000e+00</row><row type="TypeDouble" index="30" invalid="no">2.0000000000000000e+00</row><row type="TypeDouble" index="31" invalid="no">8.0000000000000000e+00</row><row type="TypeDouble" index="32" invalid="no">1.5000000000000000e+01</row><row type="TypeDouble" index="33" invalid="no">1.4000000000000000e+01</row><row type="TypeDouble" index="34" invalid="no">2.8000000000000000e+01</row><row type="TypeDouble" index="35" invalid="no">1.8000000000000000e+01</row><row type="TypeDouble" index="36" invalid="no">8.0000000000000000e+00</row><row type="TypeDouble" index="37" invalid="no">1.0000000000000000e+00</row><row type="TypeDouble" index="38" invalid="no">1.0000000000000000e+00</row><row type="TypeDouble" index="39" invalid="no">1.0000000000000000e+00</row><row type="TypeDouble" index="40" invalid="no">1.0000000000000000e+00</row><row type="TypeDouble" index="41" invalid="no">1.0000000000000000e+00</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width></table>
+geometry	1	-1	908	540	
+
+</table>
+<multiLayer>
+Graph1	1	1	4/15/2018 22:39:38
+geometry	817	9	807	564	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	447	307
+Alignement	0	0
+<graph>
+ggeometry	5	5	779	494
+PlotTitle	Measured Resistances (1.0 Ohm Resistor)	#000000	4
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0	#a0a0a4	2	0	#0000ff	0	0	#a0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	Resistance (Ohms)	Measurements			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	4	4	4
+TitleFont	MS Shell Dlg 2	13	75	0	0	0
+ScaleFont0	MS Shell Dlg 2	11	75	0	0	0
+ScaleFont1	MS Shell Dlg 2	11	75	0	0	0
+ScaleFont2	MS Shell Dlg 2	11	75	0	0	0
+ScaleFont3	MS Shell Dlg 2	11	75	0	0	0
+AxisFont0	MS Shell Dlg 2	11	50	0	0	0
+AxisFont1	MS Shell Dlg 2	11	50	0	0	0
+AxisFont2	MS Shell Dlg 2	11	50	0	0	0
+AxisFont3	MS Shell Dlg 2	11	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Table1_1	Table1_2	2	1	0	0	1	7	1	0	0	0	0	14	0	2	0	0	12	1
+FunctionCurve	0,MultiPeakFit1,x,1.0795,1.0915	100			0	1	1	0	1	0	0	0	19	0	0	14	0	2	0	170261736	1263159624	1
+<formula>
+A=0.159419331866119
+xc=1.08544399357715
+w=0.00773372805648226
+y0=-3.87068538487439
+
+y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+</formula>
+scale	0	0	20	0	8	5	0	0
+scale	1	0	20	0	8	5	0	0
+scale	2	1.078	1.092	0	8	5	0	0
+scale	3	1.078	1.092	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	1.07831460674157	19.3253012048193	MS Shell Dlg 2	11	50	0	0	0	#000000	1	0	#ffffff	0	\c{1}Number of Measurements	\c{2}Best Fit (χ<sup>2</sup>=4.55)	</legend>
+</graph>
+</multiLayer>
+<multiLayer>
+Graph2	1	1	4/15/2018 22:39:58
+geometry	840	39	937	575	active
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	448	307
+Alignement	0	0
+<graph>
+ggeometry	5	5	907	506
+PlotTitle	Measured Resistances (1.3 Ohm Resistor)	#000000	4
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0	#a0a0a4	2	0	#0000ff	0	0	#a0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	Resistance (Ohms)	Measurements			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	4	4	4
+TitleFont	MS Shell Dlg 2	14	75	0	0	0
+ScaleFont0	MS Shell Dlg 2	11	75	0	0	0
+ScaleFont1	MS Shell Dlg 2	11	75	0	0	0
+ScaleFont2	MS Shell Dlg 2	11	75	0	0	0
+ScaleFont3	MS Shell Dlg 2	11	75	0	0	0
+AxisFont0	MS Shell Dlg 2	11	50	0	0	0
+AxisFont1	MS Shell Dlg 2	11	50	0	0	0
+AxisFont2	MS Shell Dlg 2	11	50	0	0	0
+AxisFont3	MS Shell Dlg 2	11	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Table1_1	Table1_2	2	1	0	0	1	7	1	0	0	0	0	14	1	2	0	13	28	1
+scale	0	-5	20	0	8	5	0	0
+scale	1	-5	20	0	8	5	0	0
+scale	2	1.272	1.29	0	8	5	0	0
+scale	3	1.272	1.29	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	1.27240617577197	19.1784037558685	MS Shell Dlg 2	11	50	0	0	0	#000000	1	0	#ffffff	0	\c{1}Number of Measurements	</legend>
+</graph>
+</multiLayer>
+<multiLayer>
+Graph3	1	1	4/15/2018 22:43:44
+geometry	275	132	937	565	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	447	307
+Alignement	0	0
+<graph>
+ggeometry	5	4	911	496
+PlotTitle	Measured Resistances (2.3 Ohm Resistor)	#000000	4
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0	#a0a0a4	2	0	#0000ff	0	0	#a0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	Resistance (Ohms)	Measurements			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	4	4	4
+TitleFont	MS Shell Dlg 2	13	75	0	0	0
+ScaleFont0	MS Shell Dlg 2	11	75	0	0	0
+ScaleFont1	MS Shell Dlg 2	11	75	0	0	0
+ScaleFont2	MS Shell Dlg 2	11	75	0	0	0
+ScaleFont3	MS Shell Dlg 2	11	75	0	0	0
+AxisFont0	MS Shell Dlg 2	11	50	0	0	0
+AxisFont1	MS Shell Dlg 2	11	50	0	0	0
+AxisFont2	MS Shell Dlg 2	11	50	0	0	0
+AxisFont3	MS Shell Dlg 2	11	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Table1_1	Table1_2	2	1	0	0	1	7	1	0	0	0	0	14	0	2	0	29	41	1
+FunctionCurve	0,MultiPeakFit1,x,2.357,2.381	100			0	1	1	0	1	0	0	0	19	0	0	14	0	2	0	188143360	1263159624	1
+<formula>
+A=-0.160962378572812
+xc=2.36619094692883
+w=-0.00593439330089173
+y0=0.764636127939648
+
+y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+</formula>
+scale	0	0	30	0	8	5	0	0
+scale	1	0	30	0	8	5	0	0
+scale	2	2.355	2.385	0	8	5	0	0
+scale	3	2.355	2.385	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<legend>	2.35567535545024	28.9928057553957	MS Shell Dlg 2	11	50	0	0	0	#000000	1	0	#ffffff	0	\c{1}Number of Measurements	\c{2}Gaussian Fit (χ<sup>2</sup> = 8.60)	</legend>
+</graph>
+</multiLayer>
+<log>
+[4/15/2018 23:06:42	Plot: ''Graph1'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.0795 to x = 1.0915
+A (amplitude) = 1.40826416377502e-316 +/- 245,813,564.05226
+xc (center) = 2.50324628674484e-308 +/- inf
+w (width) = 1 +/- inf
+y0 (offset) = 1 +/- 1,454,455.16985145
+--------------------------------------------------------------------------------------
+Chi^2 = 854
+R^2 = -1.99568267674042
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:06:48	Plot: ''Graph1'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.0795 to x = 1.0915
+A (amplitude) = 1.40826416377502e-316 +/- 245,813,564.05226
+xc (center) = 2.50324628674484e-308 +/- inf
+w (width) = 1 +/- inf
+y0 (offset) = 1 +/- 1,454,455.16985145
+--------------------------------------------------------------------------------------
+Chi^2 = 854
+R^2 = -1.99568267674042
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:07:28	Plot: ''Graph1'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.0795 to x = 1.0915
+A (amplitude) = 0.0161391472852261 +/- 0.0223456875576305
+xc (center) = 1.09117588194757 +/- 0.00103258361009561
+w (width) = -0.00152658088130664 +/- 0.00303720793028459
+y0 (offset) = 8.70639664733497 +/- 1.53053606518526
+--------------------------------------------------------------------------------------
+Chi^2 = 208.077567872933
+R^2 = 0.270100274595755
+---------------------------------------------------------------------------------------
+Iterations = 98
+Status = success
+---------------------------------------------------------------------------------------
+[4/15/2018 23:07:30	Plot: ''Graph1'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.0795 to x = 1.0915
+A (amplitude) = 0.0161364029483101 +/- 0.0223395708593209
+xc (center) = 1.09117577493475 +/- 0.00103206967383948
+w (width) = -0.00152617185678448 +/- 0.00303730091548281
+y0 (offset) = 8.70633989908654 +/- 1.53051839960553
+--------------------------------------------------------------------------------------
+Chi^2 = 208.07756738576
+R^2 = 0.270100276304673
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = success
+---------------------------------------------------------------------------------------
+[4/15/2018 23:07:31	Plot: ''Graph1'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.0795 to x = 1.0915
+A (amplitude) = 0.0161359785542501 +/- 0.0223386266101638
+xc (center) = 1.09117575841973 +/- 0.00103199051957984
+w (width) = -0.00152610891429282 +/- 0.00303731535890894
+y0 (offset) = 8.70633112150621 +/- 1.53051568370202
+--------------------------------------------------------------------------------------
+Chi^2 = 208.077567374236
+R^2 = 0.270100276345098
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = success
+---------------------------------------------------------------------------------------
+[4/15/2018 23:07:59	Plot: ''Graph1'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.0795 to x = 1.0915
+A (amplitude) = 0.0161359132600983 +/- 0.0223384813221484
+xc (center) = 1.09117575587899 +/- 0.00103197834650669
+w (width) = -0.00152609923926266 +/- 0.00303731757530331
+y0 (offset) = 8.70632977143052 +/- 1.53051526631208
+--------------------------------------------------------------------------------------
+Chi^2 = 208.077567373964
+R^2 = 0.270100276346053
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = success
+---------------------------------------------------------------------------------------
+[4/15/2018 23:08:01	Plot: ''Graph1'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.0795 to x = 1.0915
+A (amplitude) = 0.0161359032243224 +/- 0.0223384589909942
+xc (center) = 1.09117575548848 +/- 0.00103197647561742
+w (width) = -0.00152609775241196 +/- 0.00303731791583449
+y0 (offset) = 8.70632956393145 +/- 1.53051520216976
+--------------------------------------------------------------------------------------
+Chi^2 = 208.077567373957
+R^2 = 0.270100276346075
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = success
+---------------------------------------------------------------------------------------
+[4/15/2018 23:08:05	Plot: ''Graph1'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.0795 to x = 1.0915
+A (amplitude) = 0.0161391472852261 +/- 0.0223456875576305
+xc (center) = 1.09117588194757 +/- 0.00103258361009561
+w (width) = -0.00152658088130664 +/- 0.00303720793028459
+y0 (offset) = 8.70639664733497 +/- 1.53053606518526
+--------------------------------------------------------------------------------------
+Chi^2 = 208.077567872933
+R^2 = 0.270100274595755
+---------------------------------------------------------------------------------------
+Iterations = 98
+Status = success
+---------------------------------------------------------------------------------------
+[4/15/2018 23:08:13	Plot: ''Graph1'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.0795 to x = 1.0915
+A (amplitude) = -0.00642721991647082 +/- 1.47360530296675
+xc (center) = 1.09110052125114 +/- 0.0625179937309479
+w (width) = 0.000743172239991203 +/- 0.231125560226895
+y0 (offset) = 4.87347998193281 +/- 0.684887282336191
+--------------------------------------------------------------------------------------
+Chi^2 = 41.3865679112189
+R^2 = 0.202993697575753
+---------------------------------------------------------------------------------------
+Iterations = 9
+Status = success
+---------------------------------------------------------------------------------------
+[4/15/2018 23:09:32	Plot: ''Graph1'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.0795 to x = 1.0915
+A (amplitude) = 0.159417889289684 +/- 0.146359894833377
+xc (center) = 1.08544399200679 +/- 0.000253100194196617
+w (width) = 0.00773369027084696 +/- 0.00378871346131013
+y0 (offset) = -3.87060416724054 +/- 8.22228057673879
+--------------------------------------------------------------------------------------
+Chi^2 = 4.54972822786546
+R^2 = 0.912383117157601
+---------------------------------------------------------------------------------------
+Iterations = 8
+Status = success
+---------------------------------------------------------------------------------------
+[4/15/2018 23:09:47	Plot: ''Graph1'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.0795 to x = 1.0915
+A (amplitude) = 0.159419331866119 +/- 0.146363261412602
+xc (center) = 1.08544399357715 +/- 0.000253099401042287
+w (width) = 0.00773372805648226 +/- 0.0037887678963118
+y0 (offset) = -3.87068538487439 +/- 8.22244500874943
+--------------------------------------------------------------------------------------
+Chi^2 = 4.54972822772772
+R^2 = 0.912383117160253
+---------------------------------------------------------------------------------------
+Iterations = 1
+Status = success
+---------------------------------------------------------------------------------------
+[4/15/2018 23:21:02	Plot: ''Graph2'']
+Non-linear fit of dataset: Table1_2, using function: 1/(s*sqrt(2*PI))*exp((x-xc)/(2*w^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+s  = 0.08 +/- nan
+m  = 1.28 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = nan
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:21:07	Plot: ''Graph2'']
+Non-linear fit of dataset: Table1_2, using function: 1/(s*sqrt(2*PI))*exp((x-xc)/(2*w^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+s  = 0.08 +/- nan
+m  = 1.28 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = nan
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:21:08	Plot: ''Graph2'']
+Non-linear fit of dataset: Table1_2, using function: 1/(s*sqrt(2*PI))*exp((x-xc)/(2*w^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+s  = 0.08 +/- nan
+m  = 1.28 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = nan
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:21:16	Plot: ''Graph2'']
+Non-linear fit of dataset: Table1_2, using function: 1/(s*sqrt(2*PI))*exp((x-xc)/(2*w^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+s  = 0.01 +/- nan
+m  = 1.28 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = nan
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:21:21	Plot: ''Graph2'']
+Non-linear fit of dataset: Table1_2, using function: 1/(s*sqrt(2*PI))*exp((x-xc)/(2*w^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+s  = 0.01 +/- nan
+m  = 1.28 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = nan
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:21:22	Plot: ''Graph2'']
+Non-linear fit of dataset: Table1_2, using function: 1/(s*sqrt(2*PI))*exp((x-xc)/(2*w^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+s  = 0.01 +/- nan
+m  = 1.28 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = nan
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:21:23	Plot: ''Graph2'']
+Non-linear fit of dataset: Table1_2, using function: 1/(s*sqrt(2*PI))*exp((x-xc)/(2*w^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+s  = 0.01 +/- nan
+m  = 1.28 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = nan
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:21:28	Plot: ''Graph2'']
+Non-linear fit of dataset: Table1_2, using function: 1/(s*sqrt(2*PI))*exp((x-xc)/(2*w^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+s  = 0.1 +/- nan
+m  = 1.28 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = nan
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:21:33	Plot: ''Graph2'']
+Non-linear fit of dataset: Table1_2, using function: 1/(s*sqrt(2*PI))*exp((x-xc)/(2*w^2))
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+s  = 1 +/- nan
+m  = 1 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = nan
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:22:25	Plot: ''Graph2'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+A (amplitude) = 0.16 +/- nan
+xc (center) = 1.281 +/- nan
+w (width) = 0.008 +/- nan
+y0 (offset) = 0 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = inf
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:22:27	Plot: ''Graph2'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+A (amplitude) = 0.16 +/- nan
+xc (center) = 1.281 +/- nan
+w (width) = 0.008 +/- nan
+y0 (offset) = 0 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = inf
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:22:28	Plot: ''Graph2'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+A (amplitude) = 0.16 +/- nan
+xc (center) = 1.281 +/- nan
+w (width) = 0.008 +/- nan
+y0 (offset) = 0 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = inf
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:22:46	Plot: ''Graph2'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+A (amplitude) = 0.16 +/- nan
+xc (center) = 1.281 +/- nan
+w (width) = 0.008 +/- nan
+y0 (offset) = 0 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = inf
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:22:46	Plot: ''Graph2'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+A (amplitude) = 0.16 +/- nan
+xc (center) = 1.281 +/- nan
+w (width) = 0.008 +/- nan
+y0 (offset) = 0 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = inf
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:23:17	Plot: ''Graph2'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+A (amplitude) = 0.0926413639379592 +/- 0.00861755662847528
+xc (center) = 1.28085679440671 +/- 0.000124415184058494
+w (width) = 0.00389015704822529 +/- 0.000315222587286548
+y0 (offset) = 0.2728160881875 +/- 0.669894880805247
+--------------------------------------------------------------------------------------
+Chi^2 = 30.555623157809
+R^2 = 0.958649245493957
+---------------------------------------------------------------------------------------
+Iterations = 12
+Status = success
+---------------------------------------------------------------------------------------
+[4/15/2018 23:23:31	Plot: ''Graph2'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+A (amplitude) = 0.0926413387101059 +/- 0.00861755292013576
+xc (center) = 1.28085679466723 +/- 0.000124415160028003
+w (width) = 0.00389015584108575 +/- 0.000315222476589387
+y0 (offset) = 0.272817662616375 +/- 0.66989469648201
+--------------------------------------------------------------------------------------
+Chi^2 = 30.5556231577575
+R^2 = 0.958649245494027
+---------------------------------------------------------------------------------------
+Iterations = 1
+Status = success
+---------------------------------------------------------------------------------------
+[4/15/2018 23:27:31	Plot: ''Graph3'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.357 to x = 2.381
+A (amplitude) = 0.176986394974524 +/- 0.029649487598206
+xc (center) = 2.36660916293699 +/- 0.00036426562959572
+w (width) = 0.00619490559039427 +/- 0.000911005292625981
+y0 (offset) = 0.809896946756537 +/- 1.43275736261871
+--------------------------------------------------------------------------------------
+Chi^2 = 88.7718482543735
+R^2 = 0.902777251279962
+---------------------------------------------------------------------------------------
+Iterations = 9
+Status = success
+---------------------------------------------------------------------------------------
+[4/15/2018 23:31:23	Plot: ''Graph3'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.357 to x = 2.381
+A (amplitude) = 0.176988850368312 +/- 0.0296501108130706
+xc (center) = 2.36660917214747 +/- 0.000364269360189188
+w (width) = 0.00619500517945299 +/- 0.000911021144355624
+y0 (offset) = 0.809802876478617 +/- 1.43277595309927
+--------------------------------------------------------------------------------------
+Chi^2 = 88.7718480571921
+R^2 = 0.902777251495914
+---------------------------------------------------------------------------------------
+Iterations = 12
+Status = success
+---------------------------------------------------------------------------------------
+[4/15/2018 23:31:33	Plot: ''Graph3'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.357 to x = 2.381
+A (amplitude) = 0.176990951137182 +/- 0.0296506399806091
+xc (center) = 2.36660914548832 +/- 0.000364272557687578
+w (width) = 0.0061950904448924 +/- 0.000911034597260426
+y0 (offset) = 0.80972246384542 +/- 1.43279165462365
+--------------------------------------------------------------------------------------
+Chi^2 = 88.771848043464
+R^2 = 0.902777251510949
+---------------------------------------------------------------------------------------
+Iterations = 9
+Status = success
+---------------------------------------------------------------------------------------
+[4/15/2018 23:31:53	Plot: ''Graph3'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.359 to x = 2.379
+A (amplitude) = 0.178151817587342 +/- 0.0392860932349504
+xc (center) = 2.3666056167668 +/- 0.000413148509122356
+w (width) = 0.00622292366196269 +/- 0.00112329881149556
+y0 (offset) = 0.740245259980541 +/- 2.05772490896753
+--------------------------------------------------------------------------------------
+Chi^2 = 88.722368778627
+R^2 = 0.890417015880878
+---------------------------------------------------------------------------------------
+Iterations = 19
+Status = success
+---------------------------------------------------------------------------------------
+[4/15/2018 23:32:36	Plot: ''Graph3'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.357 to x = 2.381
+A (amplitude) = -35,057.4408099619 +/- 109,168,377,627.505
+xc (center) = -0.467889986382282 +/- 787,700.408169108
+w (width) = -15.4761855680193 +/- 18,115,702.9021974
+y0 (offset) = -1,687.82543235484 +/- 3,487,087,138.50173
+--------------------------------------------------------------------------------------
+Chi^2 = 71.5714149551367
+R^2 = 0.0429807484110902
+---------------------------------------------------------------------------------------
+Iterations = 1000
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[4/15/2018 23:32:46	Plot: ''Graph3'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.357 to x = 2.381
+A (amplitude) = -26,676.1169931819 +/- 7,846,747,477.74232
+xc (center) = 2.27156909830433 +/- 34.0847649249694
+w (width) = -4.68691455001189 +/- 460,363.525865224
+y0 (offset) = -4,535.17696857596 +/- 889,746,728.12833
+--------------------------------------------------------------------------------------
+Chi^2 = 71.2790062892334
+R^2 = 0.0468906993709286
+---------------------------------------------------------------------------------------
+Iterations = 1000
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[4/15/2018 23:32:47	Plot: ''Graph3'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.357 to x = 2.381
+A (amplitude) = -20,001.5647540354 +/- 196,571,011.242114
+xc (center) = 2.3667058891714 +/- 0.00118659915340755
+w (width) = -1.11947710461718 +/- 3,667.75871938512
+y0 (offset) = -14,251.5597547079 +/- 93,395,814.2505473
+--------------------------------------------------------------------------------------
+Chi^2 = 63.1786599026014
+R^2 = 0.155204716096809
+---------------------------------------------------------------------------------------
+Iterations = 878
+Status = success
+---------------------------------------------------------------------------------------
+[4/15/2018 23:32:58	Plot: ''Graph3'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.357 to x = 2.381
+A (amplitude) = -16,092.1911084897 +/- 136,796,454.117954
+xc (center) = 2.36670586887783 +/- 0.00118657625450074
+w (width) = -1.04118077951602 +/- 2,950.69179911412
+y0 (offset) = -12,327.7255625602 +/- 69,882,406.6380155
+--------------------------------------------------------------------------------------
+Chi^2 = 63.1784309024932
+R^2 = 0.155207778178399
+---------------------------------------------------------------------------------------
+Iterations = 1000
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[4/15/2018 23:32:59	Plot: ''Graph3'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.357 to x = 2.381
+A (amplitude) = -12,864.2285459179 +/- 94,186,101.8512817
+xc (center) = 2.3667058441917 +/- 0.00118654930487578
+w (width) = -0.966291979439774 +/- 2,358.62581726049
+y0 (offset) = -10,618.0744256261 +/- 51,843,322.9300816
+--------------------------------------------------------------------------------------
+Chi^2 = 63.1781578275425
+R^2 = 0.155211429608024
+---------------------------------------------------------------------------------------
+Iterations = 1000
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[4/15/2018 23:32:59	Plot: ''Graph3'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.357 to x = 2.381
+A (amplitude) = -9,470.85178511899 +/- 56,528,956.7843973
+xc (center) = 2.36670580310197 +/- 0.00118650583296716
+w (width) = -0.872499034126838 +/- 1,736.24130176089
+y0 (offset) = -8,656.77319525047 +/- 34,459,787.977724
+--------------------------------------------------------------------------------------
+Chi^2 = 63.1777112132658
+R^2 = 0.155217401523783
+---------------------------------------------------------------------------------------
+Iterations = 1000
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[4/15/2018 23:33:00	Plot: ''Graph3'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.357 to x = 2.381
+A (amplitude) = -6,970.65032725823 +/- 33,910,947.9096919
+xc (center) = 2.36670575347268 +/- 0.00118645180556149
+w (width) = -0.787731877242081 +/- 1,277.69561826451
+y0 (offset) = -7,056.34218056555 +/- 22,895,942.2540563
+--------------------------------------------------------------------------------------
+Chi^2 = 63.1771627843895
+R^2 = 0.155224734856415
+---------------------------------------------------------------------------------------
+Iterations = 1000
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[4/15/2018 23:33:00	Plot: ''Graph3'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.357 to x = 2.381
+A (amplitude) = -4,309.54648325923 +/- 15,209,859.4254753
+xc (center) = 2.36670564885885 +/- 0.00118634389576787
+w (width) = -0.671019099836778 +/- 789.678013533263
+y0 (offset) = -5,120.17646290568 +/- 12,055,014.8937209
+--------------------------------------------------------------------------------------
+Chi^2 = 63.1760419038422
+R^2 = 0.155239722743173
+---------------------------------------------------------------------------------------
+Iterations = 1000
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[4/15/2018 23:33:01	Plot: ''Graph3'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.357 to x = 2.381
+A (amplitude) = -2,158.88074844082 +/- 4,802,612.44373732
+xc (center) = 2.36670542375236 +/- 0.00118611491514065
+w (width) = -0.532848966308793 +/- 395.328584988998
+y0 (offset) = -3,228.54393793414 +/- 4,793,017.89879249
+--------------------------------------------------------------------------------------
+Chi^2 = 63.1736479098623
+R^2 = 0.155271734103133
+---------------------------------------------------------------------------------------
+Iterations = 1000
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[4/15/2018 23:33:01	Plot: ''Graph3'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.357 to x = 2.381
+A (amplitude) = -605.131711650176 +/- 575,092.50674916
+xc (center) = 2.36670457223269 +/- 0.00118531658800517
+w (width) = -0.348539994409768 +/- 110.547413775226
+y0 (offset) = -1,381.12762056616 +/- 877,141.220726417
+--------------------------------------------------------------------------------------
+Chi^2 = 63.1649812944647
+R^2 = 0.155387620002368
+---------------------------------------------------------------------------------------
+Iterations = 1000
+Status = the iteration has not converged yet
+---------------------------------------------------------------------------------------
+[4/15/2018 23:33:02	Plot: ''Graph3'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.357 to x = 2.381
+A (amplitude) = -0.160962378572812 +/- 0.0209694777577574
+xc (center) = 2.36619094692883 +/- 0.000382778233444618
+w (width) = -0.00593439330089173 +/- 0.0006594679440457
+y0 (offset) = 0.764636127939648 +/- 0.481389896277964
+--------------------------------------------------------------------------------------
+Chi^2 = 8.59733278318849
+R^2 = 0.885040515253397
+---------------------------------------------------------------------------------------
+Iterations = 835
+Status = success
+---------------------------------------------------------------------------------------
+[4/15/2018 23:35:49	Plot: ''Graph2'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+A (amplitude) = 0.09 +/- nan
+xc (center) = 1.3 +/- nan
+w (width) = 0.004 +/- nan
+y0 (offset) = 0 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = inf
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:35:51	Plot: ''Graph2'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+A (amplitude) = 0.09 +/- nan
+xc (center) = 1.3 +/- nan
+w (width) = 0.004 +/- nan
+y0 (offset) = 0 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = inf
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:35:51	Plot: ''Graph2'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+A (amplitude) = 0.09 +/- nan
+xc (center) = 1.3 +/- nan
+w (width) = 0.004 +/- nan
+y0 (offset) = 0 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = inf
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:35:52	Plot: ''Graph2'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+A (amplitude) = 0.09 +/- nan
+xc (center) = 1.3 +/- nan
+w (width) = 0.004 +/- nan
+y0 (offset) = 0 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = inf
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:36:03	Plot: ''Graph2'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+A (amplitude) = 0.09 +/- nan
+xc (center) = 1.3 +/- nan
+w (width) = 0.004 +/- nan
+y0 (offset) = 0.1 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = inf
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:36:34	Plot: ''Graph2'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+A (amplitude) = 0.1 +/- nan
+xc (center) = 1.3 +/- nan
+w (width) = 0.004 +/- nan
+y0 (offset) = 0 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = inf
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:36:35	Plot: ''Graph2'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+A (amplitude) = 0.1 +/- nan
+xc (center) = 1.3 +/- nan
+w (width) = 0.004 +/- nan
+y0 (offset) = 0 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = inf
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:36:46	Plot: ''Graph2'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+A (amplitude) = 0.093 +/- nan
+xc (center) = 1.281 +/- nan
+w (width) = 0.004 +/- nan
+y0 (offset) = 0 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = inf
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:36:46	Plot: ''Graph2'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+A (amplitude) = 0.093 +/- nan
+xc (center) = 1.281 +/- nan
+w (width) = 0.004 +/- nan
+y0 (offset) = 0 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = inf
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:36:55	Plot: ''Graph2'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+A (amplitude) = 0.0926412382064522 +/- 0.00861753815125386
+xc (center) = 1.28085679570243 +/- 0.000124415064365513
+w (width) = 0.00389015103347739 +/- 0.000315222035828262
+y0 (offset) = 0.272823934857325 +/- 0.669893962396746
+--------------------------------------------------------------------------------------
+Chi^2 = 30.5556231585754
+R^2 = 0.95864924549292
+---------------------------------------------------------------------------------------
+Iterations = 3
+Status = success
+---------------------------------------------------------------------------------------
+[4/15/2018 23:37:03	Plot: ''Graph2'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+A (amplitude) = 0.0926412382064522 +/- nan
+xc (center) = 1.28085679570243 +/- nan
+w (width) = 0.00389015103347739 +/- nan
+y0 (offset) = 0.272823934857325 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = inf
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:37:04	Plot: ''Graph2'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+A (amplitude) = 0.0926412382064522 +/- nan
+xc (center) = 1.28085679570243 +/- nan
+w (width) = 0.00389015103347739 +/- nan
+y0 (offset) = 0.272823934857325 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = inf
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:37:06	Plot: ''Graph2'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+A (amplitude) = 0.0926412382064522 +/- nan
+xc (center) = 1.28085679570243 +/- nan
+w (width) = 0.00389015103347739 +/- nan
+y0 (offset) = 0.272823934857325 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = inf
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:37:17	Plot: ''Graph2'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+A (amplitude) = -0.0926412382064522 +/- nan
+xc (center) = 1.28085679570243 +/- nan
+w (width) = -0.00389015103347739 +/- nan
+y0 (offset) = 0.272823934857325 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = inf
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/15/2018 23:37:18	Plot: ''Graph2'']
+Gauss Fit fit of dataset: Table1_2, using function: y0+A*sqrt(2/PI)/w*exp(-2*((x-xc)/w)^2)
+Y standard errors: Statistical (assuming Poisson distribution)
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 1.274 to x = 1.289
+A (amplitude) = -0.0926412382064522 +/- nan
+xc (center) = 1.28085679570243 +/- nan
+w (width) = -0.00389015103347739 +/- nan
+y0 (offset) = 0.272823934857325 +/- nan
+--------------------------------------------------------------------------------------
+Chi^2 = inf
+R^2 = nan
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+</log>
